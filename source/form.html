@@ -46,7 +46,131 @@
 
     <main class="page-main">
       <h1 class="active-heading">Направление</h1>
+      <section class="profile-info">
+        <div class="profile-info__wrapper">
+          <img class="profile-info__level" src="https://via.placeholder.com/100x100" alt="">
+          <img class="profile-info__avatar" src="https://via.placeholder.com/100x100" alt="">
+          <button class="profile-info__button button" type="button">Изменить</button>
+          <legend class="profile-info__">Тэги</legend>
+          <p class="profile-info__">#бургер #бар #футбол #концерт #крафт</p>
+          <legend class="profile-info__">Транспорт</legend>
+          <img class="profile-info__icon-plane profile-info__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+          <img class="profile-info__icon-car profile-info__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+          <img class="profile-info__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+          <img class="profile-info__icon-afoot profile-info__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+        </div>
+      </section>
+      <section class="plans">
+        <div class="plans__wrapper">
+          <h2 class="plans__title">Мои планы:</h2>
+          <ul class="plans__list">
+            <li class="plans__item plans-infomation">
+              <h3 class="plans-infomation__cities">Франция, Италия</h3>
+              <p class="plans-infomation__people">3 Попутчика</p>
+              <p class="plans-infomation__dates">26 мар — 29 мар</p>
+              <button class="plans-infomation__button button" type="button">Cменить фото</button>
+            </li>
+            <li class="plans__item plans-infomation">
+              <h3 class="plans-infomation__cities">Таиланд, Индонезия</h3>
+              <p class="plans-infomation__people">1 Попутчик</p>
+              <p class="plans-infomation__dates">1 июл — 15 июл</p>
+              <button class="plans-infomation__button button" type="button">Изменить</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="add-plan">
+        <div class="add-plan__wrapper">
+          <h2 class="add-plan__title">Добавить план:</h2>
+          <ul class="add-plan__list steps">
+            <li class="steps__item">
+              <h3 class="steps__title">Шаг 1. Даты пребывания</h3>
+              <p class="steps__info">
+                Укажите предпочтительное количество попутчиков, которых
+                вы хотели бы позвать в поездку и ее предполагаемую длительность.
+              </p>
+              <label class="steps__label" for="traveler">Ищу попутчиков:</label>
+              <p class="steps__denomination">Чел.</p>
+              <div class="steps__qty">
+                <button class="steps__button-minus" type="button">
+                  <span class="visually-hidden">-</span>
+                </button>
+                <input type="number" id="traveler" name="traveler" min="1" value="2">
+                <button class="steps__button-plus" type="button">
+                  <span class="visually-hidden">+</span>
+                </button>
+              </div>
+              <label class="steps__label" for="duration">Длительность:</label>
+              <p class="steps__denomination">Дн.</p>
+              <div class="steps__qty">
+                <button class="steps__button-minus" type="button">
+                  <span class="visually-hidden">-</span>
+                </button>
+                <input type="number" id="duration" name="duration" min="1" value="2">
+                <button class="steps__button-plus" type="button">
+                  <span class="visually-hidden">+</span>
+                </button>
+              </div>
+              <input class="steps__checkbox" type="checkbox" id="children" name="children" checked>
+              <label class="steps__description" for="children">Можно с детьми</label>
+              <p class="steps__months">Март 2019</p>
+              <button class="steps__prev" type="button">Предыдущий месяц</button>
+              <button class="steps__next" type="button">Следующий месяц</button>
+              <!--Здесь будет календарь-->
+              <button class="steps__button button-next" type="button">Следующий шаг</button>
+            </li>
 
+            <li class="steps__item">
+              <h3 class="steps__title">Шаг 2. Маршрут</h3>
+              <p class="steps__description">Укажите страны, которые вы хотели посетить.
+                Это может быть одна или сразу несколько.
+              </p>
+              <p class="steps__countries">
+                <select name="country">
+                  <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
+                </select>
+                <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
+              </p>
+              <p class="steps__countries">
+                <select name="country">
+                  <option value="Чехия" selected>Чехия</option>
+                </select>
+                <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
+              </p>
+              <p class="steps__choose-country">
+                <select name="country">
+                  <option value="" selected>Выберите страну</option>
+                </select>
+              </p>
+              <button class="steps__button button-country" type="button">Добавить страну</button>
+              <button class="steps__button button-next" type="button">Следующий шаг</button>
+              <button class="steps__button button-prev" type="button">На шаг назад</button>
+            </li>
+
+            <li class="steps__item">
+              <h3 class="steps__title">Шаг 3. Развлечения</h3>
+              <p class="steps__description">Наконец, расскажите о своих планахвремяпровождения.
+                Можно писать в свободной форме и ставить тэги.
+              </p>
+              <p class="steps__country">
+                Босния и Герцеговина
+                <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
+                <br>
+                <textarea class="steps__textarea" name="comment" cols="25" rows="10">План действий</textarea>
+              </p>
+              <p class="steps__country">
+                Чехия
+                <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
+                <br>
+                <textarea class="steps__textarea" name="comment" cols="25" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              </p>
+              <button class="steps__button button-submit" type="submit">Отправить</button>
+              <button class="steps__button button-prev" type="button">На шаг назад</button>
+            </li>
+
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">

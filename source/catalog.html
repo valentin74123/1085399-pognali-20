@@ -46,6 +46,82 @@
 
     <main class="page-main">
         <h1 class="active-heading">Попутчики</h1>
+        <section class="country-filter">
+          <div class="country-filter__wrapper">
+            <h2 class="country-filter__title">Фильтрация по странам</h2>
+            <button class="country-filter__uncover" type="button">Раскрыть фильтры</button>
+          </div>
+        </section>
+
+        <section class="find-traveler">
+          <div class="find-traveler__wrapper">
+            <h2 class="find-traveler__title">Подберите идеального попутчика</h2>
+            <form class="find-traveler__form" action="https://echo.htmlacademy.ru" method="POST">
+              <fieldset class="find-traveler__fieldset">
+                <legend class="find-traveler__item">Хобби</legend>
+                <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+              </fieldset>
+              <fieldset class="find-traveler__fieldset">
+                <legend class="find-traveler__item">Музыка</legend>
+                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                <ul class="find-traveler__list music-genres">
+                  <li class="music-genres__item">
+                    <input class="music-genres__checkbox" type="checkbox" id="filter-rock" name="rock" checked>
+                    <label class="music-genres__description" for="filter-rock">Тяжелый рок</label>
+                  </li>
+                  <li class="music-genres__item">
+                    <input class="music-genres__checkbox" type="checkbox" id="filter-rap" name="rap" checked>
+                    <label class="music-genres__description" for="filter-rap">Русский рэп</label>
+                  </li>
+                  <li class="music-genres__item">
+                    <input class="music-genres__checkbox" type="checkbox" id="filter-eurodance" name="eurodance">
+                    <label class="music-genres__description" for="filter-eurodance">Евроденс</label>
+                  </li>
+              </fieldset>
+              <fieldset class="find-traveler__fieldset">
+                <legend class="find-traveler__item">Еда</legend>
+                <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+              </fieldset>
+              <fieldset class="find-traveler__fieldset">
+                <legend class="find-traveler__item">Транспорт</legend>
+                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                <img class="find-traveler__icon-plane find-traveler__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                <img class="find-traveler__icon-car find-traveler__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                <img class="find-traveler__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                <img class="find-traveler__icon-afoot find-traveler__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+              </fieldset>
+              <fieldset class="find-traveler__fieldset">
+                <legend class="find-traveler__item">Левел</legend>
+                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                <div class="find-traveler__range-filter range-filter">
+                  <div class="range-filter__price-controls">
+                    <div class="range-filter__min">
+                      <label class="range-filter__min-cost" for="min-cost"></label>
+                      <input type="number" id="min-cost" name="min-cost" value="30">
+                    </div>
+                    <div class="range-filter__max">
+                      <label class="range-filter__max-cost" for="max-cost"></label>
+                      <input type="number" id="max-cost" name="max-cost" value="100">
+                    </div>
+                  </div>
+                  <div class="range-filter__range-controls">
+                    <div class="range-filter__scale">
+                      <div class="range-filter__bar"></div>
+                    </div>
+                    <div class="range-filter__toggle toggle-min">
+                      <span class="visually-hidden">Переключатель минимум</span>
+                    </div>
+                    <div class="range-filter__toggle toggle-max">
+                      <span class="visually-hidden">Переключатель максимум</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="find-traveler__button show-button" type="submit">Показать</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+
         <section class="travelers-profiles">
           <div class="travelers-profiles__wrapper">
             <ul class="travelers-profiles__list">
