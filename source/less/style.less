@@ -1,11 +1,16 @@
+@import "blocks/width.less";
 @import "blocks/colors.less";
-@import "blocks/buttons.less";
+@import "blocks/button.less";
 @import "blocks/button-country.less";
 @import "blocks/button-form.less";
 @import "blocks/button-catalog.less";
 @import "blocks/button-grey.less";
 @import "blocks/button-light.less";
+@import "blocks/page.less";
+@import "blocks/page-header.less";
 @import "blocks/main-nav.less";
+@import "blocks/site-list.less";
+@import "blocks/user-list.less";
 @import "blocks/information.less";
 @import "blocks/about-service.less";
 @import "blocks/directions.less";
@@ -47,7 +52,7 @@
 }
 
 body {
-  font-family: "Blogger Sans", "Arial", sans-serif;
+
   background: blue;
 }
 
@@ -56,4 +61,22 @@ body {
   line-height: 36px;
   font-weight: bold;
   color: @white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
