@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="https://via.placeholder.com/96x15" alt="">
+        <img src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -65,19 +66,19 @@
           </p>
         </header>
         <ul class="information__list">
-          <li class="information__item">
+          <li class="information__item information__item--orange">
             <p class="information__description">Выберите направление</p>
             <p class="information__number">1</p>
           </li>
-          <li class="information__item">
+          <li class="information__item information__item--orange-light">
             <p class="information__description">Изучите идеи путешественников</p>
             <p class="information__number">2</p>
           </li>
-          <li class="information__item">
+          <li class="information__item information__item--yellow-dark">
             <p class="information__description">Находите тех, кто похож на вас</p>
             <p class="information__number">3</p>
           </li>
-          <li class="information__item">
+          <li class="information__item information__item--yellow">
             <p class="information__description">Путешествуйте вместе!</p>
             <p class="information__number">4</p>
           </li>
@@ -86,16 +87,16 @@
 
       <section class="about-service">
         <div class="about-service__wrapper">
-          <h2>О сервисе</h2>
-          <p>Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-          <p>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+          <h2 class="about-service__title">О сервисе</h2>
+          <p class="about-service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about-service__description-bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         </div>
-        </section>
+      </section>
 
       <section class="directions">
         <div class="directions__wrapper">
-          <h2>Направления</h2>
-          <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <h2 class="directions__main-title">Направления</h2>
+          <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           <ul class="directions__list">
             <li class="directions__item">
               <img class="directions__photo" src="https://via.placeholder.com/270x110" alt="">
@@ -119,15 +120,15 @@
               <p class="directions__people">5326</p>
             </li>
           </ul>
-          <a class="directions__to-all button" href="">Показать все</a>
+          <a class="directions__to-all button button--yellow" href="">Показать все</a>
         </div>
       </section>
 
       <section class="travelers">
         <div class="travelers__wrapper">
-          <h2>Попутчики</h2>
-          <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p>Теперь можно легко найти единомышленников!</p>
+          <h2 class="travelers__title">Попутчики</h2>
+          <p class="travelers__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="travelers__description-bold">Теперь можно легко найти единомышленников!</p>
           <ul class="travelers__list">
             <li class="travelers__item">
               <img class="travelers__level" src="https://via.placeholder.com/60x60" alt="">
@@ -136,7 +137,7 @@
               <img class="travelers__flag" src="https://via.placeholder.com/35x25" alt="">
               <img class="travelers__flag" src="https://via.placeholder.com/35x25" alt="">
               <h3 class="travelers__name">Таня Фрисова</h3>
-              <p class="travelers__description">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <p class="travelers__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <img class="travelers__icon-plane travelers__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
               <img class="travelers__icon-car" src="https://via.placeholder.com/23x24" alt="">
               <img class="travelers__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
@@ -148,43 +149,64 @@
               <img class="travelers__flag" src="https://via.placeholder.com/35x25" alt="">
               <img class="travelers__flag" src="https://via.placeholder.com/35x25" alt="">
               <h3 class="travelers__name">Петя Демин</h3>
-              <p class="travelers__description">#бургер #бар #футбол #концерт #крафт</p>
+              <p class="travelers__hashtags">#бургер #бар #футбол #концерт #крафт</p>
               <img class="travelers__icon-plane travelers__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
               <img class="travelers__icon-car travelers__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
               <img class="travelers__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
               <img class="travelers__icon-afoot travelers__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
             </li>
           </ul>
-          <a class="travelers__to-all button" href="">Показать всех</a>
+          <a class="travelers__to-all button button--yellow" href="">Показать всех</a>
         </div>
       </section>
 
       <section class="add-profile">
         <div class="add-profile__wrapper">
-          <h2>Добавьте свой профиль</h2>
+          <h2 class="add-profile__title">Добавьте свой профиль</h2>
           <ul class="add-profile__list">
             <li class="add-profile__item">
-              <p class="add-profile__description">Базовое размещение Бесплатно</p>
-              <p class="add-profile__number">1</p>
+              <p class="add-profile__description">Базовое размещение</p>
+              <p class="add-profile__price">Бесплатно</p>
+              <p class="add-profile__number add-profile__number--orange">1</p>
             </li>
             <li class="add-profile__item">
-              <p class="add-profile__description">Вывод на первых позициях 99 руб./мес</p>
-              <p class="add-profile__number">2</p>
+              <p class="add-profile__description">Вывод на первых позициях</p>
+              <p class="add-profile__price">99 руб./мес</p>
+              <p class="add-profile__number add-profile__number--yellow-dark">2</p>
             </li>
             <li class="add-profile__item">
-              <p class="add-profile__description">Кастомный цвет карточки 59 руб./мес</p>
-              <p class="add-profile__number">3</p>
+              <p class="add-profile__description">Кастомный цвет карточки</p>
+              <p class="add-profile__price">59 руб./мес</p>
+              <p class="add-profile__number add-profile__number--yellow">3</p>
             </li>
           </ul>
-          <a class="add-profile__business-tariff" href="">Показать всех</a>
+          <a class="add-profile__business-tariff" href="">Показать тарифы для бизнеса</a>
+        </div>
+      </section>
+
+      <section class="interested-in">
+        <div class="interested-in__wrapper">
+          <h2 class="interested-in__title">Заинтересовались?</h2>
+          <p class="interested-in__description">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="" class="interested-in__link">авторизуйтесь</a>.</p>
+          <input class="interested-in__email" type="email" value="E-mail">
+          <p class="interested-in__questions">Остались вопросы? Мы с радостью на них ответим!</p>
+          <a class="interested-in__info" href="tel:8 800 555-86-28">8 800 555-86-28</a>
+          <a class="interested-in__info" href="">mail@htmlacademy.ru</a>
+        </div>
+      </section>
+
+      <section class="route">
+        <div class="route__wrapper">
+          <p class="route__address">ул. Большая Конюшенная, 19/8</p>
+          <button class="route__button button button--yellow" type="button">Проложить маршрут</button>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__drove drove">
-        <b class="drove__description">Погнали?</b>
-      </div>
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали»">
+      </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">

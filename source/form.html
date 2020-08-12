@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="https://via.placeholder.com/96x15" alt="">
+        <img src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -53,10 +54,10 @@
             <p class="profile-info__text">level</p>
           </div>
           <img class="profile-info__avatar" src="https://via.placeholder.com/100x100" alt="">
-          <button class="profile-info__button button" type="button">Изменить</button>
-          <p class="profile-info__">Тэги</p>
-          <p class="profile-info__">#бургер #бар #футбол #концерт #крафт</p>
-          <p class="profile-info__">Транспорт</p>
+          <button class="profile-info__button button-light button-light--change" type="button">Сменить фото</button>
+          <p class="profile-info__title">Тэги</p>
+          <p class="profile-info__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+          <p class="profile-info__title">Транспорт</p>
           <img class="profile-info__icon-plane profile-info__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
           <img class="profile-info__icon-car profile-info__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
           <img class="profile-info__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
@@ -71,13 +72,13 @@
               <h3 class="plan-infomation__cities">Франция, Италия</h3>
               <p class="plan-infomation__people">3 Попутчика</p>
               <p class="plan-infomation__dates">26 мар — 29 мар</p>
-              <button class="plan-infomation__button button" type="button">Изменить</button>
+              <button class="plan-infomation__button button-grey button-grey--edit" type="button">Изменить</button>
             </li>
             <li class="plans__item plan-infomation">
               <h3 class="plan-infomation__cities">Таиланд, Индонезия</h3>
               <p class="plan-infomation__people">1 Попутчик</p>
               <p class="plan-infomation__dates">1 июл — 15 июл</p>
-              <button class="plan-infomation__button button" type="button">Изменить</button>
+              <button class="plan-infomation__button button-grey button-grey--edit" type="button">Изменить</button>
             </li>
           </ul>
         </div>
@@ -120,7 +121,7 @@
               <button class="steps__prev" type="button">Предыдущий месяц</button>
               <button class="steps__next" type="button">Следующий месяц</button>
               <!--Здесь будет календарь-->
-              <a class="steps__button button-next" href="#step-two" type="button">Следующий шаг</a>
+              <a class="steps__button button-form button-form--next" href="#step-two" type="button">Следующий шаг</a>
             </li>
 
             <li class="steps__item">
@@ -147,11 +148,11 @@
                 </button>
               </p>
               <p class="steps__choose-country">
-                <button class="steps__button button-choose">Выберите страну</button>
+                <button class="steps__button button-country button-country--choose">Выберите страну</button>
               </p>
-              <button class="steps__button button-country" type="button">Добавить страну</button>
-              <a class="steps__button button-next" href="#step-three" type="button">Следующий шаг</a>
-              <a class="steps__button button-prev" href="#step-one" type="button">На шаг назад</a>
+              <button class="steps__button button-country button-country--add" type="button">Добавить страну</button>
+              <a class="steps__button button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
+              <a class="steps__button button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
             </li>
 
             <li class="steps__item">
@@ -163,7 +164,7 @@
                 Босния и Герцеговина
                 <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
 
-                <textarea class="steps__textarea" name="comment" cols="25" rows="10">План действий</textarea>
+                <textarea class="steps__textarea steps__textarea-opacity" name="comment" cols="25" rows="10">План действий</textarea>
               </p>
               <p class="steps__country">
                 Чехия
@@ -171,8 +172,8 @@
 
                 <textarea class="steps__textarea" name="comment" cols="25" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </p>
-              <button class="steps__button button-submit" type="submit">Отправить</button>
-              <a class="steps__button button-prev" href="#step-two" type="button">На шаг назад</a>
+              <button class="steps__button button-form button-form--submit" type="submit">Отправить</button>
+              <a class="steps__button button-form button-form--prev" href="#step-two" type="button">На шаг назад</a>
             </li>
 
           </ul>
@@ -181,9 +182,9 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__drove drove">
-        <b class="drove__description">Погнали?</b>
-      </div>
+      <a class="page-footer__logo">
+        <img src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали»">
+      </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
