@@ -3,23 +3,18 @@
 }
 
 .add-plan__wrapper {
-  @media (max-width: @mobile-width) {
-    width: 270px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 2160px;
-  }
+  width: 270px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 2160px;
 
   @media (min-width: @tablet-width) {
     width: 630px;
-    display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 50px 3160px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1320px;
-    grid-template-columns: 1fr;
     grid-template-rows: 50px 3265px;
   }
 }
@@ -30,26 +25,10 @@
   font-weight: bold;
   color: @blue3;
 
-  @media (max-width: @mobile-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-  }
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .add-plan__list {
@@ -57,24 +36,8 @@
   padding: 0;
   list-style: none;
 
-  @media (max-width: @mobile-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }

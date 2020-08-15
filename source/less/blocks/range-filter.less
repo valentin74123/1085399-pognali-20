@@ -5,11 +5,7 @@
   font-weight: 500;
   color: @blue3;
   letter-spacing: 0.06em;
-
-
-  @media (max-width: @mobile-width) {
-    width: 100px;
-  }
+  width: 100px;
 
   @media (min-width: @tablet-width) {
     width: 74px;
@@ -22,22 +18,8 @@
 
 .range-filter__price-controls {
   &--min-max {
-    @media (max-width: @mobile-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50px;
-    }
-
-    @media (min-width: @tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50px;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
   }
 }

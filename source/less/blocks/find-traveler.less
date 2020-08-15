@@ -3,28 +3,21 @@
 }
 
 .find-traveler__wrapper {
-  @media (max-width: @mobile-width) {
-    width: 270px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 700px;
-  }
+  width: 270px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 700px;
 
   @media (min-width: @tablet-width) {
     width: 550px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 700px;
   }
 
   @media (min-width: @desktop-width) {
     width: 285px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 700px;
   }
 }
 
-.find-traveler__fieldset div {
+.find-traveler__fieldset-wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-around;
@@ -43,7 +36,7 @@
   letter-spacing: 0.02em;
 
   @media (max-width: @mobile-width) {
-    width: 70px;
+    width: 145px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -51,18 +44,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    width: 460px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 70px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    width: 190px;
   }
 }
 
