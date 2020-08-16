@@ -2,6 +2,21 @@
   background-color: @yellow;
 }
 
+.route__wrapper {
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1022px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+}
+
 .route__address {
   font-size: 16px;
   line-height: 22px;

@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -59,82 +60,99 @@
             <h2 class="find-traveler__title">Подберите идеального попутчика</h2>
             <form class="find-traveler__form" action="https://echo.htmlacademy.ru" method="POST">
               <fieldset class="find-traveler__fieldset">
-                <p class="find-traveler__item">Хобби</p>
-                <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+                <div class="find-traveler__fieldset-wrapper">
+                  <p class="find-traveler__item">Хобби</p>
+                  <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+                </div>
               </fieldset>
               <fieldset class="find-traveler__fieldset">
-                <p class="find-traveler__item">Музыка</p>
-                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
-                <ul class="find-traveler__list musical-genres">
-                  <li class="musical-genres__item music-genre">
-                    <input class="music-genre__checkbox" type="checkbox" id="filter-rock" name="rock" checked>
-                    <label class="music-genre__description" for="filter-rock">Тяжелый рок</label>
-                  </li>
-                  <li class="musical-genres__item music-genre">
-                    <input class="music-genre__checkbox" type="checkbox" id="filter-rap" name="rap" checked>
-                    <label class="music-genre__description" for="filter-rap">Русский рэп</label>
-                  </li>
-                  <li class="musical-genres__item music-genre">
-                    <input class="music-genre__checkbox" type="checkbox" id="filter-eurodance" name="eurodance">
-                    <label class="music-genre__description" for="filter-eurodance">Евроденс</label>
-                  </li>
+                <div class="find-traveler__fieldset-wrapper">
+                  <p class="find-traveler__item">Музыка</p>
+                  <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                  <ul class="find-traveler__list musical-genres">
+                    <li class="musical-genres__item music-genre">
+                      <input class="music-genre__checkbox" type="checkbox" id="filter-rock" name="rock" checked>
+                      <label class="music-genre__description" for="filter-rock">Тяжелый рок</label>
+                    </li>
+                    <li class="musical-genres__item music-genre">
+                      <input class="music-genre__checkbox" type="checkbox" id="filter-rap" name="rap" checked>
+                      <label class="music-genre__description" for="filter-rap">Русский рэп</label>
+                    </li>
+                    <li class="musical-genres__item music-genre">
+                      <input class="music-genre__checkbox" type="checkbox" id="filter-eurodance" name="eurodance">
+                      <label class="music-genre__description" for="filter-eurodance">Евроденс</label>
+                    </li>
+                  </ul>
+                </div>
               </fieldset>
               <fieldset class="find-traveler__fieldset">
-                <p class="find-traveler__item">Еда</p>
-                <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+                <div class="find-traveler__fieldset-wrapper">
+                  <p class="find-traveler__item">Еда</p>
+                  <button class="find-traveler__uncover" type="button">Раскрыть фильтр</button>
+                </div>
               </fieldset>
               <fieldset class="find-traveler__fieldset">
-                <p class="find-traveler__item">Транспорт</p>
-                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
-
-                <input class="find-traveler__checkbox" type="checkbox" id="plane" name="plane" checked>
-                <label class="find-traveler__description" for="plane">
-                  <img class="find-traveler__icon-plane find-traveler__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
-                </label>
-
-                <input class="find-traveler__checkbox" type="checkbox" id="car" name="car" checked>
-                <label class="find-traveler__description" for="car">
-                  <img class="find-traveler__icon-car find-traveler__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
-                </label>
-
-                <input class="find-traveler__checkbox" type="checkbox" id="bicycle" name="bicycle">
-                <label class="find-traveler__description" for="bicycle">
-                  <img class="find-traveler__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
-                </label>
-
-                <input class="find-traveler__checkbox" type="checkbox" id="afoot" name="afoot" checked>
-                <label class="find-traveler__description" for="afoot">
-                  <img class="find-traveler__icon-afoot find-traveler__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
-                </label>
+                <div class="find-traveler__fieldset-wrapper">
+                  <p class="find-traveler__item">Транспорт</p>
+                  <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                  <ul class="find-traveler__list transports">
+                    <li class="transports__item">
+                      <input class="transports__checkbox" type="checkbox" id="plane" name="plane" checked>
+                      <label class="transports__description" for="plane">
+                        <img class="transports__icon-plane transports__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                      </label>
+                    </li>
+                    <li class="transports__item">
+                      <input class="transports__checkbox" type="checkbox" id="car" name="car" checked>
+                      <label class="transports__description" for="car">
+                        <img class="transports__icon-car transports__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                      </label>
+                    </li>
+                    <li class="transports__item">
+                      <input class="transports__checkbox" type="checkbox" id="bicycle" name="bicycle">
+                      <label class="transports__description" for="bicycle">
+                        <img class="transports__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                      </label>
+                    </li>
+                    <li class="transports__item">
+                      <input class="transports__checkbox" type="checkbox" id="afoot" name="afoot" checked>
+                      <label class="transports__description" for="afoot">
+                        <img class="transports__icon-afoot transports__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </fieldset>
-              <fieldset class="find-traveler__fieldset">
-                <p class="find-traveler__item">Левел</p>
-                <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
-                <div class="find-traveler__range-filter range-filter">
-                  <div class="range-filter__price-controls">
-                    <div class="range-filter__min">
-                      <label class="range-filter__min-cost" for="min-cost"></label>
-                      <input type="number" id="min-cost" name="min-cost" value="30">
+              <fieldset class="find-traveler__fieldset find-traveler__fieldset--level">
+                <div class="find-traveler__fieldset-wrapper">
+                  <p class="find-traveler__item">Левел</p>
+                  <button class="find-traveler__uncover find-traveler__uncover--active" type="button">Раскрыть фильтр</button>
+                  <div class="find-traveler__range-filter range-filter">
+                    <div class="range-filter__price-controls range-filter__price-controls--min-max">
+                      <div class="range-filter__min">
+                        <label class="range-filter__min-cost" for="min-cost"></label>
+                        <input type="number" id="min-cost" name="min-cost" value="30">
+                      </div>
+                      <div class="range-filter__max">
+                        <label class="range-filter__max-cost" for="max-cost"></label>
+                        <input type="number" id="max-cost" name="max-cost" value="100">
+                      </div>
                     </div>
-                    <div class="range-filter__max">
-                      <label class="range-filter__max-cost" for="max-cost"></label>
-                      <input type="number" id="max-cost" name="max-cost" value="100">
-                    </div>
-                  </div>
-                  <div class="range-filter__range-controls">
-                    <div class="range-filter__scale">
-                      <div class="range-filter__bar"></div>
-                    </div>
-                    <div class="range-filter__toggle toggle-min">
-                      <span class="visually-hidden">Переключатель минимум</span>
-                    </div>
-                    <div class="range-filter__toggle toggle-max">
-                      <span class="visually-hidden">Переключатель максимум</span>
+                    <div class="range-filter__range-controls">
+                      <div class="range-filter__scale">
+                        <div class="range-filter__bar"></div>
+                      </div>
+                      <div class="range-filter__toggle toggle-min">
+                        <span class="visually-hidden">Переключатель минимум</span>
+                      </div>
+                      <div class="range-filter__toggle toggle-max">
+                        <span class="visually-hidden">Переключатель максимум</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <button class="find-traveler__button button-catalog button-catalog--show" type="submit">Показать</button>
               </fieldset>
+              <button class="find-traveler__button button-catalog button-catalog--show" type="submit">Показать</button>
             </form>
           </div>
         </section>
@@ -148,18 +166,35 @@
                 <p class="travelers-profile__distance">1,5 М</p>
                 <p class="travelers-profile__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</p>
 
-                <p class="travelers-profile__description">хочет посетить:</p>
-                <p class="travelers-profile__city travelers-profile__city--sri-lanka">Шри-ланка</p>
-                <p class="travelers-profile__city travelers-profile__city--thailand">Тайланд</p>
-                <p class="travelers-profile__city travelers-profile__city--seychelles">Сейшелы</p>
+                <p class="travelers-profile__description travelers-profile__description--visit">хочет посетить:</p>
+                <ul class="travelers-profile__list">
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--sri-lanka">Шри-ланка</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--thailand">Тайланд</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--seychelles">Сейшелы</p>
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">транспорт:</p>
-                <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
-
-                <p class="travelers-profile__description">левел:</p>
+                <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
+                <ul class="travelers-profile__transpotrs-list">
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                </ul>
+                <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -169,17 +204,33 @@
                 <p class="travelers-profile__distance">1500</p>
                 <p class="travelers-profile__hashtags">#бургер #бар #футбол #концерт #крафт</p>
 
-                <p class="travelers-profile__description">хочет посетить:</p>
-                <p class="travelers-profile__city travelers-profile__city--belgium">Бельгия</p>
-                <p class="travelers-profile__city travelers-profile__city--czech-republic">Чехия</p>
+                <p class="travelers-profile__description travelers-profile__description--visit">хочет посетить:</p>
+                <ul class="travelers-profile__list">
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--belgium">Бельгия</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--czech-republic">Чехия</p>
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">транспорт:</p>
-                <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-afoot travelers-profile__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
+                <ul class="travelers-profile__transpotrs-list">
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-afoot travelers-profile__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">левел:</p>
+                <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -189,18 +240,36 @@
                 <p class="travelers-profile__distance">170</p>
                 <p class="travelers-profile__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
 
-                <p class="travelers-profile__description">хочет посетить:</p>
-                <p class="travelers-profile__city travelers-profile__city--usa">США</p>
-                <p class="travelers-profile__city travelers-profile__city--australia">Австралия</p>
-                <p class="travelers-profile__city travelers-profile__city--dominica">Доминика</p>
+                <p class="travelers-profile__description travelers-profile__description--visit">хочет посетить:</p>
+                <ul class="travelers-profile__list">
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--usa">США</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--australia">Австралия</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--dominica">Доминика</p>
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">транспорт:</p>
-                <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-bicycle travelers-profile__icon-bicycle--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
+                <ul class="travelers-profile__transpotrs-list">
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-bicycle travelers-profile__icon-bicycle--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">левел:</p>
+                <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -210,17 +279,35 @@
                 <p class="travelers-profile__distance">23</p>
                 <p class="travelers-profile__hashtags">#образование #карьера#учеба #линкедин</p>
 
-                <p class="travelers-profile__description">хочет посетить:</p>
-                <p class="travelers-profile__city travelers-profile__city--great-britain">Великобритания</p>
-                <p class="travelers-profile__city travelers-profile__city--germany">Германия</p>
+                <p class="travelers-profile__description travelers-profile__description--visit">хочет посетить:</p>
+                <ul class="travelers-profile__list">
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--great-britain">Великобритания</p>
+                  </li>
+                  <li class="travelers-profile__item">
+                    <p class="travelers-profile__city travelers-profile__city--germany">Германия</p>
+                  </li>
+                </ul>
 
-                <p class="travelers-profile__description">транспорт:</p>
-                <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
-                <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
 
-                <p class="travelers-profile__description">левел:</p>
+
+                <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
+                <ul class="travelers-profile__transpotrs-list">
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                  <li class="travelers-profile__transpotrs-item">
+                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                  </li>
+                </ul>
+
+                <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>

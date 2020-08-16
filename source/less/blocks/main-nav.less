@@ -1,11 +1,24 @@
-.site-list__item a {
-  color: @white;
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.user-list__login {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: bold;
-  color: @light-black;
-  background-color: @yellow;
+@media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 690px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 975px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
 }

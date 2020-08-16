@@ -2,11 +2,38 @@
   background-color: @blue2;
 }
 
+.travelers__wrapper {
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 140px 50px 1fr 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1250px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 140px 200px 80px;
+  }
+}
+
 .travelers__title {
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
   color: @orange;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .travelers__description {
@@ -14,6 +41,20 @@
   line-height: 22px;
   font-weight: lighter;
   color: @white;
+  width: 215px;
+
+  @media (min-width: @tablet-width) {
+    width: 430px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }
 
 .travelers__description-bold {
@@ -21,6 +62,41 @@
   line-height: 22px;
   font-weight: bold;
   color: @white;
+  width: 215px;
+
+  @media (min-width: @tablet-width) {
+    width: 430px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+.travelers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
 }
 
 .travelers__item {
@@ -39,4 +115,22 @@
   line-height: 18px;
   font-weight: normal;
   color: @dark-gray;
+}
+
+.travelers__to-all {
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
 }

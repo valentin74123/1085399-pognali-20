@@ -2,12 +2,60 @@
   background-color: @yellow;
 }
 
+.find-traveler__wrapper {
+  width: 270px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 700px;
+
+  @media (min-width: @tablet-width) {
+    width: 550px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
+  }
+}
+
+.find-traveler__fieldset-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
 .find-traveler__title {
   font-size: 22px;
   line-height: 22px;
   font-weight: bold;
   color: @blue3;
   letter-spacing: 0.02em;
+
+  @media (max-width: @mobile-width) {
+    width: 145px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 190px;
+  }
+}
+
+.find-traveler__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .find-traveler__item {

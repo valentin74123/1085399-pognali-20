@@ -1,6 +1,24 @@
 .about-service {
   background-color: @blue2;
   background-image: url("../img/about-mobile@1x.png");
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.about-service__wrapper {
+  width: 210px;
+
+  @media (min-width: @tablet-width) {
+    width: 310px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 620px;
+  }
 }
 
 .about-service__title {
