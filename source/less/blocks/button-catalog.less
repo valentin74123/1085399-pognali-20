@@ -3,14 +3,39 @@
   line-height: 17px;
   font-weight: bold;
   text-transform: uppercase;
+  border-radius: 25px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 17px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &--show {
     color: @light-black;
     background-color: @white;
+    padding: 14px 0;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--call {
     color: @blue;
     background-color: @yellow;
+
+    &:hover,
+    &:focus {
+      background-color: @yellow-dark;
+    }
+
+    &:active {
+      color: rgba(@blue3, 0.3);
+    }
   }
 }

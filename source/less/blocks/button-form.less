@@ -4,9 +4,55 @@
   font-weight: bold;
   color: @blue3;
   text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 29px auto 27px 34px;
+  }
+
 
   &--next,
   &--submit {
     background-color: @yellow;
+    border-radius: 20px;
+    padding: 7px 0;
+    margin-top: 23px;
+
+    @media (min-width: @tablet-width) {
+      padding: 28px 34px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 60px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @yellow-dark;
+    }
+
+    &:active {
+      color: rgba(@blue3, 0.3);
+    }
+  }
+
+  &--prev {
+    margin-top: 15px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 80px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

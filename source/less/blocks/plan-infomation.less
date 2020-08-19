@@ -1,0 +1,80 @@
+.plan-infomation {
+  padding: 24px 0;
+  padding-left: 23px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 37px 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.plan-infomation__cities {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: @blue3;
+  margin: 0;
+  margin-bottom: 20px;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.plan-infomation__people,
+.plan-infomation__dates {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  color: @blue3;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.plan-infomation__people {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.plan-infomation__dates {
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}

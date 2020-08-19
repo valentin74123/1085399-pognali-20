@@ -5,8 +5,43 @@
   color: @blue3;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 25px 26px;
+  }
+
+  &--choose {
+    padding: 11px 11px;
+    margin: 0 auto;
+    border: 1px solid @ligh-gray3;
+    background-color: inherit;
+
+    &:hover,
+    &:focus {
+      border: 1px solid @dark-gray3;
+    }
+
+    &:active {
+      color: @white;
+      border: none;
+      background-color: @blue3;
+    }
+  }
 
   &--add {
+    padding: 13px 75px 11px 11px;
     background-color: @light-gray;
+
+    &:hover,
+    &:focus {
+      background-color: @light-gray4;
+    }
+
+    &:active {
+      background-color: @light-gray4;
+    }
   }
 }

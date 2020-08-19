@@ -2,30 +2,57 @@
   background-color: @light-gray4;
 }
 
+.plans__wrapper {
+  padding: 30px 25px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 75px 75px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 55px 60px 65px 125px;
+  }
+}
+
 .plans__title {
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
   color: @blue3;
+  margin-bottom: 30px;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .plans__item {
   background-color: @white;
 }
 
-.plan-infomation__cities {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: bold;
-  color: @blue3;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
-.plan-infomation__people,
-.plan-infomation__dates {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 500;
-  color: @blue3;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.plans__item {
+  background-color: @white;
+  border-radius: 15px;
+  margin-bottom: 10px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }

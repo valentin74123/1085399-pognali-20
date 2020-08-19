@@ -2,9 +2,64 @@
   background-color: @light-gray6;
 }
 
+.country-filter__wrapper {
+  width: auto;
+  padding: 20px 29px 17px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 74px;
+  }
+}
+
 .country-filter__title {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   color: @blue2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.country-filter__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.country-filter__item {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: @blue2;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.country-filter__uncover {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    color: @blue2;
+    background-color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+  }
 }

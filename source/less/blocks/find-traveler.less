@@ -1,5 +1,51 @@
 .find-traveler {
   background-color: @yellow;
+  margin: 20px 25px 30px 25px;
+  border-radius: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 20px 25px 30px 25px;
+    width: 300px;
+  }
+}
+
+.find-traveler__wrapper {
+  padding: 24px 20px;
+
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 45px;
+  }
+}
+
+.find-traveler__fieldset {
+  border: none;
+}
+
+.find-traveler__fieldset-wrapper {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @yellow-dark2;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
 }
 
 .find-traveler__title {
@@ -8,6 +54,36 @@
   font-weight: bold;
   color: @blue3;
   letter-spacing: 0.02em;
+  margin: 0;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid @yellow-dark2;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: inline;
+    }
+  }
+}
+
+.find-traveler__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .find-traveler__item {
@@ -15,4 +91,15 @@
   line-height: 18px;
   font-weight: bold;
   color: @blue3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.find-traveler__uncover {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

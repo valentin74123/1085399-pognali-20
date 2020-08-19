@@ -7,6 +7,62 @@
   line-height: 24px;
   font-weight: bold;
   color: @orange;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+}
+
+.add-profile__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr 50px;
+  }
+}
+
+.add-profile__item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-profile__info {
+  @media (min-width: @tablet-width) {
+    min-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 800px;
+  }
 }
 
 .add-profile__description {
@@ -14,6 +70,13 @@
   line-height: 16px;
   font-weight: 300;
   color: @dark-gray;
+  margin: 0;
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .add-profile__price {
@@ -21,6 +84,12 @@
   line-height: 16px;
   font-weight: 300;
   color: @dark-gray;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }
 
 .add-profile__number {
@@ -28,6 +97,23 @@
   line-height: 16px;
   font-weight: 300;
   color: @white;
+  margin: 0;
+  border-radius: 45px;
+
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+  padding-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+
+    padding-top: 20px;
+    padding-bottom: 24px;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
 
   &--orange {
     background-color: @orange;
@@ -47,4 +133,11 @@
   line-height: 16px;
   font-weight: bold;
   color: @blue-light;
+  margin: 0 auto;
+  text-decoration: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -2,9 +2,48 @@
   background-color: @yellow;
 }
 
+.route__wrapper {
+  width: auto;
+  padding: 31px 25px 35px 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 75px 85px 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 283px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .route__address {
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
   color: @blue3;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 44px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.route__button {
+  padding: 22px;
+
+  @media (min-width: @desktop-width) {
+    width: 325px;
+    height: 80px;
+  }
 }

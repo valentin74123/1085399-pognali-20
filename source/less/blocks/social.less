@@ -1,10 +1,48 @@
-.social__item {
-  background-color: @yellow;
+.social {
+  margin-bottom: 38px;
 }
 
-.copyright__text {
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: normal;
-  color: @dark-gray;
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.social__link {
+  background-color: @yellow;
+  padding: 14px 13.5px;
+  margin-right: 16px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  & path {
+    fill: @blue2;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @yellow-dark;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--facebook {
+      padding: 18px 24px;
+    }
+
+    &--vkontakte {
+      padding: 20px 17px;
+    }
+
+    &--instagram {
+      padding: 20px;
+    }
+  }
 }

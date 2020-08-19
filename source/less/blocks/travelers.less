@@ -2,11 +2,52 @@
   background-color: @blue2;
 }
 
+.travelers__wrapper {
+  padding-top: 70px;
+  padding-bottom: 31px;
+  width: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 210px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 6fr 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+  }
+}
+
 .travelers__title {
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
   color: @orange;
+  margin: 0;
+  padding-left: 50px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 55px;
+    padding-left: 73px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .travelers__description {
@@ -14,6 +55,29 @@
   line-height: 22px;
   font-weight: lighter;
   color: @white;
+  margin: 0;
+  width: auto;
+  padding-left: 50px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 40px;
+    width: 430px;
+    padding-left: 73px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .travelers__description-bold {
@@ -21,10 +85,95 @@
   line-height: 22px;
   font-weight: bold;
   color: @white;
+  margin: 0;
+  width: 215px;
+  padding-left: 50px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 60px;
+    width: 260px;
+    padding-left: 73px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 80px;
+    padding-left: 130px;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.travelers__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: auto;
+
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 60px;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 }
 
 .travelers__item {
+  @media (min-width: @tablet-width) {
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 30px;
+    }
+  }
+}
+
+.travelers__avatar {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.travelers__info {
   background-color: @white;
+  padding-top: 27px;
+  padding-left: 46px;
+  padding-right: 36px;
+  padding-bottom: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: auto;
 }
 
 .travelers__name {
@@ -32,6 +181,15 @@
   line-height: 21px;
   font-weight: bold;
   color: @blue3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .travelers__hashtags {
@@ -39,4 +197,40 @@
   line-height: 18px;
   font-weight: normal;
   color: @dark-gray;
+}
+
+.travelers__transpotrs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.travelers__transpotrs-item {
+  padding: 0 5px;
+}
+
+.travelers__to-all {
+  margin: 0 25px;
+  padding: 21px 23px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 76px;
+    width: auto;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    margin-left: 131px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
 }
