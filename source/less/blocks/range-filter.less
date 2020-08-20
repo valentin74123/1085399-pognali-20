@@ -5,4 +5,21 @@
   font-weight: 500;
   color: @blue3;
   letter-spacing: 0.06em;
+  width: 100px;
+
+  @media (min-width: @tablet-width) {
+    width: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 96px;
+  }
+}
+
+.range-filter__price-controls {
+  &--min-max {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+  }
 }

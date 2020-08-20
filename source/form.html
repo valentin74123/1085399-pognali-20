@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -55,7 +56,7 @@
           </div>
           <img class="profile-info__avatar" src="https://via.placeholder.com/100x100" alt="">
           <button class="profile-info__button button-light button-light--change" type="button">Сменить фото</button>
-          <p class="profile-info__title">Тэги</p>
+          <p class="profile-info__title profile-info__title--tags">Тэги</p>
           <p class="profile-info__hashtags">#бургер #бар #футбол #концерт #крафт</p>
           <p class="profile-info__title profile-info__title--transport">Транспорт</p>
           <ul class="profile-info__list transports">
@@ -115,9 +116,9 @@
                 Укажите предпочтительное количество попутчиков, которых
                 вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
-              <label class="steps__label" for="traveler">Ищу попутчиков:</label>
-              <p class="steps__denomination">Чел.</p>
-              <div class="steps__qty qty">
+              <label class="steps__label steps__label--companion" for="traveler">Ищу попутчиков:</label>
+              <p class="steps__denomination steps__denomination--people">Чел.</p>
+              <div class="steps__qty steps__qty--people qty">
                 <button class="qty__button-minus" type="button">
                   <span class="visually-hidden">-</span>
                 </button>
@@ -126,9 +127,9 @@
                   <span class="visually-hidden">+</span>
                 </button>
               </div>
-              <label class="steps__label" for="duration">Длительность:</label>
-              <p class="steps__denomination">Дн.</p>
-              <div class="steps__qty qty">
+              <label class="steps__label steps__label--duration" for="duration">Длительность:</label>
+              <p class="steps__denomination steps__denomination--days">Дн.</p>
+              <div class="steps__qty steps__qty--days  qty">
                 <button class="qty__button-minus" type="button">
                   <span class="visually-hidden">-</span>
                 </button>
@@ -147,7 +148,7 @@
               <button class="steps__prev" type="button">Предыдущий месяц</button>
               <button class="steps__next" type="button">Следующий месяц</button>
               <!--Здесь будет календарь-->
-              <a class="steps__button button-form button-form--next" href="#step-two" type="button">Следующий шаг</a>
+              <a class="steps__button steps__button--next-one button-form button-form--next" href="#step-two" type="button">Следующий шаг</a>
             </li>
 
             <li class="steps__item steps__item--two">
@@ -155,7 +156,7 @@
               <p class="steps__info steps__info--two">Укажите страны, которые вы хотели посетить.
                 Это может быть одна или сразу несколько.
               </p>
-              <p class="steps__countries">
+              <p class="steps__countries steps__countries--bosnia">
                 <select name="country">
                   <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
                 </select>
@@ -164,7 +165,7 @@
                   <span class="visually-hidden">Убрать страну</span>
                 </button>
               </p>
-              <p class="steps__countries">
+              <p class="steps__countries steps__countries--czech-republic">
                 <select name="country">
                   <option value="Чехия" selected>Чехия</option>
                 </select>
@@ -176,9 +177,9 @@
               <p class="steps__choose-country">
                 <button class="steps__button button-country button-country--choose">Выберите страну</button>
               </p>
-              <button class="steps__button button-country button-country--add" type="button">Добавить страну</button>
-              <a class="steps__button button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
-              <a class="steps__button button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
+              <button class="steps__button steps__button--add button-country button-country--add" type="button">Добавить страну</button>
+              <a class="steps__button steps__button--next-two button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
+              <a class="steps__button steps__button--prev-two button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
             </li>
 
             <li class="steps__item steps__item--three">
@@ -186,20 +187,20 @@
               <p class="steps__info steps__info--three">Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
-              <p class="steps__country">
+              <p class="steps__country steps__country--bosnia">
                 Босния и Герцеговина
                 <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
 
                 <textarea class="steps__textarea steps__textarea-opacity" name="comment" cols="25" rows="10">План действий</textarea>
               </p>
-              <p class="steps__country">
+              <p class="steps__country steps__country--czech-republic">
                 Чехия
                 <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">
 
                 <textarea class="steps__textarea" name="comment" cols="25" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </p>
-              <button class="steps__button button-form button-form--submit" type="submit">Отправить</button>
-              <a class="steps__button button-form button-form--prev" href="#step-two" type="button">На шаг назад</a>
+              <button class="steps__button steps__button--submit button-form button-form--submit" type="submit">Отправить</button>
+              <a class="steps__button steps__button--prev-three button-form button-form--prev" href="#step-two" type="button">На шаг назад</a>
             </li>
 
           </ul>

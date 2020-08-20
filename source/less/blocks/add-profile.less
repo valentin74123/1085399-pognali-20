@@ -2,6 +2,35 @@
   background-color: @light-gray2;
 }
 
+.add-profile__wrapper {
+  padding-left: 50px;
+  padding-right: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 75px;
+    padding-bottom: 45px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 110px;
+    padding-bottom: 165px;
+
+    grid-template-rows: 200px 1fr 50px;
+  }
+}
+
 .add-profile__title {
   font-size: 24px;
   line-height: 24px;
@@ -125,6 +154,10 @@
 
   &--yellow {
     background-color: @yellow;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: -1;
   }
 }
 
