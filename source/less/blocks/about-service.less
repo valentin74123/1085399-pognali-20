@@ -1,24 +1,19 @@
 .about-service {
   background-color: @blue2;
-  background-image: url("../img/about-mobile@1x.png");
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 
   @media (min-width: @tablet-width) {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
   }
 }
 
 .about-service__wrapper {
-  width: 210px;
-
-  @media (min-width: @tablet-width) {
-    width: 310px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 620px;
-  }
+  padding: 33px 60px 82px 50px;
+  width: auto;
 }
 
 .about-service__title {
@@ -26,6 +21,11 @@
   line-height: 24px;
   font-weight: bold;
   color: @orange;
+
+  @media (min-width: @tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .about-service__description {
@@ -33,6 +33,15 @@
   line-height: 22px;
   font-weight: lighter;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 34px;
+  }
 }
 
 .about-service__description-bold {
@@ -40,4 +49,13 @@
   line-height: 22px;
   font-weight: bold;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 24px;
+  }
 }

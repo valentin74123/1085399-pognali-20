@@ -1,18 +1,25 @@
 .travelers-profile {
-  width: 270px;
+  padding: 15px 20px 20px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: auto;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 70px 30px 60px 60px 100px 50px 50px 20px;
 
   @media (min-width: @tablet-width) {
-    width: 690px;
-    grid-template-columns: 190px 150px 50px 100px;
+    padding: 35px 25px 25px 35px;
+    margin-bottom: 40px;
+
+    grid-template-columns: 3fr 3fr 1fr 2fr;
     grid-template-rows: 70px 100px 50px 40px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 950px;
-    grid-template-columns: 285px 200px 50px 160px 100px;
+    margin-bottom: 30px;
+
+    grid-template-columns: 3fr 2fr 1fr 2fr 1fr;
     grid-template-rows: 70px 100px 50px;
   }
 }
@@ -42,7 +49,19 @@
   grid-row-start: 1;
   grid-row-end: 2;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -70,6 +89,9 @@
   grid-row-end: 3;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -89,6 +111,9 @@
   grid-row-end: 4;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -221,6 +246,11 @@
   font-weight: 500;
   color: @blue3;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .travelers-profile__level {

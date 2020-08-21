@@ -1,0 +1,34 @@
+.social-list {
+  width: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.social-list__item {
+  margin: 0 13px;
+
+  & path {
+    fill: @blue2;
+  }
+
+  &:hover path,
+  &:focus path {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
