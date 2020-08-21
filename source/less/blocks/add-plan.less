@@ -3,19 +3,17 @@
 }
 
 .add-plan__wrapper {
-  width: 270px;
+  padding: 30px 25px 45px 25px;
+  width: auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 2160px;
 
   @media (min-width: @tablet-width) {
-    width: 630px;
-    grid-template-rows: 50px 3160px;
+    padding: 55px 75px 60px 75px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1320px;
-    grid-template-rows: 50px 3265px;
+    padding: 55px 60px 70px 60px;
   }
 }
 
@@ -29,6 +27,15 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+  }
 }
 
 .add-plan__list {

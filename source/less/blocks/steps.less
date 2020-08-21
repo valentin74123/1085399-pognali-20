@@ -1,60 +1,69 @@
 .steps__item {
   background-color: @white;
+  border-radius: 15px;
+  padding: 24px 20px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 43px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 160px;
+    margin-bottom: 45px;
+  }
 
   &--one {
-    width: 270px;
+    width: auto;
     display: grid;
-    grid-template-columns: 180px 90px;
-    grid-template-rows: 50px 160px 30px 40px 30px 40px 30px 40px 200px 40px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px min-content(90px) 30px 1fr 30px 1fr 1fr 1fr 200px 40px;
 
     @media (min-width: @tablet-width) {
-      width: 540px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 75px 100px 30px 70px 40px 30px 70px 86px 440px 40px;
+      grid-template-rows: 100px min-content(50px) 1fr 1fr 1fr 1fr 1fr 86px 440px 80px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 1320px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 50px 50px 100px 70px 70px 80px 460px 40px;
+      grid-template-rows: 50px 50px 100px 100px 100px 80px 200px min-content(100px);
     }
   }
 
   &--two {
-    width: 270px;
+    padding-bottom: 17px;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 70px 40px 40px 50px 40px 30px 30px;
+    grid-template-rows: 50px min-content(90px) 40px 40px 50px 40px 30px 30px;
 
     @media (min-width: @tablet-width) {
-      width: 540px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 75px 100px 60px 60px 60px 60px 40px;
+      grid-template-rows: 100px min-content(50px) 60px 60px 60px 60px 80px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 1320px;
       grid-template-columns: 1fr 650px 1fr;
-      grid-template-rows: 50px 50px 100px 70px 70px 70px 70px 40px;
+      grid-template-rows: 50px 50px 100px 70px 70px 70px 70px min-content(100px);
     }
   }
 
   &--three {
-    width: 270px;
+    padding-bottom: 17px;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 100px 280px 280px 30px 30px;
+    grid-template-rows: 50px min-content(90px) 280px 280px 30px 30px;
 
     @media (min-width: @tablet-width) {
-      width: 540px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 50px 100px 280px 280px 40px;
+      grid-template-rows: 100px min-content(50px) 280px 280px 80px;
     }
 
     @media (min-width: @desktop-width) {
-      width: 1320px;
-      grid-template-columns: 1fr 650px 1fr;
-      grid-template-rows: 50px 50px 100px 280px 280px 40px;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 50px 50px 100px 280px 280px min-content(100px);
     }
   }
 }
@@ -64,9 +73,22 @@
   line-height: 20px;
   font-weight: bold;
   color: @blue3;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    br {
+      display: none;
+    }
+  }
 
   &--one {
-    width: 160px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -74,7 +96,6 @@
   }
 
   &--two {
-    width: 100px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -87,7 +108,6 @@
   }
 
   &--three {
-    width: 160px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -110,16 +130,25 @@
   line-height: 22px;
   font-weight: normal;
   color: @dark-gray;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid @gray2;
+  }
 
   &--one {
-    width: 218px;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
 
     @media (min-width: @tablet-width) {
-      width: 450px;
+      grid-column-start: 1;
+      grid-column-end: 4;
     }
 
     @media (min-width: @desktop-width) {
@@ -129,14 +158,12 @@
   }
 
   &--two {
-    width: 250px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 
     @media (min-width: @tablet-width) {
-      width: 350px;
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 2;
@@ -152,14 +179,12 @@
   }
 
   &--three {
-    width: 250px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
 
     @media (min-width: @tablet-width) {
-      width: 450px;
       grid-column-start: 1;
       grid-column-end: 3;
     }
@@ -180,6 +205,14 @@
   color: @blue3;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
   &--companion {
     grid-column-start: 1;
@@ -193,6 +226,9 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 60px;
+      margin-bottom: 0;
+
       grid-row-start: 4;
       grid-row-end: 5;
     }
@@ -210,6 +246,9 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 25px;
+      margin-bottom: 60px;
+
       grid-row-start: 5;
       grid-row-end: 6;
     }
@@ -224,6 +263,14 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   opacity: 0.3;
+  margin: 0;
+  text-align: end;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 25px;
+  }
 
   &--people {
     grid-column-start: 2;
@@ -232,6 +279,9 @@
     grid-row-end: 4;
 
     @media (min-width: @desktop-width) {
+      margin-top: 60px;
+      margin-bottom: 25px;
+
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 4;
@@ -251,6 +301,9 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 25px;
+      margin-bottom: 60px;
+
       grid-column-start: 3;
       grid-column-end: 4;
       grid-row-start: 5;
@@ -260,6 +313,8 @@
 }
 
 .steps__qty {
+  margin-bottom: 20px;
+
   &--people {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -304,6 +359,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    margin-bottom: 25px;
+
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 4;
@@ -312,11 +370,6 @@
 }
 
 .steps__months {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-  color: @blue3;
-
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 8;
@@ -331,6 +384,9 @@
 }
 
 .steps__countries {
+  margin: 0;
+  margin-bottom: 22px;
+
   &--bosnia {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -358,7 +414,6 @@
     grid-row-start: 4;
     grid-row-end: 5;
 
-
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 3;
@@ -373,6 +428,16 @@
   }
 }
 
+.steps__flags {
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid @ligh-gray3;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
 .steps__countries select {
   font-size: 14px;
   line-height: 18px;
@@ -380,6 +445,15 @@
   color: @blue3;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  padding: 11px 7px 11px 11px;
+  border-radius: 10px;
+  border: 1px solid @ligh-gray3;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 25px 26px;
+  }
 }
 
 .steps__country {
@@ -387,6 +461,14 @@
   line-height: 18px;
   font-weight: 500;
   color: @blue3;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+  }
 
   &--bosnia {
     grid-column-start: 1;
@@ -458,15 +540,20 @@
 }
 
 .steps__button {
+  text-align: center;
+
   &--next-one {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 10;
     grid-row-end: 11;
 
-    @media (min-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 2;
+    }
+
+    @media (min-width: @desktop-width) {
       grid-row-start: 8;
       grid-row-end: 9;
     }
