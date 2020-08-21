@@ -11,7 +11,6 @@
 @import "blocks/main-nav.less";
 @import "blocks/site-list.less";
 @import "blocks/user-list.less";
-@import "blocks/social-list.less";
 @import "blocks/information.less";
 @import "blocks/about-service.less";
 @import "blocks/directions.less";
@@ -20,7 +19,6 @@
 @import "blocks/interested-in.less";
 @import "blocks/route.less";
 @import "blocks/social.less";
-@import "blocks/copyright.less";
 @import "blocks/page-footer.less";
 @import "blocks/profile-info.less";
 @import "blocks/plans.less";
@@ -28,11 +26,10 @@
 @import "blocks/add-plan.less";
 @import "blocks/steps.less";
 @import "blocks/qty.less";
-@import "blocks/months.less";
 @import "blocks/checkbox.less";
 @import "blocks/country-filter.less";
 @import "blocks/find-traveler.less";
-@import "blocks/list-catalog.less";
+@import "blocks/music-genre.less";
 @import "blocks/transports.less";
 @import "blocks/range-filter.less";
 @import "blocks/travelers-profiles.less";
@@ -44,8 +41,8 @@
   font-style: normal;
   font-display: swap;
   src:
-    url("../fonts/bloggersans.woff2") format("woff2"),
-    url("../fonts/bloggersans.woff") format("woff");
+    url("fonts/bloggersans.woff2") format("woff2"),
+    url("fonts/bloggersans.woff") format("woff");
 }
 
 @font-face {
@@ -54,12 +51,13 @@
   font-style: normal;
   font-display: swap;
   src:
-    url("../fonts/bloggersans-bold.woff2") format("woff2"),
-    url("../fonts/bloggersans-bold.woff") format("woff");
+    url("fonts/bloggersans-bold.woff2") format("woff2"),
+    url("fonts/bloggersans-bold.woff") format("woff");
 }
 
 body {
-  background: blue;
+
+  background: @blue2;
 }
 
 .active-heading {
