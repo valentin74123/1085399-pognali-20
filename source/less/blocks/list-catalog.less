@@ -1,0 +1,32 @@
+.list-catalog {
+  &--hobby,
+  &--eat {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    display: inline;
+
+    &--hobby,
+    &--eat {
+      display: none;
+    }
+  }
+}
+
+.list-catalog__description {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
