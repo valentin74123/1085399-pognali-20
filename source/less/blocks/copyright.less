@@ -1,7 +1,7 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  padding-top: 15px;
+  align-items: center;
   border-top: 1px solid @gray;
 }
 
@@ -10,9 +10,35 @@
   line-height: 16px;
   font-weight: normal;
   color: @dark-gray;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity:  0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-right: 23px;
+  }
+}
+
+.copyright__link {
+  & path {
+    fill: @dark-gray;
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: rgba(@dark-gray, 0.6);
+  }
+
+  &:active path {
+    fill: rgba(@dark-gray, 0.3);
   }
 }

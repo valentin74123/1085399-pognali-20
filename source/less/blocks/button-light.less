@@ -6,5 +6,21 @@
     color: @light-black;
     background-color: @light-gray4;
     text-transform: uppercase;
+
+    @media (min-width: @desktop-width) {
+      span {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @gray3;
+    }
+
+    &:active {
+      background-color: @light-gray4;
+      color: rgba(@light-black, 0.3);
+    }
   }
 }

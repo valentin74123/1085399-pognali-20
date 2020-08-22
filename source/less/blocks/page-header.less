@@ -1,6 +1,11 @@
 .page-header {
   display: flex;
   flex-direction: row;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 60px;
+    padding-top: 45px;
+  }
 }
 
 .page-header__logo {

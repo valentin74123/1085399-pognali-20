@@ -14,10 +14,25 @@
 
 .social__link {
   background-color: @yellow;
-  padding: 14px 13.5px;
+
   margin-right: 16px;
   border-radius: 50%;
   text-decoration: none;
+
+  &--facebook {
+    padding: 0 20px;
+    padding-bottom: 15px;
+    padding-top: 19px;
+  }
+
+  &--vkontakte {
+    padding: 17px 15px;
+  }
+
+  &--instagram {
+    padding: 18px;
+    padding-bottom: 15px;
+  }
 
   & path {
     fill: @blue2;
@@ -34,15 +49,24 @@
 
   @media (min-width: @tablet-width) {
     &--facebook {
-      padding: 18px 24px;
+      padding: 0 20px;
+      padding-bottom: 15px;
+      padding-top: 19px;
+      width: 14px;
+      height: 26px;
     }
 
     &--vkontakte {
-      padding: 20px 17px;
+      padding: 17px 15px;
+      width: 27px;
+      height: 18px;
     }
 
     &--instagram {
-      padding: 20px;
+      padding: 18px;
+      padding-bottom: 15px;
+      width: 20px;
+      height: 21px;
     }
   }
 }

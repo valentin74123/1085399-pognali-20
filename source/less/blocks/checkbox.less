@@ -1,4 +1,21 @@
 .checkbox__description {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-checkbox:checked + .checkbox__description::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.checkbox__description {
   font-size: 15px;
   line-height: 15px;
   font-weight: normal;
