@@ -1,7 +1,17 @@
 .checkbox__description {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  color: @blue3;
+
   position: relative;
   cursor: pointer;
   user-select: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .input-checkbox:checked + .checkbox__description::before {
@@ -13,16 +23,4 @@
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-.checkbox__description {
-  font-size: 15px;
-  line-height: 15px;
-  font-weight: normal;
-  color: @blue3;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-  }
 }
