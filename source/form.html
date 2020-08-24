@@ -123,7 +123,9 @@
     </header>
 
     <main class="page-main">
-      <h1 class="active-heading">Направление</h1>
+      <article class="active-heading">
+        <h1 class="active-heading-title">Направление</h1>
+      </article>
       <section class="profile-info">
         <div class="profile-info__wrapper">
           <div class="profile-info__level">
@@ -192,6 +194,11 @@
                 Укажите предпочтительное количество попутчиков, которых
                 вы хотели бы позвать в поездку и ее предполагаемую длительность.
               </p>
+              <ul class="steps__points-list steps__points-list--one points">
+                <li class="points__item points__item--active">Даты</li>
+                <li class="points__item">Маршрут</li>
+                <li class="points__item">Развлечения</li>
+              </ul>
               <label class="steps__label steps__label--companion" for="traveler">Ищу попутчиков:</label>
               <p class="steps__denomination steps__denomination--people">Чел.</p>
               <div class="steps__qty steps__qty--people qty">
@@ -238,10 +245,10 @@
                 <button class="months__button" type="button">
                   <span class="visually-hidden">Предыдущий месяц</span>
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="21" x="0px" y="0px"
-                  viewBox="0 0 18 34" style="enable-background:new 0 0 18 34;" xml:space="preserve">
-                  <path d="M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5
-                  c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z"/>
-                </svg>
+                    viewBox="0 0 18 34" style="enable-background:new 0 0 18 34;" xml:space="preserve">
+                    <path d="M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5
+                    c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z"/>
+                  </svg>
                 </button>
                 <p class="months__month">Март 2019</p>
                 <button class="months__button" type="button">
@@ -326,6 +333,11 @@
               <p class="steps__info steps__info--two">Укажите страны, которые вы хотели посетить.
                 Это может быть одна или сразу несколько.
               </p>
+              <ul class="steps__points-list steps__points-list--two points">
+                <li class="points__item">Даты</li>
+                <li class="points__item points__item--active">Маршрут</li>
+                <li class="points__item">Развлечения</li>
+              </ul>
               <p class="steps__countries steps__countries--bosnia">
                 <select name="country">
                   <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
@@ -357,6 +369,11 @@
               <p class="steps__info steps__info--three">Наконец, расскажите о своих планах времяпровождения.
                 Можно писать в свободной форме и ставить тэги.
               </p>
+              <ul class="steps__points-list steps__points-list--three points">
+                <li class="points__item">Даты</li>
+                <li class="points__item">Маршрут</li>
+                <li class="points__item points__item--active">Развлечения</li>
+              </ul>
               <p class="steps__country steps__country--bosnia">
                 Босния и Герцеговина
                 <img class="steps__flag" src="https://via.placeholder.com/35x25" alt="">

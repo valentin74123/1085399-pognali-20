@@ -43,15 +43,22 @@
   margin-right: 14px;
 }
 
-.qty__button {
-  fill: rgba(@black, 0.3);
+.qty__button-min,
+.qty__button-max {
+  & rect,
+  & polygon {
+    fill: rgba(@black, 0.3);
+  }
 
-  &:hover,
-  &:focus {
+  &:hover rect,
+  &:focus rect,
+  &:hover polygon,
+  &:focus polygon {
     fill: rgba(@black, 0.5);
   }
 
-  &:active {
+  &:active rect,
+  &:active polygon {
     fill: rgba(@black, 0.1);
   }
 }

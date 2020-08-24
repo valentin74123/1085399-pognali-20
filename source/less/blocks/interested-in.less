@@ -179,3 +179,51 @@
     }
   }
 }
+
+.interested-in__icon {
+  background-color: @dark-blue;
+  fill: @yellow;
+  margin-right: 16px;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: @yellow-dark;
+  }
+
+  &--tel {
+    padding: 14px 13.5px;
+
+    @media (min-width: @tablet-width) {
+      padding: 20px 21px;
+      width: 27px;
+      height: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 28px;
+      width: 36px;
+      height: 34px;
+    }
+  }
+
+  &--mail {
+    padding: 11px 10px 9px 11px;
+
+    @media (min-width: @tablet-width) {
+      padding: 15px 16px;
+      width: 35px;
+      height: 37px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 20px 21px;
+      width: 47px;
+      height: 50px;
+    }
+  }
+}

@@ -17,8 +17,8 @@
     margin-left: 40px;
 
     display: grid;
-    grid-template-columns: 560px 380px;
-    grid-template-rows: 1fr 1fr 80px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
   }
 }
 
@@ -27,9 +27,11 @@
   line-height: 24px;
   font-weight: bold;
   color: @orange;
+  margin: 0;
   padding-left: 25px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
     font-size: 45px;
     line-height: 45px;
     padding-left: 0;
@@ -49,17 +51,28 @@
   font-weight: 300;
   color: @dark-gray;
   padding-left: 25px;
+  margin: 0;
   width: auto;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
     padding-left: 0;
+    margin-bottom: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    margin-top: 60px;
+    margin-bottom: 0;
   }
 }
 
 .directions__list {
-
   margin: 0;
   padding: 0;
   list-style: none;
@@ -163,17 +176,16 @@
 
 .directions__to-all {
   padding: 22px 23px;
-  margin-bottom: 34px;
-
-  @media (min-width: @tablet-width) {
-    width: 688px;
-  }
+  text-align: center;
 
   @media (min-width: @desktop-width) {
-    width: 275px;
+    padding: 28px 34px;
+    margin-top: 320px;
+    height: 80px;
+
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 }

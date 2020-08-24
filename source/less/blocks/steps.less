@@ -198,6 +198,35 @@
   }
 }
 
+.steps__points-list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+
+    &--one {
+      grid-column-start: 4;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    &--two {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    &--three {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+  }
+}
+
 .steps__label {
   font-size: 16px;
   line-height: 16px;
