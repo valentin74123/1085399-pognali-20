@@ -11,7 +11,7 @@
   }
 }
 
-th {
+.table__day {
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
@@ -22,21 +22,21 @@ th {
     font-size: 18px;
     line-height: 18px;
   }
-}
 
-.table__red {
-  color: @dark-orange;
-}
+  &--red {
+    color: @dark-orange;
+  }
 
-th span {
-  display: none;
+  & span {
+    display: none;
 
-  @media (min-width: @tablet-width) {
-    display: inline;
+    @media (min-width: @tablet-width) {
+      display: inline;
+    }
   }
 }
 
-td {
+.table__date {
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
