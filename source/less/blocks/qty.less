@@ -1,7 +1,81 @@
+.qty {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  align-items: center;
+
+  box-sizing: border-box;
+  border: 1px solid @ligh-gray3;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 0;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid @dark-gray3;
+  }
+
+  &:active {
+    border: 1px solid @blue;
+  }
+}
+
+.qty button {
+  border: none;
+  background-color: transparent;
+}
+
+.qty__button-min svg,
+.qty__button-max svg {
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.qty__button-min {
+  margin-left: 14px;
+}
+
+.qty__button-max {
+  margin-right: 14px;
+}
+
+.qty__button-min,
+.qty__button-max {
+  & rect,
+  & polygon {
+    fill: rgba(@black, 0.3);
+  }
+
+  &:hover rect,
+  &:focus rect,
+  &:hover polygon,
+  &:focus polygon {
+    fill: rgba(@black, 0.5);
+  }
+
+  &:active rect,
+  &:active polygon {
+    fill: rgba(@black, 0.1);
+  }
+}
+
 .qty__number {
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
   color: @blue3;
   text-transform: uppercase;
+
+  width: 180px;
+  text-align: center;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
 }

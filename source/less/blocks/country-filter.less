@@ -43,20 +43,45 @@
 }
 
 .country-filter__item {
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: bold;
   color: @blue2;
+  opacity: 0.3;
   text-transform: uppercase;
-  margin-right: 30px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+  }
 }
 
 .country-filter__uncover {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     font-weight: bold;
     color: @blue2;
+    opacity: 0.3;
     background-color: inherit;
     text-transform: uppercase;
     text-decoration: none;

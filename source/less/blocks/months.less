@@ -1,15 +1,56 @@
+.months {
+  border-bottom: 1px solid @gray2;
+  border-top: 1px solid @gray2;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 0;
+  }
+}
+
 .months__month {
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
   color: @blue3;
   text-align: center;
-  padding: 11px 0;
-  border-bottom: 1px solid @gray2;
-  border-top: 1px solid @gray2;
+  margin: 0;
+
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+.months__button {
+  background-color: inherit;
+  border: none;
+
+  & path {
+    fill: rgba(@black, 0.3);
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: rgba(@black, 0.5);
+  }
+
+  &:active path {
+    fill: rgba(@black, 0.1);
+  }
+}
+
+.months__button svg {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 35px;
+    height: 30px;
   }
 }

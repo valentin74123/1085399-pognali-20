@@ -1,5 +1,5 @@
 .add-profile {
-  background-color: @light-gray2;
+  background-color: @light-gray;
 }
 
 .add-profile__wrapper {
@@ -166,11 +166,34 @@
   line-height: 16px;
   font-weight: bold;
   color: @blue-light;
-  margin: 0 auto;
+  margin-left: 40px;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.add-profile__icon {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    fill: @blue-light;
+    padding: 21px;
+    background-color: @light-gray6;
+    border-radius: 50%;
+    margin-right: 20px;
   }
 }

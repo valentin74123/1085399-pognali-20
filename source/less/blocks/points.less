@@ -1,0 +1,33 @@
+.points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 36px;
+}
+
+.points__item {
+  position: relative;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: @black;
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -36px;
+    background-color: @blue3;
+    width: 6px;
+    height: 6px;
+    border-radius: 25px;
+  }
+
+  &--active {
+    opacity: 1;
+  }
+}

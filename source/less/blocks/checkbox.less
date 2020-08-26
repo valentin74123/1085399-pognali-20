@@ -4,8 +4,23 @@
   font-weight: normal;
   color: @blue3;
 
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.input-checkbox:checked + .checkbox__description::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
