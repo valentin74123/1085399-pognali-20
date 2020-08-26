@@ -1,5 +1,18 @@
 .add-profile {
   background-color: @light-gray;
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: right 10%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-size: 200px 200px;
+    background-position: 95% 55%;
+  }
 }
 
 .add-profile__wrapper {
@@ -32,6 +45,7 @@
 }
 
 .add-profile__title {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
@@ -114,6 +128,7 @@
   font-weight: 300;
   color: @dark-gray;
   margin: 0;
+  text-align: start;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -123,25 +138,20 @@
 
 .add-profile__number {
   font-size: 16px;
-  line-height: 16px;
   font-weight: 300;
   color: @white;
   margin: 0;
-  border-radius: 45px;
-
-  padding-top: 10px;
-  padding-bottom: 11px;
-  padding-left: 13px;
-  padding-right: 13px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  line-height: 2.2em;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
-    line-height: 28px;
-
-    padding-top: 20px;
-    padding-bottom: 24px;
-    padding-left: 27px;
-    padding-right: 27px;
+    width: 68px;
+    height: 68px;
+    line-height: 2.5em;
   }
 
   &--orange {

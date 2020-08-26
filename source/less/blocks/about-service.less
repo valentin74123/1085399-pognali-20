@@ -2,14 +2,40 @@
   background-color: @blue2;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
+  background-image: url("../img/about-mobile@1x.png");
+  height: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
+
 
   @media (min-width: @tablet-width) {
+    background-image: url("../img/about-tablet@1x.png");
+    height: 600px;
+    background-position: right;
+    background-size: 50% 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
+
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: @desktop-width) {
+    background-image: url("../img/about-desktop@1x.png");
+    height: 680px;
+
     margin-left: 70px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
   }
 }
 
