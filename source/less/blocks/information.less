@@ -54,9 +54,12 @@
   color: @white;
   text-align: center;
 
+  margin: 0 auto;
+
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 70px;
+    max-width: 400px;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -65,9 +68,10 @@
   @media (min-width: @desktop-width) {
     text-align: start;
     margin-left: 67px;
+    max-width: 420px;
 
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;
   }
