@@ -40,6 +40,7 @@
 @import "blocks/range-filter.less";
 @import "blocks/travelers-profiles.less";
 @import "blocks/travelers-profile.less";
+@import "blocks/pages.less";
 
 @font-face {
   font-family: "Blogger Sans";
@@ -61,8 +62,12 @@
     url("../fonts/bloggersans-bold.woff") format("woff");
 }
 
-body {
+.page__body {
   background: @blue2;
+
+  &--catalog {
+    background: @light-gray;
+  }
 }
 
 img {

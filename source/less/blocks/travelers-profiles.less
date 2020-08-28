@@ -19,3 +19,47 @@
 .travelers-profiles__item {
   background-color: @white;
 }
+
+.travelers-profiles__yet {
+  text-align: center;
+  margin-left: 0 auto;
+  margin-top: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+  }
+}
+
+.travelers-profiles__yet-botton {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/show-more-plus.svg");
+    width: 18px;
+    height: 18px;
+    left: -40px;
+    top: 2px;
+
+    @media (min-width: @tablet-width) {
+      width: 26px;
+      height: 26px;
+      left: -50px;
+      top: 0;
+    }
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}

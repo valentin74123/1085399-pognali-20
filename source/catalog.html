@@ -6,10 +6,14 @@
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--catalog">
     <header class="page-header">
       <a class="page-header__logo">
-        <img src="img/logo-mobile-white@1x.png" alt="Логотип «Погнали»">
+        <picture>
+          <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+          <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+        </picture>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -273,7 +277,11 @@
           <div class="travelers-profiles__wrapper">
             <ul class="travelers-profiles__list">
               <li class="travelers-profiles__item travelers-profile">
-                <img class="travelers-profile__avatar" src="https://via.placeholder.com/70x70" alt="">
+                <picture>
+                  <source media="(min-width: 1320px)"  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <img class="travelers-profile__avatar" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фрисова">
+                </picture>
                 <p class="travelers-profile__name">Таня Фрисова</p>
                 <p class="travelers-profile__distance">1,5 М</p>
                 <p class="travelers-profile__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</p>
@@ -307,11 +315,18 @@
                   </li>
                 </ul>
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
-                <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
+                <div class="travelers-profile__level">
+                  <p class="travelers-profile__number">99</p>
+                  <p class="travelers-profile__text">level</p>
+                </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
               <li class="travelers-profiles__item travelers-profile">
-                <img class=" travelers-profile__avatar" src="https://via.placeholder.com/70x70" alt="">
+                <picture>
+                  <source media="(min-width: 1320px)"  srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img class="travelers-profile__avatar" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин">
+                </picture>
                 <p class="travelers-profile__name">Петя Демин</p>
                 <p class="travelers-profile__distance">1500</p>
                 <p class="travelers-profile__hashtags">#бургер #бар #футбол #концерт #крафт</p>
@@ -343,11 +358,18 @@
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
-                <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
+                <div class="travelers-profile__level">
+                  <p class="travelers-profile__number">80</p>
+                  <p class="travelers-profile__text">level</p>
+                </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
               <li class="travelers-profiles__item travelers-profile">
-                <img class="travelers-profile__avatar" src="https://via.placeholder.com/70x70" alt="">
+                <picture>
+                  <source media="(min-width: 1320px)"  srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <img class="travelers-profile__avatar" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов">
+                </picture>
                 <p class="travelers-profile__name">Марк Смолов</p>
                 <p class="travelers-profile__distance">170</p>
                 <p class="travelers-profile__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -382,11 +404,18 @@
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
-                <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
+                <div class="travelers-profile__level">
+                  <p class="travelers-profile__number">25</p>
+                  <p class="travelers-profile__text">level</p>
+                </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
               <li class="travelers-profiles__item travelers-profile">
-                <img class="travelers-profile__avatar" src="https://via.placeholder.com/70x70" alt="">
+                <picture>
+                  <source media="(min-width: 1320px)"  srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="travelers-profile__avatar" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая">
+                </picture>
                 <p class="travelers-profile__name">Лариса Роговая</p>
                 <p class="travelers-profile__distance">23</p>
                 <p class="travelers-profile__hashtags">#образование #карьера#учеба #линкедин</p>
@@ -420,20 +449,59 @@
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
-                <img class="travelers-profile__level" src="https://via.placeholder.com/45x45" alt="">
+                <div class="travelers-profile__level">
+                  <p class="travelers-profile__number">50</p>
+                  <p class="travelers-profile__text">level</p>
+                </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
             </ul>
-            <a class="travelers-profiles__yet button-form button-form--yet" href="">Показать еще</a>
-            <button class="travelers-profiles__prev" type="button">Предыдущий профиль</button>
-            <button class="travelers-profiles__next" type="button">Следующий профиль</button>
+            <article class="travelers-profiles__yet">
+              <a class="travelers-profiles__yet-botton button-catalog button-catalog--yet" href="">Показать еще</a>
+            </article>
+            <div class="travelers-profiles__pages pages">
+              <ul class="pages__list">
+                <li class="pages__item pages__item--active">
+                  <a class="pages__number" href="">1</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__number" href="">2</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__number" href="">3</a>
+                </li>
+                <li class="pages__item">
+                  <a class="pages__number" href="">4</a>
+                </li>
+              </ul>
+              <div class="pages__buttons">
+                <button class="pages__button" type="button">
+                  <span class="visually-hidden">Предыдущий профиль</span>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="20" x="0px" y="0px"
+                    viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
+                    <polygon points="0,7.1 10,0.1 10,14 "/>
+                  </svg>
+                </button>
+                <button class="pages__button" type="button">
+                  <span class="visually-hidden"> Следующий профиль</span>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13" height="20" x="0px" y="0px"
+                    viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
+                    <polygon points="0,14 0,0.1 10,7.1 "/>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
       <footer class="page-footer">
         <a class="page-footer__logo">
-          <img src="img/logo-mobile-blue@1x.png" alt="Логотип «Погнали»">
+          <picture>
+            <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+          </picture>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
