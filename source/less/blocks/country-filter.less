@@ -15,10 +15,13 @@
 }
 
 .country-filter__title {
+  position: relative;
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   color: @blue2;
+  text-transform: uppercase;
+  margin-left: 27px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -28,6 +31,25 @@
     display: inline;
     font-size: 20px;
     line-height: 20px;
+    margin-left: 45px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 10px;
+    left: -27px;
+    top: 3px;
+
+    @media (min-width: @desktop-width) {
+      width: 23px;
+      height: 15px;
+      left: -45px;
+      top: 3px;
+    }
   }
 }
 
@@ -49,6 +71,10 @@
   color: @blue2;
   opacity: 0.3;
   text-transform: uppercase;
+
+  &--active {
+    opacity: 1;
+  }
 
   &:hover,
   &:focus {

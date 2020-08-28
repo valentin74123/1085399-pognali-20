@@ -19,10 +19,9 @@
 
 .user-list__info-icon {
   background-color: @dark-blue;
-  padding: 14px 13.5px;
   margin-right: 16px;
   border-radius: 50%;
-  text-decoration: none;
+  padding: 20px;
 
   @media (min-width: @tablet-width) {
     margin-right: 23px;
@@ -32,17 +31,11 @@
     display: none;
   }
 
-  & path {
-    fill: @yellow;
-  }
+  fill: @yellow;
 
-  &:hover path,
-  &:focus path {
+  &:hover,
+  &:focus {
     fill: @yellow-dark;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -62,7 +55,6 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
-
 
   &:hover,
   &:focus {
