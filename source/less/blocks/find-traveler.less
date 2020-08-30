@@ -86,20 +86,76 @@
   list-style: none;
 }
 
+.find-traveler__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .find-traveler__item {
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   color: @blue3;
 
+  & span {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
+    & span {
+      display: inline;
+    }
+
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    & span {
+      display: none;
+    }
   }
 }
 
 .find-traveler__uncover {
+  background-color: inherit;
+  border: none;
+
+  &--active {
+    transform: rotate(180deg);
+  }
+
+  & polygon {
+    fill: @blue2;
+  }
+
+  &:hover polygon,
+  &:focus polygon {
+    fill: rgba(@blue2, 0.6);
+  }
+
+  &:active polygon {
+    fill: rgba(@blue2, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.find-traveler__button {
+  width: 100%;
 }
