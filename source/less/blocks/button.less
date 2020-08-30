@@ -1,13 +1,19 @@
 .button {
-  &--yellow {
-    background-color: @yellow;
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: bold;
-    color: @blue3;
-    text-decoration: none;
-    border-radius: 15px;
+  background-color: @yellow;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: @blue3;
+  text-decoration: none;
+  border-radius: 20px;
+  text-align: left;
 
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &--yellow {
     padding: 21px 0;
 
     &:hover,
@@ -20,10 +26,22 @@
     }
 
     @media (min-width: @tablet-width) {
-      font-size: 24px;
-      line-height: 24px;
-      text-align: start;
+
       padding: 29px 32px;
+    }
+  }
+
+  &--route {
+    border: 3px solid @blue2;
+
+    &:hover,
+    &:focus {
+      background-color: @blue2;
+      color: @white;
+    }
+
+    &:active {
+      color: rgba(@white, 0.3);
     }
   }
 }
