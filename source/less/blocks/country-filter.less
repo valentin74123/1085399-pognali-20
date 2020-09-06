@@ -5,7 +5,7 @@
 .country-filter__wrapper {
   width: auto;
   padding: 20px 29px 17px 25px;
-  display: flex;
+
   justify-content: space-between;
   align-items: center;
 
@@ -54,10 +54,9 @@
 }
 
 .country-filter__list {
-  margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
+  margin: 0 25px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -112,5 +111,20 @@
     text-transform: uppercase;
     text-decoration: none;
     border: none;
+  }
+}
+
+.country-filter__button {
+  padding: 11px 0;
+  margin: 0 25px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 0;
+    margin: 0 77px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 60px;
   }
 }

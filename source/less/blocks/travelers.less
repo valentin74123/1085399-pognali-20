@@ -214,6 +214,8 @@
   position: relative;
   z-index: 2;
   top: -20px;
+  left: 50%;
+  transform: translateX(-150%);
 }
 
 .travelers__info {
@@ -234,6 +236,11 @@
   line-height: 21px;
   font-weight: bold;
   color: @blue3;
+  max-width: 140px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
 
   &:hover,
   &:focus {
@@ -250,6 +257,9 @@
   line-height: 18px;
   font-weight: normal;
   color: @dark-gray;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .travelers__transpotrs-list {

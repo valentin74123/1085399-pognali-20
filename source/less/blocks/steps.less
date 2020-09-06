@@ -44,7 +44,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 1fr 650px 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 50px 50px 100px 70px 70px 70px 70px min-content(100px);
     }
   }
@@ -54,16 +54,16 @@
     width: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px min-content(90px) 280px 280px 30px 30px;
+    grid-template-rows: 50px min-content(90px) 50px 230px 50px 230px 30px 30px;
 
     @media (min-width: @tablet-width) {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px min-content(50px) 280px 280px 80px;
+      grid-template-rows: 100px min-content(50px) 70px 280px 70px 280px 80px;
     }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: 50px 50px 100px 280px 280px min-content(100px);
+      grid-template-rows: 50px 50px 100px 70px 280px 70px 280px min-content(100px);
     }
   }
 }
@@ -152,6 +152,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 4;
       grid-row-start: 3;
       grid-row-end: 4;
     }
@@ -344,6 +346,10 @@
 .steps__qty {
   margin-bottom: 20px;
 
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+
   &--people {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -351,6 +357,9 @@
     grid-row-end: 5;
 
     @media (min-width: @desktop-width) {
+      margin-top: 10px;
+      margin-bottom: 7px;
+
       grid-column-start: 2;
       grid-column-end: 3;
     }
@@ -368,6 +377,9 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 7px;
+      margin-bottom: 33px;
+
       grid-column-start: 2;
       grid-column-end: 3;
       grid-row-start: 5;
@@ -427,8 +439,19 @@
 }
 
 .steps__countries {
+  position: relative;
   margin: 0;
   margin-bottom: 22px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 3fr 1fr;
+  }
 
   &--bosnia {
     grid-column-start: 1;
@@ -445,7 +468,7 @@
 
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
       grid-row-start: 4;
       grid-row-end: 5;
     }
@@ -464,7 +487,7 @@
 
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
       grid-row-start: 5;
       grid-row-end: 6;
     }
@@ -473,10 +496,15 @@
 
 .steps__flags {
   padding: 9px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid @ligh-gray3;
+  width: 35px;
+  height: 24px;
+
 
   @media (min-width: @tablet-width) {
+    height: 47px;
+    width: 70px;
     border: none;
   }
 }
@@ -489,13 +517,19 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   padding: 11px 7px 11px 11px;
-  border-radius: 10px;
+  border-radius: 4px;
   border: 1px solid @ligh-gray3;
+  width: 85%;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     padding: 25px 26px;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -506,6 +540,9 @@
   color: @blue3;
   margin: 0;
   margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -526,7 +563,7 @@
 
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
       grid-row-start: 4;
       grid-row-end: 5;
     }
@@ -535,8 +572,8 @@
   &--czech-republic {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
 
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
@@ -545,10 +582,21 @@
 
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
-      grid-column-end: 4;
-      grid-row-start: 5;
-      grid-row-end: 6;
+      grid-column-end: 3;
+      grid-row-start: 6;
+      grid-row-end: 7;
     }
+  }
+}
+
+.steps__country-name {
+  margin: 0;
+}
+
+.steps__flag {
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    height: 47px;
   }
 }
 
@@ -576,9 +624,63 @@
   line-height: 22px;
   font-weight: normal;
   color: @dark-gray;
+  min-height: 220px;
+  border: 1px solid @ligh-gray3;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid  @dark-gray3;
+  }
+
+  &:active {
+    border: 1px solid  @blue;
+  }
 
   &--opacity {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 140px;
+  }
+
+  &--bosnia {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
+  }
+
+  &--czech-republic {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 7;
+      grid-row-end: 8;
+    }
   }
 }
 
@@ -661,35 +763,35 @@
   &--submit {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 8;
 
     @media (min-width: @desktop-width) {
       grid-column-start: 1;
       grid-column-end: 2;
-      grid-row-start: 6;
-      grid-row-end: 7;
+      grid-row-start: 8;
+      grid-row-end: 9;
     }
   }
 
   &--prev-three {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 9;
 
     @media (min-width: @tablet-width) {
       grid-column-start: 2;
       grid-column-end: 3;
-      grid-row-start: 5;
-      grid-row-end: 6;
+      grid-row-start: 7;
+      grid-row-end: 8;
     }
 
     @media (min-width: @desktop-width) {
       grid-column-start: 3;
       grid-column-end: 4;
-      grid-row-start: 6;
-      grid-row-end: 7;
+      grid-row-start: 8;
+      grid-row-end: 9;
     }
   }
 }

@@ -92,12 +92,28 @@
 }
 
 .interested-in__email {
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 70px;
+  }
+}
+
+.interested-in__email-input {
+  width: 70%;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
   color: rgba(@dark-gray, 0.3);
   background-color: @white;
-  margin-bottom: 30px;
+
+  border: none;
 
   padding-top: 22px;
   padding-bottom: 22px;
@@ -114,16 +130,75 @@
     padding-bottom: 28px;
     padding-left: 36px;
     margin-bottom: 60px;
+    width: 80%;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 70px;
-
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width: 60%;
   }
 }
 
+.interested-in__button {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+
+  min-width: 60px;
+  height: 62px;
+  padding-bottom: 25px;
+
+  border-radius: 15px;
+  background-color: @yellow;
+  border: none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-width: 80px;
+    height: 80px;
+    padding-bottom: 35px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 330px;
+    width: 35%;
+    padding-bottom: 5px;
+  }
+}
+
+.interested-in__button-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.interested-in__button::after {
+  position: absolute;
+  content: "";
+  top: 23px;
+  left: 22px;
+  width: 16px;
+  height: 14px;
+  background-image: url("../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 34px;
+    left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    left: 90%;
+  }
+}
 
 .interested-in__questions {
   font-size: 16px;
