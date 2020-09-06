@@ -12,7 +12,6 @@
     padding: 29px auto 27px 34px;
   }
 
-
   &--next,
   &--submit {
     background-color: @yellow;
@@ -23,6 +22,19 @@
     @media (min-width: @tablet-width) {
       padding: 28px 34px;
       margin-top: 50px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 30px;
+        left: 90%;
+        width: 16px;
+        height: 14px;
+        background-image: url("../img/triangle-arrow-right.svg");
+        background-repeat: no-repeat;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -44,6 +56,19 @@
 
     @media (min-width: @tablet-width) {
       margin-top: 80px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: 10%;
+        width: 16px;
+        height: 14px;
+        background-image: url("../img/triangle-arrow-left.svg");
+        background-repeat: no-repeat;
+      }
     }
 
     &:hover,

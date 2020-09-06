@@ -14,7 +14,19 @@
   }
 
   &--yellow {
+    position: relative;
     padding: 21px 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 35px;
+      left: 90%;
+      width: 16px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
 
     &:hover,
     &:focus {
@@ -26,7 +38,6 @@
     }
 
     @media (min-width: @tablet-width) {
-
       padding: 29px 32px;
     }
   }
@@ -42,6 +53,22 @@
 
     &:active {
       color: rgba(@white, 0.3);
+    }
+  }
+
+  &--reg {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: @blue3;
+
+    &:hover,
+    &:focus {
+      background-color: @yellow-dark;
+    }
+
+    &:active {
+      color: rgba(@blue3, 0.3);
     }
   }
 }
