@@ -1,15 +1,16 @@
 .site-list {
   margin-top: 118px;
-
+  padding-left: 25px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 97px;
     margin-top: 185px;
     margin-bottom: 144px;
     width: auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 46px;
+    margin-top: 0;
     margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
@@ -36,10 +37,12 @@
   color: @blue2;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 71px;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {

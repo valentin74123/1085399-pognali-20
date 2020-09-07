@@ -2,10 +2,10 @@
   position: relative;
   width: 100%;
   background-color: @white;
-  padding-left: 25px;
+
 
   @media (min-width: @tablet-width) {
-    padding-left: 97px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -19,6 +19,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -53,30 +54,32 @@
   transform: translateX(-50%);
   width: 25px;
   height: 3px;
-  background-color: black;
-  box-shadow: 0 8px 0 0 black;
+  background-color: @white;
+  box-shadow: 0 8px 0 0 @white;
   border-radius: 1.5px;
 }
 
-/*.main-nav--closed {
+.main-nav--closed {
   background-color: @dark-blue2;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
-}*/
+}
 
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
     display: none;
-
-    &--active {
-      display: block;
-      color: @white;
-    }
   }
 
   .main-nav--closed .site-list__item--active a {
     padding-right: 70px;
     padding-left: 70px;
     text-align: center;
+  }
+
+  .main-nav--closed .user-list {
+    display: none;
+  }
+
+  .main-nav--closed .social-list {
+    display: none;
   }
 
   .main-nav--closed .user-list__item {
@@ -111,14 +114,13 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (max-width: @desktop-width) {
+  .main-nav--closed {
+    padding: 0;
+  }
+
   .main-nav--closed .site-list__item {
     display: none;
-
-    &--active {
-      display: block;
-      color: @white;
-    }
   }
 
   .main-nav--closed .site-list__item--active a {
@@ -127,7 +129,12 @@
     text-align: center;
   }
 
-  .main-nav--closed .user-list__item {
+  .main-nav--closed .user-list {
+    margin: 0;
+  }
+
+  .main-nav--closed .user-list__item:nth-child(1),
+  .main-nav--closed .user-list__item:nth-child(2) {
     display: none;
   }
 

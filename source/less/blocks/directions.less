@@ -176,6 +176,7 @@
 }
 
 .directions__people {
+  position: relative;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -184,9 +185,29 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    margin-left: 28px;
     padding-top: 20px;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+.directions__people::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -17px;
+  width: 10px;
+  height: 12px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: -28px;
+    width: 18px;
+    height: 20px;
   }
 }
 

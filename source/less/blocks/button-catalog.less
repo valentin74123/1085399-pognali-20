@@ -12,17 +12,36 @@
     line-height: 20px;
   }
 
+  &--collapse {
+    color: @blue2;
+    background-color: @gray4;
+
+    &:hover,
+    &:focus {
+      background-color: @gray5;
+    }
+
+    &:active {
+      color: rgba(@blue2, 0.3);
+    }
+  }
+
   &--show {
     color: @light-black;
     background-color: @white;
     padding: 14px 0;
 
-    grid-column-start: 1;
-    grid-column-end: 2;
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 3px 6px rgba(@black, 0.14));
+    }
 
     &:active {
       opacity: 0.3;
     }
+
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 
   &--call {
