@@ -19,6 +19,15 @@
   }
 }
 
+.list-catalog__item {
+  margin-left: 36px;
+  margin-bottom: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 50px;
+  }
+}
+
 .list-catalog__description {
   font-size: 15px;
   line-height: 20px;
@@ -29,4 +38,53 @@
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.list-catalog__description {
+  position: relative;
+  cursor: pointer;
+}
+
+.list-catalog__description::before {
+  position: absolute;
+  top: 0;
+  left: -36px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: @white;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.list-catalog__checkbox[type="checkbox"] {
+  display: none;
+}
+
+.list-catalog__checkbox[type="checkbox"]:checked ~ .list-catalog__description::before {
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-size: 11px 11px;
+  }
+}
+
+.list-catalog__checkbox[type=checkbox]:focus ~ .list-catalog__description::before,
+.list-catalog__checkbox[type=checkbox]:hover ~ .list-catalog__description:before {
+  opacity: 0.6;
+}
+
+.list-catalog__checkbox[type=checkbox]:active ~ .list-catalog__description::before {
+  opacity: 0.3;
+  border: inherit;
+  background-color: @light-gray6;
 }

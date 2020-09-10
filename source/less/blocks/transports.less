@@ -1,3 +1,109 @@
 .transports {
   display: flex;
 }
+
+.transports__item {
+  width: 32px;
+  height: 32px;
+  background-color: @white;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+  }
+
+  &:active {
+    background-color: @light-gray8;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.transports__description {
+  position: relative;
+  cursor: pointer;
+}
+
+.transports__description {
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: -8px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      left: -12px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--catalog::before {
+    left: 8px;
+
+    @media (min-width: @tablet-width) {
+      left: 10px;
+    }
+  }
+
+  &--plane::before {
+    background-image: url("../img/icon-plane.svg");
+  }
+
+  &--car::before {
+    background-image: url("../img/icon-bus.svg");
+  }
+
+  &--bicycle::before {
+    background-image: url("../img/icon-bike.svg");
+  }
+
+  &--afoot::before {
+    background-image: url("../img/icon-run.svg");
+  }
+}
+
+.transports__checkbox[type="checkbox"] {
+  display: none;
+}
+
+.transports__checkbox[type="checkbox"] ~ .transports__description::before {
+  filter: invert(98%) sepia(1%) saturate(237%) hue-rotate(28deg) brightness(91%) contrast(90%);
+}
+
+.transports__checkbox[type="checkbox"]:checked ~ .transports__description::before {
+  filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
+}
+
+.transports__checkbox[type=checkbox]:focus ~ .transports__description::before,
+.transports__checkbox[type=checkbox]:hover ~ .transports__description::before {
+  filter: invert(73%) sepia(3%) saturate(26%) hue-rotate(347deg) brightness(96%) contrast(97%);
+}
+
+.transports__checkbox[type=checkbox]:checked:focus ~ .transports__description::before,
+.transports__checkbox[type=checkbox]:checked:hover ~ .transports__description::before {
+  filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
+  opacity: 0.7;
+}
+
+.transports__checkbox[type=checkbox]:active ~ .transports__description::before {
+  filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
+  opacity: 0.1;
+
+}
+
+.transports__checkbox[type=checkbox]:checked:active ~ .transports__description::before {
+  filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
+  opacity: 0.3;
+}

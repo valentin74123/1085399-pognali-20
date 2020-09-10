@@ -6,13 +6,13 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 70px 30px 60px 60px 100px 50px 50px 20px;
+  grid-template-rows: 45px 30px 50px 50px 70px 50px 50px 60px;
 
   @media (min-width: @tablet-width) {
     padding: 35px 25px 25px 35px;
     margin-bottom: 40px;
 
-    grid-template-columns: 3fr 3fr 1fr 2fr;
+    grid-template-columns: 190px 150px 50px 50px 60px;
     grid-template-rows: 70px 100px 50px 40px 60px;
   }
 
@@ -20,8 +20,8 @@
     padding: 46px 43px 40px 60px;
     margin-bottom: 30px;
 
-    grid-template-columns: 2fr 2fr 1fr 2fr 1fr;
-    grid-template-rows: 50px 90px 60px;
+    grid-template-columns: 2fr 2fr 50px 50px 2fr 60px;
+    grid-template-rows: 50px 90px 52px;
   }
 }
 
@@ -59,11 +59,13 @@
 }
 
 .travelers-profile__name {
+  position: relative;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
   color: @blue3;
   margin: 0;
+  max-width: 80px;
 
   grid-column-start: 2;
   grid-column-end: 3;
@@ -80,11 +82,12 @@
   }
 
   @media (min-width: @tablet-width) {
+    max-width: none;
     font-size: 30px;
     line-height: 30px;
 
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;
   }
@@ -97,6 +100,35 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 140px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @light-red;
+
+    @media (min-width: @tablet-width) {
+      top: 11px;
+      left: -20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 20px;
+
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &--online::before {
+    background-color: @green;
+  }
 }
 
 .travelers-profile__distance {
@@ -105,6 +137,7 @@
   font-weight: bold;
   color: @light-black;
   text-transform: uppercase;
+  margin: 0;
 
   grid-column-start: 2;
   grid-column-end: 3;
@@ -114,7 +147,17 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-top: 15px;
 
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.travelers-profile__heart {
+  @media (min-width: @tablet-width) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -128,6 +171,8 @@
   font-weight: normal;
   color: @dark-gray;
   margin: 0;
+  margin-top: 10px;
+  max-width: 180px;
 
   grid-column-start: 1;
   grid-column-end: 3;
@@ -135,11 +180,12 @@
   grid-row-end: 4;
 
   @media (min-width: @tablet-width) {
+    max-width: 227px;
     font-size: 20px;
     line-height: 23px;
 
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
   }
@@ -192,6 +238,7 @@
   }
 
   &--level {
+    text-align: right;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 6;
@@ -226,8 +273,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 3;
     display: grid;
@@ -250,7 +297,6 @@
 
   margin: 0;
   margin-right: 25px;
-  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -327,6 +373,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  align-items: center;
 
   grid-column-start: 1;
   grid-column-end: 2;
@@ -334,16 +381,16 @@
   grid-row-end: 8;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 3;
     display: inline;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 4;
     display: flex;
@@ -355,6 +402,26 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
+
+  @media (min-width: @tablet-width) {
+   background-color: inherit;
+  }
+}
+
+.travelers-profile__icon {
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
+  fill: rgba(@blue3, 0.15);
+
+  &--active {
+    fill: rgba(@blue3, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 21px;
+  }
 }
 
 .travelers-profile__level {
@@ -372,15 +439,15 @@
     width: 60px;
     height: 60px;
 
-    grid-column-start: 4;
-    grid-column-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 4;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-start: 6;
+    grid-column-end: 7;
     grid-row-start: 3;
     grid-row-end: 4;
   }
@@ -420,12 +487,16 @@
 }
 
 .travelers-profile__button {
+  margin-top: 20px;
+
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 8;
   grid-row-end: 9;
 
   @media (min-width: @tablet-width) {
+    margin-top: 0;
+
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;

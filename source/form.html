@@ -167,26 +167,26 @@
           <ul class="profile-info__list transports">
             <li class="transports__item">
               <input class="transports__checkbox" type="checkbox" id="plane" name="plane" checked>
-              <label class="transports__description" for="plane">
-                <img class="transports__icon-plane transports__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+              <label class="transports__description transports__description--plane" for="plane">
+                <img class="transports__icon-plane transports__icon-plane--active" src="" alt="" width="23" height="24">
               </label>
             </li>
             <li class="transports__item">
               <input class="transports__checkbox" type="checkbox" id="car" name="car" checked>
-              <label class="transports__description" for="car">
-                <img class="transports__icon-car transports__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+              <label class="transports__description transports__description--car" for="car">
+                <img class="transports__icon-car transports__icon-car--active" src="" alt="" width="23" height="24">
               </label>
             </li>
             <li class="transports__item">
               <input class="transports__checkbox" type="checkbox" id="bicycle" name="bicycle">
-              <label class="transports__description" for="bicycle">
-                <img class="transports__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+              <label class="transports__description transports__description--bicycle" for="bicycle">
+                <img class="transports__icon-bicycle" src="" alt="" width="23" height="24">
               </label>
             </li>
             <li class="transports__item">
               <input class="transports__checkbox" type="checkbox" id="afoot" name="afoot" checked>
-              <label class="transports__description" for="afoot">
-                <img class="transports__icon-afoot transports__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+              <label class="transports__description transports__description--afoot" for="afoot">
+                <img class="transports__icon-afoot transports__icon-afoot--active" src="" alt="" width="23" height="24">
               </label>
             </li>
           </ul>
@@ -298,7 +298,10 @@
                   <th class="table__day table__day--red">В<span>с</span></th>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__date">23</td>
+                  <td class="table__date">
+                    <input class="table__input" type="checkbox" id="23">
+                    <label class="table__label" for="23">23</label>
+                  </td>
                   <td class="table__date">24</td>
                   <td class="table__date">25</td>
                   <td class="table__date">26</td>
@@ -371,7 +374,7 @@
                 </select>
                 <img class="steps__flags" src="img/flag-bosnia.svg" alt="Босния">
                 <button class="steps__button-close button-close" type="button">
-                  <span class="visually-hidden">Убрать страну</span>
+                  <span class="visually-hidden">Удалить страну из списка</span>
                 </button>
               </p>
               <p class="steps__countries steps__countries--czech-republic">
@@ -487,7 +490,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg class="" width="11" height="21">
+              <svg class="social__icon social__icon--facebook" width="11" height="21">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -495,7 +498,7 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <svg class="" width="23" height="12">
+              <svg class="social__icon social__icon--vkontakte" width="23" height="12">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
@@ -503,7 +506,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="">
               <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg class="" width="18" height="18">
+              <svg class="social__icon social__icon--instagram" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
@@ -525,23 +528,7 @@
       </div>
     </footer>
 
+    <script src="js/top-menu.js"></script>
 
-
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
   </body>
 </html>

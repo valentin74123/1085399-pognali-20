@@ -98,7 +98,9 @@
               <li class="country-filter__item">Америка</li>
               <li class="country-filter__item">Острова</li>
             </ul>
-            <button class="country-filter__uncover" type="button">Показать все</button>
+            <button class="country-filter__uncover" type="button">
+              <span class="country-filter__uncover-text">Показать все</span>
+            </button>
           </div>
           <section class="country-filter__countries countries country-filter__modal modal country-filter__modal-show">
 
@@ -393,7 +395,9 @@
             </ul>
 
           </section>
-          <button class="country-filter__button button-catalog button-catalog--collapse" type="button">Свернуть</button>
+          <button class="country-filter__button button-catalog button-catalog--collapse" type="button">
+            <span class="country-filter__button-text">Свернуть</span>
+          </button>
         </section>
 
         <section class="find-traveler">
@@ -499,26 +503,26 @@
                   <ul class="find-traveler__list transports">
                     <li class="transports__item">
                       <input class="transports__checkbox" type="checkbox" id="plane" name="plane" checked>
-                      <label class="transports__description" for="plane">
-                        <img class="transports__icon-plane transports__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                      <label class="transports__description transports__description--catalog transports__description--plane" for="plane">
+                        <img class="transports__icon-plane transports__icon-plane--active" src="" alt="" width="23" height="24">
                       </label>
                     </li>
                     <li class="transports__item">
                       <input class="transports__checkbox" type="checkbox" id="car" name="car" checked>
-                      <label class="transports__description" for="car">
-                        <img class="transports__icon-car transports__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                      <label class="transports__description transports__description--catalog transports__description--car" for="car">
+                        <img class="transports__icon-car transports__icon-car--active" src="" alt="" width="23" height="24">
                       </label>
                     </li>
                     <li class="transports__item">
                       <input class="transports__checkbox" type="checkbox" id="bicycle" name="bicycle">
-                      <label class="transports__description" for="bicycle">
-                        <img class="transports__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                      <label class="transports__description transports__description--catalog transports__description--bicycle" for="bicycle">
+                        <img class="transports__icon-bicycle" src="" alt="" width="23" height="24">
                       </label>
                     </li>
                     <li class="transports__item">
                       <input class="transports__checkbox" type="checkbox" id="afoot" name="afoot" checked>
-                      <label class="transports__description" for="afoot">
-                        <img class="transports__icon-afoot transports__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                      <label class="transports__description transports__description--catalog transports__description--afoot" for="afoot">
+                        <img class="transports__icon-afoot transports__icon-afoot--active" src="" alt="" width="23" height="24">
                       </label>
                     </li>
                   </ul>
@@ -580,6 +584,12 @@
                   <img class="travelers-profile__avatar" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фрисова">
                 </picture>
                 <p class="travelers-profile__name">Таня Фрисова</p>
+                <article class="travelers-profile__heart heart">
+                  <input class="heart__checkbox" type="checkbox" id="heart-frisova" name="heart-frisova" checked>
+                  <label class="heart__description" for="heart-frisova">
+                    <span class="visually-hidden">В избранное</span>
+                  </label>
+                </article>
                 <p class="travelers-profile__distance">1,5 М</p>
                 <p class="travelers-profile__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</p>
 
@@ -599,16 +609,24 @@
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
@@ -629,6 +647,12 @@
                   <img class="travelers-profile__avatar" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин">
                 </picture>
                 <p class="travelers-profile__name">Петя Демин</p>
+                <article class="travelers-profile__heart heart">
+                  <input class="heart__checkbox" type="checkbox" id="heart-dimin" name="heart-dimin">
+                  <label class="heart__description" for="heart-dimin">
+                    <span class="visually-hidden">В избранное</span>
+                  </label>
+                </article>
                 <p class="travelers-profile__distance">1500</p>
                 <p class="travelers-profile__hashtags">#бургер #бар #футбол #концерт #крафт</p>
 
@@ -645,16 +669,24 @@
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-afoot travelers-profile__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
 
@@ -676,6 +708,12 @@
                   <img class="travelers-profile__avatar" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов">
                 </picture>
                 <p class="travelers-profile__name">Марк Смолов</p>
+                <article class="travelers-profile__heart heart">
+                  <input class="heart__checkbox" type="checkbox" id="heart-smolov" name="heart-smolov">
+                  <label class="heart__description" for="heart-smolov">
+                    <span class="visually-hidden">В избранное</span>
+                  </label>
+                </article>
                 <p class="travelers-profile__distance">170</p>
                 <p class="travelers-profile__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
 
@@ -695,16 +733,24 @@
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-car" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-bicycle travelers-profile__icon-bicycle--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
 
@@ -725,7 +771,13 @@
                   <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                   <img class="travelers-profile__avatar" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая">
                 </picture>
-                <p class="travelers-profile__name">Лариса Роговая</p>
+                <p class="travelers-profile__name travelers-profile__name--online">Лариса Роговая</p>
+                <article class="travelers-profile__heart heart">
+                  <input class="heart__checkbox" type="checkbox" id="heart-rogovaya" name="heart-rogovaya">
+                  <label class="heart__description" for="heart-rogovaya">
+                    <span class="visually-hidden">В избранное</span>
+                  </label>
+                </article>
                 <p class="travelers-profile__distance">23</p>
                 <p class="travelers-profile__hashtags">#образование #карьера#учеба #линкедин</p>
 
@@ -744,16 +796,24 @@
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-plane travelers-profile__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-car travelers-profile__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers-profile__transpotrs-item">
-                    <img class="travelers-profile__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="14" height="16">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
 
@@ -817,7 +877,7 @@
             <li class="social__item">
               <a class="social__link social__link--facebook" href="">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg class="" width="11" height="21">
+                <svg class="social__icon social__icon--facebook" width="11" height="21">
                   <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -825,7 +885,7 @@
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="">
                 <span class="visually-hidden">Мы в Вконтакте</span>
-                <svg class="" width="23" height="12">
+                <svg class="social__icon social__icon--vkontakte" width="23" height="12">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -833,7 +893,7 @@
             <li class="social__item">
               <a class="social__link social__link--instagram" href="">
                 <span class="visually-hidden">Мы в Инстаграме</span>
-                <svg class="" width="18" height="18">
+                <svg class="social__icon social__icon--instagram" width="18" height="18">
                   <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -855,23 +915,7 @@
         </div>
       </footer>
 
+      <script src="js/top-menu.js"></script>
 
-
-      <script>
-        var navMain = document.querySelector('.main-nav');
-        var navToggle = document.querySelector('.main-nav__toggle');
-
-        navMain.classList.remove('main-nav--nojs');
-
-        navToggle.addEventListener('click', function() {
-          if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-          } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-          }
-        });
-      </script>
   </body>
 </html>

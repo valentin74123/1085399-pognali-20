@@ -1,0 +1,67 @@
+.users-links__info {
+  display: flex;
+  align-items: center;
+}
+
+.users-links__icons {
+  background-color: @dark-blue;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 68px;
+    height: 68px;
+    margin-right: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 30px;
+  }
+}
+
+.users-links__icon {
+  fill: @yellow;
+  display: block;
+  margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    fill: @yellow-dark;
+  }
+
+  &--tel {
+    margin-top: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 21px;
+      width: 27px;
+      height: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 28px;
+      width: 36px;
+      height: 34px;
+    }
+  }
+
+  &--mail {
+    margin-top: 17px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 25px;
+      width: 28px;
+      height: 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 34px;
+      width: 37px;
+      height: 25px;
+    }
+  }
+}

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/styles.min.css">
+
+    <link rel="preload" href="./css/styles.min.css" as="style">
+    <link rel="preload" href="./js/script.min.js" as="script">
+    <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
+
   </head>
   <body class="page__body">
 
@@ -39,19 +44,23 @@
             </li>
           </ul>
           <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__info" href="tel:8 800 555-86-28">
-                <svg class="user-list__info-icon" width="18" height="17">
-                  <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
-                </svg>
+            <li class="user-list__item users-links">
+              <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
+                  </svg>
+                </article>
                 <span>8 800 555-86-28</span>
               </a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__info" href="">
-                <svg class="user-list__info-icon" width="24" height="23">
-                  <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
-                </svg>
+            <li class="user-list__item users-links">
+              <a class="user-list__info users-links__info" href="">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--mail" width="18" height="13">
+                    <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
+                  </svg>
+                </article>
                 <span>mail@htmlacademy.ru</span>
               </a>
             </li>
@@ -221,16 +230,24 @@
                 <p class="travelers__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="travelers__transpotrs-list">
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-plane travelers__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-car" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="17" height="19">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="21" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-afoot" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
               </div>
@@ -254,16 +271,24 @@
                 <p class="travelers__hashtags">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="travelers__transpotrs-list">
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-plane travelers__icon-plane--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
+                      <use xlink:href="img/sprite.svg#icon-plane"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-car travelers__icon-car--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="17" height="19">
+                      <use xlink:href="img/sprite.svg#icon-bus"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-bicycle" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon" width="21" height="16">
+                      <use xlink:href="img/sprite.svg#icon-bike"></use>
+                    </svg>
                   </li>
                   <li class="travelers__transpotrs-item">
-                    <img class="travelers__icon-afoot travelers__icon-afoot--active" src="https://via.placeholder.com/23x24" alt="">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="18" height="18">
+                      <use xlink:href="img/sprite.svg#icon-run"></use>
+                    </svg>
                   </li>
                 </ul>
               </div>
@@ -300,15 +325,18 @@
             </li>
           </ul>
           <a class="add-profile__business-tariff" href="">
-            <svg class="add-profile__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0px" y="0px"
-              viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
-              <path class="st0" d="M16.4,15.1c-0.9-1.2-2-2-3.6-2.4l-1.5,5.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9v-4.2
-              c0-0.6-0.5-1.1-1.1-1.1c-0.6,0-1.1,0.5-1.1,1.1v4.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9l-1.5-5.2
-              c-1.6,0.4-2.7,1.2-3.6,2.4C0.2,15.6,0,16.6,0,17.1c0,0.1,0,0.3,0,0.4v0.9v0.9c0,1,0.8,1.7,1.7,1.7h13.5c1,0,1.7-0.8,1.7-1.7v-0.9
-              v-0.9c0-0.2,0-0.3,0-0.4C17,16.6,16.8,15.6,16.4,15.1z M3.9,4.6c0,2.6,1.6,6.3,4.6,6.3c2.9,0,4.6-3.8,4.6-6.3c0-2.6-2-4.6-4.6-4.6
-              C6,0,3.9,2.1,3.9,4.6z"/>
-            </svg>
-            Показать тарифы для бизнеса</a>
+            <article class="add-profile__icons">
+              <svg class="add-profile__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0px" y="0px"
+                viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
+                <path class="st0" d="M16.4,15.1c-0.9-1.2-2-2-3.6-2.4l-1.5,5.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9v-4.2
+                c0-0.6-0.5-1.1-1.1-1.1c-0.6,0-1.1,0.5-1.1,1.1v4.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9l-1.5-5.2
+                c-1.6,0.4-2.7,1.2-3.6,2.4C0.2,15.6,0,16.6,0,17.1c0,0.1,0,0.3,0,0.4v0.9v0.9c0,1,0.8,1.7,1.7,1.7h13.5c1,0,1.7-0.8,1.7-1.7v-0.9
+                v-0.9c0-0.2,0-0.3,0-0.4C17,16.6,16.8,15.6,16.4,15.1z M3.9,4.6c0,2.6,1.6,6.3,4.6,6.3c2.9,0,4.6-3.8,4.6-6.3c0-2.6-2-4.6-4.6-4.6
+                C6,0,3.9,2.1,3.9,4.6z"/>
+              </svg>
+            </article>
+            <span>Показать тарифы для бизнеса</span>
+          </a>
         </div>
       </section>
 
@@ -317,21 +345,25 @@
           <h2 class="interested-in__title">Заинтересовались?</h2>
           <p class="interested-in__description">Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда<br> скорее <a href="" class="interested-in__link">авторизуйтесь</a>.</p>
           <article class="interested-in__email">
-            <input class="interested-in__email-input" type="email" value="E-mail">
+            <input class="interested-in__email-input" type="email" placeholder="E-mail">
             <button class="interested-in__button button button--reg" type="button">
               <span class="interested-in__button-text ">Регистрация</span></button>
           </article>
           <p class="interested-in__questions">Остались вопросы?<br> Мы с радостью на них ответим!</p>
-          <a class="interested-in__info" href="tel:8 800 555-86-28">
-            <svg class="interested-in__icon interested-in__icon--tel" width="17" height="15">
-              <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
-            </svg>
+          <a class="interested-in__info users-links users-links__info" href="tel:8 800 555-86-28">
+            <article class="users-links__icons">
+              <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
+                <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
+              </svg>
+            </article>
             <span>8 800 555-86-28</span><br>
           </a>
-          <a class="interested-in__info" href="">
-            <svg class="interested-in__icon interested-in__icon--mail" width="23" height="24">
-              <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
-            </svg>
+          <a class="interested-in__info users-links users-links__info" href="">
+            <article class="users-links__icons">
+              <svg class="users-links__icon users-links__icon--mail" width="18" height="13">
+                <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
+              </svg>
+            </article>
             <span>mail@htmlacademy.ru</span>
           </a>
         </div>
@@ -340,8 +372,22 @@
       <section class="route">
         <div class="route__wrapper">
           <p class="route__address">ул. Большая<br> Конюшенная, 19/8</p>
-          <button class="route__button button button--route" type="button">Проложить маршрут</button>
+          <button class="route__button button button--route" type="button">
+            <span class="route__button-text">Проложить маршрут</span>
+          </button>
         </div>
+      </section>
+
+      <section class="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1320px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1320px)"  srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="map__img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+        </picture>
       </section>
     </main>
 
@@ -354,7 +400,7 @@
 
           <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img src="img/logo-mobile-blue@1x.png" srcset="img/img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+          <img src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
         </picture>
       </a>
       <div class="page-footer__social social">
@@ -362,7 +408,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg class="" width="11" height="21">
+              <svg class="social__icon social__icon--facebook" width="11" height="21">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -370,7 +416,7 @@
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <svg class="" width="23" height="12">
+              <svg class="social__icon social__icon--vkontakte" width="23" height="12">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
@@ -378,7 +424,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="">
               <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg class="" width="18" height="18">
+              <svg class="social__icon social__icon--instagram" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
@@ -400,23 +446,7 @@
       </div>
     </footer>
 
+    <script src="js/top-menu.js"></script>
 
-
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
   </body>
 </html>

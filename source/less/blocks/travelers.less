@@ -169,14 +169,35 @@
 }
 
 .travelers__level {
-  position: relative;
-  top: 80px;
+
+  top: 90px;
   left: 5%;
+
+
+
+
+}
+
+.travelers__level {
+  display: inline-block;
   width: 60px;
   height: 60px;
-  border: 4px solid @orange;
+  position: relative;
   border-radius: 50%;
+  background-image: linear-gradient(150deg, transparent 50%, @orange 50%),
+                    linear-gradient(90deg, transparent 50%, @orange 50%);
+}
+
+.travelers__level:after {
+  border-radius: 50%;
+  display: block;
+  content: "";
+  position: absolute;
   background: rgba(@black, 0.6);
+  left: .2em;
+  top: .2em;
+  height: 54px;
+  width: 54px;
 }
 
 .travelers__number {
@@ -267,10 +288,12 @@
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .travelers__transpotrs-item {
-  padding: 0 5px;
+  margin-right: 15px;
 }
 
 .travelers__to-all {
@@ -288,6 +311,7 @@
   @media (min-width: @desktop-width) {
     width: 280px;
     margin-left: 131px;
+    margin-bottom: 48px;
 
     grid-column-start: 1;
     grid-column-end: 2;
