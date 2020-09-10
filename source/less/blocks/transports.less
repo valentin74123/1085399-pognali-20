@@ -26,9 +26,6 @@
 .transports__description {
   position: relative;
   cursor: pointer;
-}
-
-.transports__description {
 
   &::before {
     position: absolute;
@@ -86,24 +83,23 @@
   filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
 }
 
-.transports__checkbox[type=checkbox]:focus ~ .transports__description::before,
-.transports__checkbox[type=checkbox]:hover ~ .transports__description::before {
+.transports__checkbox[type="checkbox"]:focus ~ .transports__description::before,
+.transports__checkbox[type="checkbox"]:hover ~ .transports__description::before {
   filter: invert(73%) sepia(3%) saturate(26%) hue-rotate(347deg) brightness(96%) contrast(97%);
 }
 
-.transports__checkbox[type=checkbox]:checked:focus ~ .transports__description::before,
-.transports__checkbox[type=checkbox]:checked:hover ~ .transports__description::before {
+.transports__checkbox[type="checkbox"]:checked:focus ~ .transports__description::before,
+.transports__checkbox[type="checkbox"]:checked:hover ~ .transports__description::before {
   filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
   opacity: 0.7;
 }
 
-.transports__checkbox[type=checkbox]:active ~ .transports__description::before {
+.transports__checkbox[type="checkbox"]:active ~ .transports__description::before {
   filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
   opacity: 0.1;
-
 }
 
-.transports__checkbox[type=checkbox]:checked:active ~ .transports__description::before {
+.transports__checkbox[type="checkbox"]:checked:active ~ .transports__description::before {
   filter: invert(18%) sepia(13%) saturate(3263%) hue-rotate(187deg) brightness(92%) contrast(97%);
   opacity: 0.3;
 }

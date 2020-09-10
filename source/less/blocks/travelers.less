@@ -169,33 +169,25 @@
 }
 
 .travelers__level {
-
   top: 90px;
   left: 5%;
-
-
-
-
-}
-
-.travelers__level {
   display: inline-block;
   width: 60px;
   height: 60px;
   position: relative;
   border-radius: 50%;
   background-image: linear-gradient(150deg, transparent 50%, @orange 50%),
-                    linear-gradient(90deg, transparent 50%, @orange 50%);
+    linear-gradient(90deg, transparent 50%, @orange 50%);
 }
 
-.travelers__level:after {
+.travelers__level::after {
   border-radius: 50%;
   display: block;
   content: "";
   position: absolute;
   background: rgba(@black, 0.6);
-  left: .2em;
-  top: .2em;
+  left: 2em;
+  top: 2em;
   height: 54px;
   width: 54px;
 }

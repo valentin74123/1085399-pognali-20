@@ -29,6 +29,8 @@
 }
 
 .list-catalog__description {
+  position: relative;
+  cursor: pointer;
   font-size: 15px;
   line-height: 20px;
   font-weight: normal;
@@ -38,11 +40,6 @@
     font-size: 20px;
     line-height: 20px;
   }
-}
-
-.list-catalog__description {
-  position: relative;
-  cursor: pointer;
 }
 
 .list-catalog__description::before {
@@ -78,12 +75,12 @@
   }
 }
 
-.list-catalog__checkbox[type=checkbox]:focus ~ .list-catalog__description::before,
-.list-catalog__checkbox[type=checkbox]:hover ~ .list-catalog__description:before {
+.list-catalog__checkbox[type="checkbox"]:focus ~ .list-catalog__description::before,
+.list-catalog__checkbox[type="checkbox"]:hover ~ .list-catalog__description::before {
   opacity: 0.6;
 }
 
-.list-catalog__checkbox[type=checkbox]:active ~ .list-catalog__description::before {
+.list-catalog__checkbox[type="checkbox"]:active ~ .list-catalog__description::before {
   opacity: 0.3;
   border: inherit;
   background-color: @light-gray6;
