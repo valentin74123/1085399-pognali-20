@@ -72,18 +72,33 @@
     </svg>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
-        </picture>
-      </a>
+
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
+          <a class="page-header__logo">
+            <picture>
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+
+              <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="page-header__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+            </picture>
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
+              <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+            </picture>
+          </a>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">О сервисе</a>
@@ -95,24 +110,28 @@
               <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__info" href="tel:8 800 555-86-28">
-                <svg class="user-list__info-icon" width="18" height="17">
-                  <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
-                </svg>
+          <ul class="main-nav__list user-list__item--close user-list">
+            <li class="user-list__item users-links">
+              <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
+                  </svg>
+                </article>
                 <span>8 800 555-86-28</span>
               </a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__info" href="">
-                <svg class="user-list__info-icon" width="24" height="23">
-                  <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
-                </svg>
+            <li class="user-list__item user-list__item--close users-links">
+              <a class="user-list__info users-links__info" href="">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--mail" width="18" height="13">
+                    <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
+                  </svg>
+                </article>
                 <span>mail@htmlacademy.ru</span>
               </a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--mobile-close">
               <a class="user-list__login js-login" href="login.html">
                 <span>Авторизация</span>
               </a>
@@ -152,8 +171,13 @@
       <section class="profile-info">
         <div class="profile-info__wrapper">
           <div class="profile-info__level">
-            <p class="profile-info__number">80</p>
-            <p class="profile-info__text">level</p>
+            <svg width="100" height="100">
+              <circle class="profile-info__circle" r="48" cx="50" cy="50" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+            </svg>
+            <article class="profile-info__level-text">
+              <p class="profile-info__number">80</p>
+              <p class="profile-info__text">level</p>
+            </article>
           </div>
           <picture>
             <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
@@ -203,7 +227,7 @@
               <button class="plan-infomation__button button-grey button-grey--edit" type="button">Изменить</button>
             </li>
             <li class="plans__item plan-infomation">
-              <h3 class="plan-infomation__cities">Таиланд, Индонезия</h3>
+              <h3 class="plan-infomation__cities plan-infomation__cities--number">Таиланд, Индонезия</h3>
               <p class="plan-infomation__people">1 Попутчик</p>
               <p class="plan-infomation__dates">1 июл — 15 июл</p>
               <button class="plan-infomation__button button-grey button-grey--edit" type="button">Изменить</button>
@@ -372,24 +396,30 @@
                 <select name="country">
                   <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
                 </select>
-                <img class="steps__flags" src="img/flag-bosnia.svg" alt="Босния">
-                <button class="steps__button-close button-close" type="button">
-                  <span class="visually-hidden">Удалить страну из списка</span>
-                </button>
+                <div class="steps__countries-flags steps__countries-flags--bosnia">
+                  <img class="steps__flags" src="img/flag-bosnia.svg" alt="Босния">
+                  <button class="steps__button-close button-close" type="button">
+                    <span class="visually-hidden">Удалить страну из списка</span>
+                  </button>
+                </div>
               </p>
               <p class="steps__countries steps__countries--czech-republic">
                 <select name="country">
                   <option value="Чехия" selected>Чехия</option>
                 </select>
-                <img class="steps__flags" src="img/flag-czech.svg" alt="Чехия">
-                <button class="steps__button-close button-close" type="button">
-                  <span class="visually-hidden">Удалить страну из списка</span>
-                </button>
+                <div class="steps__countries-flags steps__countries-flags--czech-republic">
+                  <img class="steps__flags" src="img/flag-czech.svg" alt="Чехия">
+                  <button class="steps__button-close button-close" type="button">
+                    <span class="visually-hidden">Удалить страну из списка</span>
+                  </button>
+                </div>
               </p>
-              <div class="steps__choose-country choose-country">
-                <button class="steps__button button-country button-country--choose">Выберите страну</button>
+              <div class="steps__choose-country choose-country choose-country--opened choose-country--nojs">
+                <button class="steps__button steps__button--choose button-country button-country--choose">
+                  <span class="button-country__text button-country__text--choose">Выберите страну</span>
+                </button>
 
-                <section class="choose-country__modal modal choose-country__modal-show">
+                <section class="choose-country__modal">
                   <table class="choose-country__table">
                     <tr class="choose-country__row">
                       <td class="choose-country__letter choose-country__letter--active">А</td>
@@ -443,7 +473,9 @@
                   </ul>
                 </section>
               </div>
-              <button class="steps__button steps__button--add button-country button-country--add" type="button">Добавить страну</button>
+              <button class="steps__button steps__button--add button-country button-country--add" type="button">
+                <span class="button-country__text button-country__text--add">Добавить страну</span>
+              </button>
               <a class="steps__button steps__button--next-two button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
               <a class="steps__button steps__button--prev-two button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
             </li>
@@ -459,15 +491,18 @@
                 <li class="points__item points__item--active">Развлечения</li>
               </ul>
               <div class="steps__country steps__country--bosnia">
-                <p class="steps__country-name">Босния и Герцеговина</p>
+                <label for="bosnia-entertainment" class="steps__country-name">Босния и Герцеговина</label>
                 <img class="steps__flag" src="img/flag-bosnia.svg" alt="Босния" width="35" height="24">
               </div>
-              <input class="steps__textarea steps__textarea--bosnia" type="text" id="name" name="name" placeholder="План действий">
+              <textarea class="steps__textarea steps__textarea--bosnia"
+                name="bosnia-entertainment" id="bosnia-entertainment" cols="30" rows="10" placeholder="План действий"></textarea>
               <div class="steps__country steps__country--czech-republic">
-                <p class="steps__country-name">Чехия</p>
+                <label for="czech-republic-entertainment" class="steps__country-name">Чехия</label>
                 <img class="steps__flag" src="img/flag-czech.svg" alt="Чехия" width="35" height="24">
               </div>
-              <input class="steps__textarea steps__textarea--czech-republic" type="text" id="name" name="name" value="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.">
+              <textarea class="steps__textarea steps__textarea--czech-republic"
+                name="czech-republic-entertainment" id="czech-republic-entertainment" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+              </textarea>
               <button class="steps__button steps__button--submit button-form button-form--submit" type="submit">Отправить</button>
               <a class="steps__button steps__button--prev-three button-form button-form--prev" href="#step-two" type="button">На шаг назад</a>
             </li>
@@ -529,6 +564,7 @@
     </footer>
 
     <script src="js/top-menu.js"></script>
+    <script src="js/choose-country.js"></script>
 
   </body>
 </html>

@@ -6,6 +6,18 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+
+    &--hobby {
+      margin-left: 66px;
+    }
+
+    &--music {
+      margin-left: 50px;
+    }
+
+    &--eat {
+      margin-left: 87px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -24,7 +36,15 @@
   margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 50px;
+    width: 115px;
+
+    &:nth-child(1) {
+      margin-right: 25px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -77,11 +97,11 @@
 
 .list-catalog__checkbox[type="checkbox"]:focus ~ .list-catalog__description::before,
 .list-catalog__checkbox[type="checkbox"]:hover ~ .list-catalog__description::before {
-  opacity: 0.6;
+  background-color: rgba(@white, 0.6);
 }
 
 .list-catalog__checkbox[type="checkbox"]:active ~ .list-catalog__description::before {
   opacity: 0.3;
   border: inherit;
-  background-color: @light-gray6;
+  background-color: rgba(@white, 0.3);
 }

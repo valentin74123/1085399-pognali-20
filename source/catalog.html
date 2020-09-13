@@ -8,18 +8,33 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
-        </picture>
-      </a>
+
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
+          <a class="page-header__logo">
+            <picture>
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+
+              <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="page-header__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+            </picture>
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
+              <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+            </picture>
+          </a>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="index.html">О сервисе</a>
@@ -31,24 +46,28 @@
               <a href="">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a class="user-list__info" href="tel:8 800 555-86-28">
-                <svg class="user-list__info-icon" width="18" height="17">
-                  <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
-                </svg>
+          <ul class="main-nav__list user-list__item--close user-list">
+            <li class="user-list__item users-links">
+              <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
+                    <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
+                  </svg>
+                </article>
                 <span>8 800 555-86-28</span>
               </a>
             </li>
-            <li class="user-list__item">
-              <a class="user-list__info" href="">
-                <svg class="user-list__info-icon" width="24" height="23">
-                  <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
-                </svg>
+            <li class="user-list__item user-list__item--close users-links">
+              <a class="user-list__info users-links__info" href="">
+                <article class="users-links__icons">
+                  <svg class="users-links__icon users-links__icon--mail" width="18" height="13">
+                    <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
+                  </svg>
+                </article>
                 <span>mail@htmlacademy.ru</span>
               </a>
             </li>
-            <li class="user-list__item">
+            <li class="user-list__item user-list__item--mobile-close">
               <a class="user-list__login js-login" href="login.html">
                 <span>Авторизация</span>
               </a>
@@ -86,10 +105,10 @@
           <article class="active-heading__item">
             <h1 class="active-heading__title">Попутчики</h1>
           </article>
-          <a class="active-heading__to-main" href="">На главную</a>
+          <a class="active-heading__to-main" href="index.html">На главную</a>
         </div>
 
-        <section class="country-filter">
+        <section class="country-filter country-filter--opened country-filter--nojs">
           <div class="country-filter__wrapper">
             <h2 class="country-filter__title">Фильтрация по странам:</h2>
             <ul class="country-filter__list">
@@ -102,7 +121,12 @@
               <span class="country-filter__uncover-text">Показать все</span>
             </button>
           </div>
-          <section class="country-filter__countries countries country-filter__modal modal country-filter__modal-show">
+
+
+          <div class="country-filter__countries-list">
+
+
+          <section class="country-filter__countries countries">
 
             <table class="countries__table">
               <tr class="countries__row">
@@ -398,8 +422,11 @@
           <button class="country-filter__button button-catalog button-catalog--collapse" type="button">
             <span class="country-filter__button-text">Свернуть</span>
           </button>
-        </section>
 
+
+          </div>
+        </section>
+      <div class="desktop">
         <section class="find-traveler">
           <div class="find-traveler__wrapper">
             <h2 class="find-traveler__title">Подберите<br> идеального<br> попутчика<br></h2>
@@ -500,7 +527,7 @@
                       </svg>
                     </button>
                   </article>
-                  <ul class="find-traveler__list transports">
+                  <ul class="find-traveler__list  find-traveler__list-transports transports">
                     <li class="transports__item">
                       <input class="transports__checkbox" type="checkbox" id="plane" name="plane" checked>
                       <label class="transports__description transports__description--catalog transports__description--plane" for="plane">
@@ -608,31 +635,50 @@
 
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <div class="travelers-profile__level">
-                  <p class="travelers-profile__number">99</p>
-                  <p class="travelers-profile__text">level</p>
+                  <svg width="65" height="65">
+                    <circle class="travelers-profile__circle travelers-profile__circle--frisova"
+                      r="22" cx="24" cy="24" fill="transparent" stroke="#FF8D30" stroke-width="4"
+                    />
+                  </svg>
+                  <article class="travelers-profile__level-text">
+                    <p class="travelers-profile__number">99</p>
+                    <p class="travelers-profile__text">level</p>
+                  </article>
                 </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -668,32 +714,49 @@
 
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <div class="travelers-profile__level">
-                  <p class="travelers-profile__number">80</p>
-                  <p class="travelers-profile__text">level</p>
+                  <svg width="65" height="65">
+                    <circle class="travelers-profile__circle travelers-profile__circle--demin" r="22" cx="24" cy="24" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+                  </svg>
+                  <article class="travelers-profile__level-text">
+                    <p class="travelers-profile__number">80</p>
+                    <p class="travelers-profile__text">level</p>
+                  </article>
                 </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -732,32 +795,49 @@
 
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <div class="travelers-profile__level">
-                  <p class="travelers-profile__number">25</p>
-                  <p class="travelers-profile__text">level</p>
+                  <svg width="65" height="65">
+                    <circle class="travelers-profile__circle travelers-profile__circle--smolov" r="22" cx="24" cy="24" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+                  </svg>
+                  <article class="travelers-profile__level-text">
+                    <p class="travelers-profile__number">25</p>
+                    <p class="travelers-profile__text">level</p>
+                  </article>
                 </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -779,7 +859,7 @@
                   </label>
                 </article>
                 <p class="travelers-profile__distance">23</p>
-                <p class="travelers-profile__hashtags">#образование #карьера#учеба #линкедин</p>
+                <p class="travelers-profile__hashtags">#образование #карьера #учеба #линкедин</p>
 
                 <p class="travelers-profile__description travelers-profile__description--visit">хочет посетить:</p>
                 <ul class="travelers-profile__list">
@@ -795,32 +875,51 @@
 
                 <p class="travelers-profile__description travelers-profile__description--transport">транспорт:</p>
                 <ul class="travelers-profile__transpotrs-list">
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers-profile__transpotrs-item">
+                  <li class="travelers-profile__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="14" height="16">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
 
                 <p class="travelers-profile__description travelers-profile__description--level">левел:</p>
                 <div class="travelers-profile__level">
-                  <p class="travelers-profile__number">50</p>
-                  <p class="travelers-profile__text">level</p>
+                  <svg class="ravelers-profile__svg-circle" width="65" height="65">
+                    <circle class="travelers-profile__circle travelers-profile__circle--rogovaya"
+                      r="22" cx="24" cy="24" fill="transparent" stroke="#FF8D30" stroke-width="4"
+                    />
+                  </svg>
+                  <article class="travelers-profile__level-text">
+                    <p class="travelers-profile__number">50</p>
+                    <p class="travelers-profile__text">level</p>
+                  </article>
                 </div>
                 <button class="travelers-profile__button button-catalog button-catalog--call">Позвать!</button>
               </li>
@@ -862,6 +961,7 @@
             </div>
           </div>
         </section>
+      </div>
       </main>
 
       <footer class="page-footer">
@@ -916,6 +1016,7 @@
       </footer>
 
       <script src="js/top-menu.js"></script>
+      <script src="js/country-filter.js"></script>
 
   </body>
 </html>

@@ -7,27 +7,31 @@
   width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px 50px 50px min-content(90px) 50px min-content(65px);
+  grid-template-rows: 120px 77px 20px 90px 20px 65px;
 
   @media (min-width: @tablet-width) {
     padding: 65px 75px 50px 75px;
 
     grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: min-content(105px) 50px 60px min-content(105px) 50px;
+    grid-template-rows: 105px 20px 110px 105px 20px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 125px 54px 125px;
 
     grid-template-columns: 4fr 1fr 1fr;
-    grid-template-rows: 190px 100px min-content(105px) 40px;
+    grid-template-rows: 190px 74px 105px 20px;
   }
+}
+
+.profile-info__circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 210 40;
 }
 
 .profile-info__level {
   width: 100px;
   height: 100px;
-  border: 3px solid @orange;
   border-radius: 50%;
 
   grid-column-start: 1;
@@ -44,6 +48,10 @@
     grid-column-start: 2;
     grid-column-end: 3;
   }
+}
+
+.profile-info__level-text {
+  margin-top: -100px;
 }
 
 .profile-info__number {
@@ -105,7 +113,7 @@
 
 .profile-info__button {
   padding: 13px 0;
-  border-radius: 15px;
+  margin-bottom: 33px;
 
   grid-column-start: 1;
   grid-column-end: 3;
@@ -115,7 +123,6 @@
   @media (min-width: @tablet-width) {
     padding: 21px 0;
     margin-bottom: 50px;
-
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -125,6 +132,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 16px;
     padding-bottom: 13px;
+    margin-bottom: 27px;
     border-radius: 0;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;

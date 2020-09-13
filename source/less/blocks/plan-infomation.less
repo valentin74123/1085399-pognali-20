@@ -29,6 +29,7 @@
   color: @blue3;
   margin: 0;
   margin-bottom: 20px;
+  margin-left: 18px;
 
   grid-column-start: 1;
   grid-column-end: 2;
@@ -38,11 +39,46 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 24px;
+    margin-left: 0;
+    margin-bottom: 50px;
 
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-left: 50px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "1.";
+    width: 13px;
+    height: 16px;
+    left: -18px;
+    font-weight: 500;
+
+    @media (min-width: @tablet-width) {
+      width: 16px;
+      height: 15px;
+      left: auto;
+      right: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 19px;
+      right: auto;
+      left: -50px;
+    }
+  }
+
+  &--number::before {
+    content: "2.";
   }
 }
 

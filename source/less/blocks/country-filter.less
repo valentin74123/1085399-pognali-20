@@ -1,4 +1,5 @@
 .country-filter {
+  position: relative;
   background-color: @light-gray6;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -37,6 +38,7 @@
   font-weight: bold;
   color: @blue2;
   text-transform: uppercase;
+  margin: 0;
   margin-left: 27px;
 
   @media (min-width: @tablet-width) {
@@ -73,8 +75,10 @@
   padding: 0;
   list-style: none;
   margin: 0 25px;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     display: flex;
   }
 }
@@ -108,11 +112,22 @@
 }
 
 .country-filter__uncover {
-  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-right: 50px;
+  color: @blue2;
+
+  background-color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
 
   &::after {
     position: absolute;
     content: "";
+    top: 25px;
+    right: 30px;
     width: 17px;
     height: 3px;
     background-image: url("../img/dots.svg");
@@ -126,16 +141,9 @@
     }
   }
 
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: bold;
-  margin-right: 50px;
-  color: @blue2;
-
-  background-color: inherit;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
 
   &:hover,
   &:focus {
@@ -199,4 +207,38 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+@media (max-width: @mobile-width-only) {
+  .country-filter--closed .country-filter__list {
+    display: none;
+  }
+}
+
+.country-filter--opened .country-filter__uncover {
+
+  content: "Свернуть";
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 19px;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/filter-close.svg");
+    background-repeat: no-repeat;
+    filter: invert(12%) sepia(9%) saturate(4552%) hue-rotate(193deg) brightness(97%) contrast(97%);
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      left: 185px;
+      width: 22px;
+      height: 24px;
+    }
+  }
+}
+
+.country-filter--closed .country-filter__countries-list {
+  display: none;
 }

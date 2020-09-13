@@ -29,7 +29,17 @@
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="page-header__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+            </picture>
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
+              <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
           </a>
           <ul class="main-nav__list site-list">
@@ -43,7 +53,7 @@
               <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list user-list__item--close user-list">
             <li class="user-list__item users-links">
               <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
                 <article class="users-links__icons">
@@ -54,7 +64,17 @@
                 <span>8 800 555-86-28</span>
               </a>
             </li>
-            <li class="user-list__item users-links">
+            <li class="user-list__topmenu">
+              <a class="user-list__topmenu-links" href="tel:8 800 555-86-28">
+                <div class="user-list__topmenu-icons user-list__topmenu-icons--tel">
+                  <svg class="user-list__topmenu-icon user-list__topmenu-icon--tel" width="15" height="16">
+                    <use xlink:href="img/sprite.svg#icon-topmenu-phone"></use>
+                  </svg>
+                </div>
+            </a>
+            </li>
+
+            <li class="user-list__item user-list__item--close users-links">
               <a class="user-list__info users-links__info" href="">
                 <article class="users-links__icons">
                   <svg class="users-links__icon users-links__icon--mail" width="18" height="13">
@@ -62,6 +82,15 @@
                   </svg>
                 </article>
                 <span>mail@htmlacademy.ru</span>
+              </a>
+            </li>
+            <li class="user-list__topmenu">
+              <a class="user-list__topmenu-links" href="">
+                <div class="user-list__topmenu-icons user-list__topmenu-icons--mail">
+                  <svg class="user-list__topmenu-icon user-list__topmenu-icon--mail" width="18" height="16">
+                    <use xlink:href="img/sprite.svg#icon-topmenu-mail"></use>
+                  </svg>
+                </div>
               </a>
             </li>
             <li class="user-list__item">
@@ -138,7 +167,9 @@
           <h2 class="about-service__title">О сервисе</h2>
           <p class="about-service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
           <p class="about-service__description-bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a class="about-service__to-all button button--yellow" href="">Подробнее</a>
+          <a class="about-service__to-all button button--yellow" href="">
+            <span class="button__text--yellow">Подробнее</span>
+          </a>
         </div>
       </section>
 
@@ -200,7 +231,9 @@
               </div>
             </li>
           </ul>
-          <a class="directions__to-all button button--yellow" href="">Показать все</a>
+          <a class="directions__to-all button button--yellow" href="">
+            <span class="button__text--yellow">Показать все</span>
+          </a>
         </div>
       </section>
 
@@ -212,8 +245,13 @@
           <ul class="travelers__list">
             <li class="travelers__item">
               <div class="travelers__level">
-                <p class="travelers__number">99</p>
-                <p class="travelers__text">level</p>
+                <svg width="65" height="65">
+                  <circle class="travelers__circle travelers__circle--frisova" r="29" cx="31" cy="31" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+                </svg>
+                <article class="travelers__level-text">
+                  <p class="travelers__number">99</p>
+                  <p class="travelers__text">level</p>
+                </article>
               </div>
               <picture>
                 <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
@@ -229,33 +267,51 @@
                 <h3 class="travelers__name">Таня Фрисова</h3>
                 <p class="travelers__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="travelers__transpotrs-list">
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="17" height="19">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="21" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="18" height="18">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="travelers__item">
+
               <div class="travelers__level">
-                <p class="travelers__number">80</p>
-                <p class="travelers__text">level</p>
+                <svg width="65" height="65">
+                  <circle class="travelers__circle travelers__circle--demin" r="29" cx="31" cy="31" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+                </svg>
+                <article class="travelers__level-text">
+                  <p class="travelers__number">80</p>
+                  <p class="travelers__text">level</p>
+                </article>
               </div>
               <picture>
                 <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
@@ -263,38 +319,52 @@
                 <img class="travelers__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2px" alt="Петя Демин">
               </picture>
               <article class="travelers__flags">
-                <img class="travelers__flag" src="img/flag-germany.svg" alt="флаг Германии" width="35" height="24">
+                <img class="travelers__flag travelers__flag--germany" src="img/flag-germany.svg" alt="флаг Германии" width="30" height="20">
                 <img class="travelers__flag" src="img/flag-czech.svg" alt="флаг Чехии" width="35" height="24">
               </article>
               <div class="travelers__info">
-                <h3 class="travelers__name">Петя Демин</h3>
+                <h3 class="travelers__name travelers__name--online">Петя Демин</h3>
                 <p class="travelers__hashtags">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="travelers__transpotrs-list">
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
+                      Авиаперелет
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="17" height="19">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
+                      Автотранспорт
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon" width="21" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
+                      Велосипед
+                    </div>
                   </li>
-                  <li class="travelers__transpotrs-item">
+                  <li class="travelers__transpotrs-item transpotrs-hover">
                     <svg class="travelers-profile__icon travelers-profile__icon--active" width="18" height="18">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
+                    <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
+                      Пешком
+                    </div>
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
-          <a class="travelers__to-all button button--yellow" href="">Показать всех</a>
+          <a class="travelers__to-all button button--yellow" href="">
+            <span class="button__text--yellow">Показать всех</span>
+          </a>
         </div>
       </section>
 
@@ -324,7 +394,7 @@
               <p class="add-profile__number add-profile__number--yellow">3</p>
             </li>
           </ul>
-          <a class="add-profile__business-tariff" href="">
+          <a class="add-profile__business-tariff">
             <article class="add-profile__icons">
               <svg class="add-profile__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0px" y="0px"
                 viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
@@ -337,6 +407,32 @@
             </article>
             <span>Показать тарифы для бизнеса</span>
           </a>
+          <section class="business-tariff">
+            <div class="business-tariff__wraper">
+              <h2 class="business-tariff__title">Бизнес-тарифы</h2>
+              <ul class="business-tariff__list">
+                <li class="business-tariff__item">
+                  <p class="business-tariff__text">Реклама у блоггера</p>
+                  <p class="business-tariff__text">300 000 руб./пост</p>
+                </li>
+                <li class="business-tariff__item">
+                  <p class="business-tariff__text">Накрутка подписчиков</p>
+                  <p class="business-tariff__text">от 1 руб./шт.</p>
+                </li>
+                <li class="business-tariff__item">
+                  <p class="business-tariff__text">Лайки от ботов</p>
+                  <p class="business-tariff__text">от 20 коп./лайк</p>
+                </li>
+                <li class="business-tariff__item">
+                  <p class="business-tariff__text">Ваш продакт-плейсмент</p>
+                  <p class="business-tariff__text">Индивидуально</p>
+                </li>
+              </ul>
+              <button class="business-tariff__button">
+                <span class="business-tariff__button-text">Закрыть окно</span>
+              </button>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -344,11 +440,11 @@
         <div class="interested-in__wrapper">
           <h2 class="interested-in__title">Заинтересовались?</h2>
           <p class="interested-in__description">Зарегистрируйтесь,<br> это быстро и бесплатно!<br> Уже зарегистрированы? Тогда<br> скорее <a href="" class="interested-in__link">авторизуйтесь</a>.</p>
-          <article class="interested-in__email">
+          <div class="interested-in__email">
             <input class="interested-in__email-input" type="email" placeholder="E-mail">
             <button class="interested-in__button button button--reg" type="button">
               <span class="interested-in__button-text ">Регистрация</span></button>
-          </article>
+            </div>
           <p class="interested-in__questions">Остались вопросы?<br> Мы с радостью на них ответим!</p>
           <a class="interested-in__info users-links users-links__info" href="tel:8 800 555-86-28">
             <article class="users-links__icons">
@@ -447,6 +543,7 @@
     </footer>
 
     <script src="js/top-menu.js"></script>
+    <script src="js/business-tariff.js"></script>
 
   </body>
 </html>

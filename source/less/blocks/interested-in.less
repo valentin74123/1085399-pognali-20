@@ -1,5 +1,7 @@
 .interested-in {
   background-color: @blue2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .interested-in__wrapper {
@@ -93,6 +95,7 @@
 
 .interested-in__email {
   margin-bottom: 30px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
@@ -106,14 +109,16 @@
 }
 
 .interested-in__email-input {
-  width: 70%;
+  width: 90%;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: rgba(@dark-gray, 0.3);
+
   background-color: @white;
 
   border: none;
+  z-index: 1;
+
 
   padding-top: 22px;
   padding-bottom: 22px;
@@ -123,6 +128,7 @@
   &:hover,
   &:focus {
     color: rgba(@dark-gray, 0.5);
+    background-color: @light-gray;
   }
 
   @media (min-width: @tablet-width) {
@@ -130,12 +136,28 @@
     padding-bottom: 28px;
     padding-left: 36px;
     margin-bottom: 60px;
-    width: 80%;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 60%;
+.interested-in__email-input[type="email"]::placeholder {
+  color: rgba(@dark-gray, 0.3);
+
+  &:hover,
+  &:focus {
+    color: rgba(@dark-gray, 0.5);
   }
+}
+
+.interested-in__email-input[type="email"]:valid {
+  outline: 4px solid @white;
+  outline-offset: -4px;
+  background-color: inherit;
+  color: @white;
+}
+
+.interested-in__email-input[type="email"]:invalid {
+  background-color: @white;
+  color: red;
 }
 
 .interested-in__button {
@@ -144,17 +166,21 @@
   line-height: 24px;
 
   min-width: 60px;
-  height: 62px;
+  height: 65px;
   padding-bottom: 25px;
 
   border-radius: 15px;
   background-color: @yellow;
   border: none;
-  position: relative;
+  position: absolute;
+
+  z-index: 4;
+  top: 0;
+  right: 0;
 
   @media (min-width: @tablet-width) {
     min-width: 80px;
-    height: 80px;
+    height: 77px;
     padding-bottom: 35px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -172,6 +198,7 @@
 
   @media (min-width: @desktop-width) {
     display: inline;
+    padding-left: 42px;
   }
 }
 
@@ -190,12 +217,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 34px;
+    top: 30px;
     left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-
     left: 90%;
   }
 }

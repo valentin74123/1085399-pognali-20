@@ -1,5 +1,40 @@
 .travelers {
   background-color: @blue2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 310px;
+    left: -7px;
+    width: 71px;
+    height: 71px;
+    background-size: 71px 71px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url("../img/rogovaya-back-mobile@1x.png");
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 150px;
+      left: auto;
+      right: 74px;
+      width: 285px;
+      height: 285px;
+      background-size: 285px 285px;
+      border-radius: 20px;
+      background-image: url("../img/rogovaya-back-desktop@1x.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 490px;
+      left: 190px;
+      right: auto;
+    }
+  }
 }
 
 .travelers__wrapper {
@@ -17,8 +52,63 @@
 
   @media (min-width: @desktop-width) {
     width: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 430px min-content(190px) 285px 285px;
+    grid-template-rows: 100px 174px 135px 80px;
+    padding-bottom: 135px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 34px;
+    width: 113px;
+    height: 132px;
+    background-color: @dark-blue3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 130px;
+      left: 40px;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 60px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 34px;
+    right: 25px;
+    width: 144px;
+    height: 144px;
+    background-size: 144px 144px;
+    border-radius: 5px;
+    background-image: url("../img/smolov-back-desktop@1x.png");
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 500px;
+      left: 40px;
+      width: 144px;
+      height: 144px;
+      background-size: 144px 144px;
+      border-radius: 20px;
+      background-image: url("../img/smolov-back-desktop@1x.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 235px;
+      left: 547px;
+    }
   }
 }
 
@@ -31,6 +121,7 @@
   margin-bottom: 20px;
   padding-left: 50px;
   padding-right: 50px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -62,11 +153,13 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 25px;
+  max-width: 220px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    width: 430px;
+    max-width: 430px;
     padding-left: 73px;
     margin-bottom: 40px;
 
@@ -94,6 +187,7 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 55px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -158,38 +252,45 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    min-width: 285px;
+
     &:nth-child(1) {
-      margin-right: 30px;
+      margin-right: 25px;
     }
 
     &:nth-child(2) {
-      margin-left: 30px;
+      margin-left: 25px;
     }
   }
 }
 
-.travelers__level {
-  top: 90px;
-  left: 5%;
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  position: relative;
-  border-radius: 50%;
-  background-image: linear-gradient(150deg, transparent 50%, @orange 50%),
-    linear-gradient(90deg, transparent 50%, @orange 50%);
+.travelers__circle {
+
+  stroke-dashoffset: 65;
+
+  &--frisova {
+    stroke-dasharray: 195 5;
+  }
+
+  &--demin {
+    stroke-dasharray: 170 30;
+  }
 }
 
-.travelers__level::after {
-  border-radius: 50%;
-  display: block;
-  content: "";
-  position: absolute;
+.travelers__level {
+  z-index: 1;
+
+  top: 80px;
+  left: 5%;
+  width: 60px;
+  height: 60px;
   background: rgba(@black, 0.6);
-  left: 2em;
-  top: 2em;
-  height: 54px;
-  width: 54px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.travelers__level-text {
+  margin-top: -70px;
 }
 
 .travelers__number {
@@ -229,6 +330,12 @@
   top: -20px;
   left: 50%;
   transform: translateX(-150%);
+
+  &--germany {
+    top: -17px;
+    margin-right: 15px;
+    transform: translateX(-150%) scale(1.2);
+  }
 }
 
 .travelers__info {
@@ -245,6 +352,7 @@
 }
 
 .travelers__name {
+  position: relative;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -254,6 +362,32 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 200px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @light-red;
+
+    @media (min-width: @tablet-width) {
+      left: 10px;
+    }
+  }
+
+  &--online::before {
+    background-color: @green;
+  }
 
   &:hover,
   &:focus {
@@ -270,9 +404,16 @@
   line-height: 18px;
   font-weight: normal;
   color: @dark-gray;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 15px;
+  max-width: 190px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    max-width: 225px;
+  }
 }
 
 .travelers__transpotrs-list {
@@ -290,6 +431,8 @@
 
 .travelers__to-all {
   margin: 0 25px;
+  display: block;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     margin: 0 76px;
@@ -303,7 +446,6 @@
   @media (min-width: @desktop-width) {
     width: 280px;
     margin-left: 131px;
-    margin-bottom: 48px;
 
     grid-column-start: 1;
     grid-column-end: 2;

@@ -36,11 +36,11 @@
     width: auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px min-content(90px) 40px 40px 50px 40px 30px 30px;
+    grid-template-rows: 50px 90px 64px 64px 64px 67px;
 
     @media (min-width: @tablet-width) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 100px min-content(50px) 60px 60px 60px 60px 80px;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 100px 80px 86px 86px 86px 120px;
     }
 
     @media (min-width: @desktop-width) {
@@ -50,6 +50,7 @@
   }
 
   &--three {
+    position: relative;
     padding-bottom: 17px;
     width: auto;
     display: grid;
@@ -64,6 +65,30 @@
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 50px 50px 100px 70px 280px 70px 280px min-content(100px);
+    }
+  }
+
+  &--three::before {
+    position: absolute;
+    content: "";
+    top: 152px;
+    left: 10px;
+    width: 2px;
+    height: 310px;
+    background-color: @blue3;
+
+    @media (min-width: @tablet-width) {
+      top: 276px;
+      left: auto;
+      right: 49px;
+      height: 300px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 30%;
+      top: 295px;
+      width: 2px;
+      height: 280px;
     }
   }
 }
@@ -138,6 +163,7 @@
     line-height: 24px;
     padding-bottom: 35px;
     border-bottom: 1px solid @gray2;
+    max-width: 505px;
   }
 
   &--one {
@@ -442,7 +468,6 @@
   position: relative;
   margin: 0;
   margin-bottom: 22px;
-  display: flex;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -494,22 +519,8 @@
   }
 }
 
-.steps__flags {
-  padding: 9px;
-  border-radius: 4px;
-  border: 1px solid @ligh-gray3;
-  width: 35px;
-  height: 24px;
-
-
-  @media (min-width: @tablet-width) {
-    height: 47px;
-    width: 70px;
-    border: none;
-  }
-}
-
 .steps__countries select {
+  position: relative;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -519,17 +530,131 @@
   padding: 11px 7px 11px 11px;
   border-radius: 4px;
   border: 1px solid @ligh-gray3;
-  width: 85%;
+  width: 83%;
+
+  appearance: none;
+  background: url("../img/dropdown-form.svg") no-repeat 97% center;
+  background-size: 16px 11px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
     padding: 25px 26px;
-    width: 100%;
+    width: 83%;
+    background-size: 20px 17px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+  }
+}
+
+.steps__flags {
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: @tablet-width) {
+    height: 47px;
+    width: 70px;
+    border: none;
+  }
+}
+
+.steps__countries-flags {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px 24px;
+  width: 35px;
+  height: 24px;
+  border: 1px solid @ligh-gray3;
+  padding: 9px;
+  padding-bottom: 7px;
+  border-radius: 4px;
+  position: relative;
+  top: 0;
+  left: 83%;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    width: 70px;
+    height: 47px;
+    left: 100px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 50px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: @blue3;
+
+    @media (min-width: @tablet-width) {
+      top: 25px;
+      right: auto;
+      left: -20px;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &--bosnia {
+    top: -371px;
+
+    @media (min-width: @tablet-width) {
+      top: -255px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 160px;
+      left: 345%;
+    }
+  }
+
+  &--czech-republic {
+    top: -381px;
+
+    @media (min-width: @tablet-width) {
+      top: -420px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -85px;
+    }
+  }
+}
+
+.steps__button-close {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: -10px;
+  width: 21px;
+  height: 21px;
+  border: none;
+  background: url("../img/filter-close.svg");
+
+  border-radius: 50%;
+  filter: opacity(1);
+  background-color: @light-gray;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+    top: 20px;
+    right: -25px;
+  }
+
+  &:hover,
+  &:focus {
+    filter: opacity(0.3);
+  }
+
+  &:active {
+    filter: opacity();
   }
 }
 
@@ -540,14 +665,61 @@
   color: @blue3;
   margin: 0;
   margin-bottom: 20px;
+  margin-left: 15px;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-bottom: 30px;
     font-size: 30px;
     line-height: 30px;
     font-weight: bold;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 25px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: -15px;
+    width: 6px;
+    height: 6px;
+    background-color: @blue3;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 15px;
+      left: auto;
+      right: 0;
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -13px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: -23px;
+    width: 11px;
+    height: 2px;
+    background-color: @blue3;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 
   &--bosnia {
@@ -595,6 +767,7 @@
 
 .steps__flag {
   @media (min-width: @tablet-width) {
+    margin-right: 35px;
     width: 70px;
     height: 47px;
   }
@@ -624,9 +797,15 @@
   line-height: 22px;
   font-weight: normal;
   color: @dark-gray;
-  min-height: 220px;
   border: 1px solid @ligh-gray3;
   border-radius: 4px;
+  text-align: left;
+  padding: 11px 0;
+  padding-left: 15px;
+  padding-right: 20px;
+  resize: none;
+  margin-bottom: 20px;
+  height: 220px;
 
   &:hover,
   &:focus {
@@ -642,7 +821,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 140px;
+    margin-right: 35px;
+    margin-bottom: 45px;
+    height: 140px;
   }
 
   &--bosnia {
@@ -685,8 +866,6 @@
 }
 
 .steps__button {
-  text-align: center;
-
   &--next-one {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -704,15 +883,24 @@
     }
   }
 
+  &--choose {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+
   &--add {
+    margin-bottom: 25px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 6;
     grid-row-end: 7;
 
     @media (min-width: @tablet-width) {
+      margin-bottom: 50px;
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 2;
       grid-row-start: 6;
       grid-row-end: 7;
     }
@@ -761,6 +949,8 @@
   }
 
   &--submit {
+    border: none;
+
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 7;
