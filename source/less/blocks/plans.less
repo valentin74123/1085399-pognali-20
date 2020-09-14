@@ -2,20 +2,25 @@
   background-color: @light-gray4;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  position: relative;
+  margin-top: -30px;
+  z-index: 2;
 }
 
 .plans__wrapper {
   padding: 30px 25px;
+  padding-bottom: 60px;
   width: auto;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 75px 75px 75px;
+    padding: 60px 75px 105px 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 60px 65px 125px;
+    padding: 55px 60px 95px 125px;
   }
 }
 

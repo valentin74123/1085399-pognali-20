@@ -84,7 +84,7 @@
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 2fr 1fr;
-      grid-template-rows: 50px 50px 100px 70px 70px 70px 70px min-content(100px);
+      grid-template-rows: 50px 50px 100px 70px 70px 70px 800px min-content(100px);
     }
   }
 
@@ -220,6 +220,7 @@
   }
 
   &--three {
+    position: relative;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -235,6 +236,20 @@
       grid-column-end: 3;
       grid-row-start: 3;
       grid-row-end: 4;
+    }
+  }
+
+  &--three::after {
+    position: absolute;
+    content: "";
+    top: 73px;
+    left: -10px;
+    height: 310px;
+    width: 2px;
+    background-color: @blue3;
+
+    @media (min-width: @tablet-width) {
+      display: none;
     }
   }
 }
@@ -417,7 +432,7 @@
 
     @media (min-width: @desktop-width) {
       margin-top: 7px;
-      margin-bottom: 33px;
+      margin-bottom: 10px;
 
       grid-column-start: 2;
       grid-column-end: 3;
@@ -591,7 +606,7 @@
     border: none;
     width: 70px;
     height: 47px;
-    left: 100px;
+    left: 70px;
   }
 
   &::after {
@@ -622,7 +637,7 @@
 
     @media (min-width: @desktop-width) {
       top: 160px;
-      left: 345%;
+      left: 325%;
     }
   }
 
@@ -717,7 +732,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      right: -13px;
+      right: -60px;
     }
   }
 
@@ -757,7 +772,7 @@
       grid-row-end: 5;
 
       &::after {
-        right: -7px;
+        right: -54px;
         height: 285px;
         width: 2px;
         background-color: @blue3;
@@ -934,6 +949,8 @@
     }
 
     @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+      padding-bottom: 40px;
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 7;
@@ -948,6 +965,7 @@
     grid-row-end: 8;
 
     @media (min-width: @desktop-width) {
+
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 8;

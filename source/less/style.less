@@ -71,8 +71,16 @@
 }
 
 .page__body {
-  background: @blue2;
-  background-image: url("/source/img/globe-back-mobile@1x.jpg");
+  background: @blue;
+
+  @media (min-width: @tablet-width) {
+    background-color: @dark-blue2;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    background-color: @blue;
+  }
 }
 
 .page-main {

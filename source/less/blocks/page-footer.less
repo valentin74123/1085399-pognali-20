@@ -1,8 +1,24 @@
 .page-footer {
   background-color: @white;
-  width: auto;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  position: relative;
+
+  &--index {
+    margin-top: -35px;
+    z-index: 2;
+  }
+
+  &--form {
+    z-index: 4;
+    margin-top: -30px;
+  }
+
+  &--catalog {
+    z-index: 2;
+    margin-top: -30px;
+  }
 
   padding: 38px 25px 20px 25px;
 

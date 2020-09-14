@@ -2,18 +2,22 @@
   background-color: @blue2;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  z-index: 3;
+  margin-top: -30px;
+  position: relative;
 }
 
 .interested-in__wrapper {
-  padding: 70px 25px 15px 25px;
+  padding: 100px 25px 15px 25px;
   width: auto;
 
   @media (min-width: @tablet-width) {
-    padding: 75px 76px 60px 76px;
+    padding: 105px 76px 60px 76px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 133px 100px 133px;
+    padding: 140px 133px 100px 133px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -119,16 +123,20 @@
   border: none;
   z-index: 1;
 
-
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 25px;
   border-radius: 15px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: rgba(@dark-gray, 0.5);
     background-color: @light-gray;
+  }
+
+  &:focus {
+    border: 1px solid @white;
+    background-color: inherit;
+    color: @white;
   }
 
   @media (min-width: @tablet-width) {
@@ -146,13 +154,6 @@
   &:focus {
     color: rgba(@dark-gray, 0.5);
   }
-}
-
-.interested-in__email-input[type="email"]:valid {
-  outline: 4px solid @white;
-  outline-offset: -4px;
-  background-color: inherit;
-  color: @white;
 }
 
 .interested-in__email-input[type="email"]:invalid {

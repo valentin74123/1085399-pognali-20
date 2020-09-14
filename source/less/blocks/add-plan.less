@@ -2,20 +2,24 @@
   background-color: @light-gray5;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  position: relative;
+  z-index: 3;
+  margin-top: -30px;
 }
 
 .add-plan__wrapper {
-  padding: 30px 25px 45px 25px;
+  padding: 30px 25px 75px 25px;
   width: auto;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-    padding: 55px 75px 60px 75px;
+    padding: 55px 75px 90px 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 60px 70px 60px;
+    padding: 55px 60px 100px 60px;
   }
 }
 

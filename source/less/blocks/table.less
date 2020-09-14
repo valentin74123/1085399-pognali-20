@@ -46,7 +46,7 @@
   border: 1px solid @gray2;
   cursor: pointer;
 
-  &:disabled {
+  &--disabled {
     opacity: 0.3;
     font-weight: normal;
 
@@ -66,6 +66,18 @@
 
   &:active {
     outline: none;
+  }
+
+  &--hover {
+    color: @white;
+    background-color: @blue3;
+    outline: 4px solid @dark-orange;
+    outline-offset: -4px;
+  }
+
+  &--active {
+    color: @white;
+    background-color: @blue3;
   }
 
   @media (min-width: @tablet-width) {
