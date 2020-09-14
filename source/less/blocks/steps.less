@@ -3,15 +3,54 @@
   border-radius: 15px;
   padding: 24px 20px;
   margin-bottom: 10px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 50px 43px;
     margin-bottom: 40px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 43px;
+      width: 90%;
+      height: 1px;
+      background-color: @light-gray9;
+    }
+
+    &--one::before {
+      top: 250px;
+    }
+
+    &--two::before {
+      top: 215px;
+    }
+
+    &--three::before {
+      top: 225px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 100px 160px;
     margin-bottom: 45px;
+
+    &::before {
+      left: 160px;
+      width: 80%;
+    }
+
+    &--one::before {
+      top: 270px;
+    }
+
+    &--two::before {
+      top: 235px;
+    }
+
+    &--three::before {
+      top: 235px;
+    }
   }
 
   &--one {
@@ -50,7 +89,6 @@
   }
 
   &--three {
-    position: relative;
     padding-bottom: 17px;
     width: auto;
     display: grid;
@@ -65,30 +103,6 @@
     @media (min-width: @desktop-width) {
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 50px 50px 100px 70px 280px 70px 280px min-content(100px);
-    }
-  }
-
-  &--three::before {
-    position: absolute;
-    content: "";
-    top: 152px;
-    left: 10px;
-    width: 2px;
-    height: 310px;
-    background-color: @blue3;
-
-    @media (min-width: @tablet-width) {
-      top: 276px;
-      left: auto;
-      right: 49px;
-      height: 300px;
-    }
-
-    @media (min-width: @desktop-width) {
-      right: 30%;
-      top: 295px;
-      width: 2px;
-      height: 280px;
     }
   }
 }
@@ -162,7 +176,6 @@
     font-size: 20px;
     line-height: 24px;
     padding-bottom: 35px;
-    border-bottom: 1px solid @gray2;
     max-width: 505px;
   }
 
@@ -716,10 +729,6 @@
     width: 11px;
     height: 2px;
     background-color: @blue3;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
   }
 
   &--bosnia {
@@ -731,6 +740,14 @@
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 3;
+
+      &::after {
+        top: 20px;
+        left: auto;
+        right: 6px;
+        height: 285px;
+        width: 2px;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -738,6 +755,13 @@
       grid-column-end: 3;
       grid-row-start: 4;
       grid-row-end: 5;
+
+      &::after {
+        right: -7px;
+        height: 285px;
+        width: 2px;
+        background-color: @blue3;
+      }
     }
   }
 
@@ -750,6 +774,10 @@
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
       grid-column-end: 3;
+
+      &::after {
+        display: none;
+      }
     }
 
     @media (min-width: @desktop-width) {
