@@ -25,10 +25,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-
+    .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -119,19 +119,19 @@ exports.clean = clean;
 
 // Build
 
-const build = () => {
-  gulp.series(
-    "clean",
-    "images",
-    "webps",
-    "copy",
-    "styles",
-    "sprite",
-    "html",
-    "minify",
-    "compress"
-  )();
-}
+const build = (done) =>
+gulp.series(
+  "clean",
+  "images",
+  "webps",
+  "copy",
+  "styles",
+  "sprite",
+  "html",
+  "minify",
+  "compress"
+)(done);
+
 
 exports.build = build;
 
@@ -140,7 +140,7 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,

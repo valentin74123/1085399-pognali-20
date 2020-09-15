@@ -351,7 +351,7 @@
                 <li class="points__item">Развлечения</li>
               </ul>
               <p class="steps__countries steps__countries--bosnia">
-                <select name="country">
+                <select class="steps__countries-select" name="country">
                   <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
                 </select>
                 <div class="steps__countries-flags steps__countries-flags--bosnia">
@@ -362,7 +362,7 @@
                 </div>
               </p>
               <p class="steps__countries steps__countries--czech-republic">
-                <select name="country">
+                <select class="steps__countries-select" name="country">
                   <option value="Чехия" selected>Чехия</option>
                 </select>
                 <div class="steps__countries-flags steps__countries-flags--czech-republic">
@@ -431,9 +431,13 @@
                   </ul>
                 </section>
               </div>
-              <button class="steps__button steps__button--add button-country button-country--add" type="button">
-                <span class="button-country__text button-country__text--add">Добавить страну</span>
-              </button>
+
+              <div class="steps__button steps__button--add">
+                <button class=" button-country button-country--add" type="button">
+                  <span class="button-country__text button-country__text--add">Добавить страну</span>
+                </button>
+              </div>
+
               <a class="steps__button steps__button--next-two button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
               <a class="steps__button steps__button--prev-two button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
             </li>

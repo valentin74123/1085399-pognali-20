@@ -15,6 +15,43 @@
     padding: 0;
     width: 93%;
   }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      position: relative;
+      z-index: 8;
+      background-color: @white;
+      padding: 15px 60px;
+
+      display: flex;
+
+      .page-header__logo {
+        margin-left: 40px;
+      }
+
+      .main-nav__wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .site-list {
+        &::before {
+          background-color: @blue2;
+        }
+      }
+
+      .site-list__item a {
+        color: @blue2;
+      }
+
+      .user-list {
+        position: absolute;
+        right: 60px;
+      }
+    }
+  }
 }
 
 .main-nav__wrapper {

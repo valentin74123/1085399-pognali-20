@@ -117,10 +117,10 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-
+  border: 4px solid @white;
   background-color: @white;
 
-  border: none;
+
   z-index: 1;
 
   padding-top: 22px;
@@ -134,14 +134,16 @@
   }
 
   &:focus {
-    border: 1px solid @white;
+    border: 4px solid @white;
     background-color: inherit;
     color: @white;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     padding-left: 36px;
     margin-bottom: 60px;
   }
@@ -167,7 +169,7 @@
   line-height: 24px;
 
   min-width: 60px;
-  height: 65px;
+  height: 73px;
   padding-bottom: 25px;
 
   border-radius: 15px;
@@ -181,7 +183,7 @@
 
   @media (min-width: @tablet-width) {
     min-width: 80px;
-    height: 77px;
+    height: 86px;
     padding-bottom: 35px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -206,10 +208,10 @@
 .interested-in__button::after {
   position: absolute;
   content: "";
-  top: 23px;
+  top: 28px;
   left: 22px;
   width: 16px;
-  height: 14px;
+  height: 15px;
   background-image: url("../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
 
@@ -218,7 +220,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 30px;
+    top: 35px;
     left: 30px;
   }
 

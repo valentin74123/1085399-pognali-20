@@ -18,23 +18,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/about-tablet@1x.png");
-    height: 670px;
-    background-position: right;
+    background-image: none;
+    height: 790px;
     background-color: @dark-blue2;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/about-tablet@2x.png");
-    }
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/about-desktop@1x.png");
-    height: 668px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/about-desktop@2x.png");
-    }
+    height: 660px;
   }
 }
 
@@ -46,10 +36,70 @@
   @media (min-width: @tablet-width) {
     padding-left: 74px;
     padding-right: 0;
+    padding-top: 137px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 130px;
+    padding-top: 42px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -19px;
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: @dark-blue3;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 96px;
+      left: 40px;
+      height: 212px;
+      width: 90%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 212px;
+      top: -20px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      width: 376px;
+      height: 548px;
+      top: 144px;
+      right: 8px;
+      background-image: url("../img/about-tablet@1x.png");
+      z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -5px;
+      right: 60px;
+      width: 630px;
+      height: 665px;
+      background-image: url("../img/about-desktop@1x.png");
+
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
+    }
   }
 }
 
@@ -60,6 +110,8 @@
   color: @orange;
   margin: 0;
   margin-bottom: 20px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -80,6 +132,8 @@
   margin: 0;
   margin-bottom: 20px;
   max-width: 211px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -102,6 +156,8 @@
   color: @white;
   margin: 0;
   max-width: 211px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
