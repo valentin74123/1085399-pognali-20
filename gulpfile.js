@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
 
 // Styles
 
@@ -22,10 +25,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-
+    .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -39,6 +42,22 @@ const html = () => {
 }
 
 exports.html = html;
+
+gulp.task("minify", () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+});
+
+// JS
+
+gulp.task("compress", function () {
+  return pipeline(
+        gulp.src("source/js/*.js"),
+        uglify(),
+        gulp.dest("build/js")
+  );
+});
 
 // Images
 
@@ -100,17 +119,19 @@ exports.clean = clean;
 
 // Build
 
-const build = () => {
-  gulp.series(
-    "clean",
-    "images",
-    "webps",
-    "copy",
-    "styles",
-    "sprite",
-    "html"
-  )();
-}
+const build = (done) =>
+gulp.series(
+  "clean",
+  "images",
+  "webps",
+  "copy",
+  "styles",
+  "sprite",
+  "html",
+  "minify",
+  "compress"
+)(done);
+
 
 exports.build = build;
 
@@ -119,7 +140,7 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,

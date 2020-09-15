@@ -1,4 +1,7 @@
 .range-filter {
+  display: grid;
+  grid-template-columns: 1fr;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -16,10 +19,11 @@
   font-weight: 500;
   color: @blue3;
   letter-spacing: 0.06em;
-  width: 50px;
+  text-align: center;
   background: inherit;
   padding-top: 13px;
   padding-bottom: 8px;
+  background-color: @white;
 
   border-radius: 4px;
   border: 1px solid @ligh-gray3;
@@ -40,16 +44,74 @@
     padding-top: 15px;
     padding-bottom: 11px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.range-filter__min input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.range-filter__max input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 .range-filter__price-controls {
-  background-color: @white;
+  background-color: inherit;
+  position: relative;
 
   &--min-max {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     box-sizing: border-box;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 1px;
+    background-color: @ligh-gray3;
+
+    @media (min-width: @tablet-width) {
+      top: 25px;
+      width: 21px;
+      height: 1px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 10px;
+    background-color: @white;
+
+    @media (min-width: @tablet-width) {
+      top: 18px;
+      width: 21px;
+      height: 15px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    margin-left: 0;
   }
 }
 
@@ -61,6 +123,8 @@
 
   @media (min-width: @tablet-width) {
     order: -1;
+    margin: 0;
+    margin-top: 5px;
   }
 }
 

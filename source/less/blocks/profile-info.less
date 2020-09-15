@@ -1,33 +1,42 @@
 .profile-info {
   background-color: @light-gray;
+  z-index: 1;
+  margin-top: -30px;
 }
 
 .profile-info__wrapper {
-  padding: 20px 25px 35px 25px;
+  padding: 50px 25px 65px 25px;
   width: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px 50px 50px min-content(90px) 50px min-content(65px);
+  grid-template-rows: 120px 77px 20px 90px 20px 65px;
 
   @media (min-width: @tablet-width) {
-    padding: 65px 75px 50px 75px;
+    padding: 95px 75px 80px 75px;
 
     grid-template-columns: 100px 1fr 100px;
-    grid-template-rows: min-content(105px) 50px 60px min-content(105px) 50px;
+    grid-template-rows: 105px 20px 110px 105px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 125px 54px 125px;
+    position: relative;
+    z-index: 3;
+    margin-top: -220px;
+    padding: 30px 125px 84px 125px;
 
     grid-template-columns: 4fr 1fr 1fr;
-    grid-template-rows: 190px 100px min-content(105px) 40px;
+    grid-template-rows: 190px 74px 105px 20px;
   }
+}
+
+.profile-info__circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 210 40;
 }
 
 .profile-info__level {
   width: 100px;
   height: 100px;
-  border: 3px solid @orange;
   border-radius: 50%;
 
   grid-column-start: 1;
@@ -46,6 +55,10 @@
   }
 }
 
+.profile-info__level-text {
+  margin-top: -100px;
+}
+
 .profile-info__number {
   font-size: 38px;
   line-height: 38px;
@@ -59,6 +72,10 @@
   padding-bottom: 7px;
   margin-bottom: 7px;
   border-bottom: 1px solid rgba(@dark-gray, 0.3);
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }
 
 .profile-info__text {
@@ -70,6 +87,10 @@
   text-align: center;
 
   width: 50px;
+
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
 }
 
 .profile-info__avatar {
@@ -92,20 +113,18 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 190px;
-    height: 190px;
+    width: 120%;
+    height: 100%;
     border-radius: 0;
+    right: 0;
 
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    position: absolute;
   }
 }
 
 .profile-info__button {
   padding: 13px 0;
-  border-radius: 15px;
+  margin-bottom: 33px;
 
   grid-column-start: 1;
   grid-column-end: 3;
@@ -115,7 +134,6 @@
   @media (min-width: @tablet-width) {
     padding: 21px 0;
     margin-bottom: 50px;
-
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -125,6 +143,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 16px;
     padding-bottom: 13px;
+    margin-bottom: 27px;
     border-radius: 0;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;

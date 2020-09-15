@@ -46,7 +46,7 @@
   border: 1px solid @gray2;
   cursor: pointer;
 
-  &:disabled {
+  &--disabled {
     opacity: 0.3;
     font-weight: normal;
 
@@ -68,6 +68,18 @@
     outline: none;
   }
 
+  &--hover {
+    color: @white;
+    background-color: @blue3;
+    outline: 4px solid @dark-orange;
+    outline-offset: -4px;
+  }
+
+  &--active {
+    color: @white;
+    background-color: @blue3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -81,4 +93,8 @@
     vertical-align: top;
     text-align: left;
   }
+}
+
+.table__input[type="checkbox"] {
+  display: none;
 }

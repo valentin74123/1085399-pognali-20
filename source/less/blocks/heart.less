@@ -1,0 +1,56 @@
+.heart__description {
+  position: relative;
+  cursor: pointer;
+}
+
+.heart__description::before {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 1;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-image: url("../img/heart.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 11px;
+  background-position: center;
+  background-color: @light-gray6;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-size: 20px 20px;
+  }
+}
+
+.heart__checkbox[type="checkbox"] {
+  display: none;
+}
+
+.heart__checkbox[type="checkbox"]:checked ~ .heart__description::before {
+  opacity: 1;
+  background-image: url("../img/heart-active.svg");
+  background-color: @light-pink;
+}
+
+.heart__checkbox[type="checkbox"]:checked:focus ~ .heart__description::before,
+.heart__checkbox[type="checkbox"]:checked:hover ~ .heart__description::before {
+  background-color: @light-pink2;
+  opacity: 1;
+}
+
+.heart__checkbox[type="checkbox"]:checked:active ~ .heart__description::before {
+  opacity: 0.3;
+}
+
+.heart__checkbox[type="checkbox"]:focus ~ .heart__description::before,
+.heart__checkbox[type="checkbox"]:hover ~ .heart__description::before {
+  opacity: 0.5;
+}
+
+.heart__checkbox[type="checkbox"]:active ~ .heart__description::before {
+  opacity: 0.1;
+}

@@ -6,20 +6,23 @@
 @import "blocks/button-catalog.less";
 @import "blocks/button-grey.less";
 @import "blocks/button-light.less";
-@import "blocks/button-close.less";
 @import "blocks/page.less";
 @import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/site-list.less";
 @import "blocks/user-list.less";
+@import "blocks/users-links.less";
 @import "blocks/social-list.less";
 @import "blocks/information.less";
 @import "blocks/about-service.less";
 @import "blocks/directions.less";
 @import "blocks/travelers.less";
+@import "blocks/transpotrs-hover";
 @import "blocks/add-profile.less";
+@import "blocks/business-tariff";
 @import "blocks/interested-in.less";
 @import "blocks/route.less";
+@import "blocks/map.less";
 @import "blocks/social.less";
 @import "blocks/copyright.less";
 @import "blocks/page-footer.less";
@@ -37,12 +40,14 @@
 @import "blocks/country-filter.less";
 @import "blocks/countries.less";
 @import "blocks/choose-country.less";
+@import "blocks/desktop.less";
 @import "blocks/find-traveler.less";
 @import "blocks/list-catalog.less";
 @import "blocks/transports.less";
 @import "blocks/range-filter.less";
 @import "blocks/travelers-profiles.less";
 @import "blocks/travelers-profile.less";
+@import "blocks/heart.less";
 @import "blocks/pages.less";
 
 @font-face {
@@ -66,7 +71,16 @@
 }
 
 .page__body {
-  background: @blue2;
+  background: @blue;
+
+  @media (min-width: @tablet-width) {
+    background-color: @dark-blue2;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    background-color: @blue;
+  }
 }
 
 .page-main {

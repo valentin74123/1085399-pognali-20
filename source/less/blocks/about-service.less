@@ -1,51 +1,105 @@
 .about-service {
   background-color: @blue2;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   background-image: url("../img/about-mobile@1x.png");
   height: 350px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60% 100%;
+  background-size: center 100%;
+
+
+  z-index: 7;
+
+  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/about-mobile@2x.png");
   }
 
-
   @media (min-width: @tablet-width) {
-    background-image: url("../img/about-tablet@1x.png");
-    height: 600px;
-    background-position: right;
-    background-size: 50% 100%;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/about-tablet@2x.png");
-    }
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background-image: none;
+    height: 790px;
+    background-color: @dark-blue2;
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/about-desktop@1x.png");
-    height: 680px;
-
-    margin-left: 70px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/about-desktop@2x.png");
-    }
+    height: 660px;
   }
 }
 
 .about-service__wrapper {
   padding: 33px 60px 82px 50px;
   width: auto;
+  margin-top: 0;
 
   @media (min-width: @tablet-width) {
     padding-left: 74px;
     padding-right: 0;
+    padding-top: 137px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-top: 42px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -19px;
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: @dark-blue3;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 96px;
+      left: 40px;
+      height: 212px;
+      width: 90%;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 212px;
+      top: -20px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      width: 376px;
+      height: 548px;
+      top: 144px;
+      right: 8px;
+      background-image: url("../img/about-tablet@1x.png");
+      z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -5px;
+      right: 60px;
+      width: 630px;
+      height: 665px;
+      background-image: url("../img/about-desktop@1x.png");
+
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
+    }
   }
 }
 
@@ -56,6 +110,8 @@
   color: @orange;
   margin: 0;
   margin-bottom: 20px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -75,16 +131,21 @@
   color: @white;
   margin: 0;
   margin-bottom: 20px;
+  max-width: 211px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
     margin-bottom: 30px;
+    max-width: 310px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 40px;
     line-height: 34px;
+    max-width: 620px;
   }
 }
 
@@ -94,16 +155,21 @@
   font-weight: bold;
   color: @white;
   margin: 0;
+  max-width: 211px;
+  z-index: 3;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     line-height: 25px;
     margin-bottom: 50px;
+    max-width: 265px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 24px;
     margin-bottom: 85px;
+    max-width: 425px;
   }
 }
 
@@ -111,7 +177,8 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: inline;
+    display: block;
     padding: 28px 34px;
+    width: 275px;
   }
 }

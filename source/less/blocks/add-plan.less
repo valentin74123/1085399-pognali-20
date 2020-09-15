@@ -1,19 +1,25 @@
 .add-plan {
   background-color: @light-gray5;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  position: relative;
+  z-index: 3;
+  margin-top: -30px;
 }
 
 .add-plan__wrapper {
-  padding: 30px 25px 45px 25px;
+  padding: 30px 25px 75px 25px;
   width: auto;
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-    padding: 55px 75px 60px 75px;
+    padding: 55px 75px 90px 75px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 55px 60px 70px 60px;
+    padding: 55px 60px 100px 60px;
   }
 }
 
@@ -22,13 +28,40 @@
   line-height: 24px;
   font-weight: bold;
   color: @blue3;
+  margin: 0;
+  margin-bottom: 30px;
 
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
 
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 43px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: @blue3;
+    box-shadow: 16px 0 0 0 rgba(@blue3, 0.3),
+      32px 0 0 0 rgba(@blue3, 0.3);
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+      right: 73px;
+      width: 6px;
+      height: 6px;
+      box-shadow: 30px 0 0 0 rgba(@blue3, 0.3),
+        60px 0 0 0 rgba(@blue3, 0.3);
+    }
+  }
+
   @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
     font-size: 36px;
     line-height: 36px;
   }

@@ -1,5 +1,17 @@
 .country-filter {
+  position: relative;
   background-color: @light-gray6;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: inherit;
+  }
 }
 
 .country-filter__wrapper {
@@ -10,7 +22,12 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     padding: 57px 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
   }
 }
 
@@ -21,6 +38,7 @@
   font-weight: bold;
   color: @blue2;
   text-transform: uppercase;
+  margin: 0;
   margin-left: 27px;
 
   @media (min-width: @tablet-width) {
@@ -57,8 +75,10 @@
   padding: 0;
   list-style: none;
   margin: 0 25px;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
     display: flex;
   }
 }
@@ -92,39 +112,133 @@
 }
 
 .country-filter__uncover {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-right: 50px;
+  color: @blue2;
+
+  background-color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 30px;
+    width: 17px;
+    height: 3px;
+    background-image: url("../img/dots.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 6px;
+      left: 185px;
+      width: 30px;
+      height: 7px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
   }
 
   &:active {
-    opacity: 1;
+    opacity: 0.3;
   }
+}
+
+.country-filter__uncover-text {
+  display: none;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    color: @blue2;
-    opacity: 0.3;
-    background-color: inherit;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
+    display: block;
   }
 }
 
 .country-filter__button {
   padding: 11px 0;
   margin: 0 25px;
-  width: 100%;
+  margin-bottom: 30px;
+  width: 89%;
 
   @media (min-width: @tablet-width) {
     padding: 37px 0;
     margin: 0 77px;
+    width: 79%;
+    margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 60px;
+    width: 90%;
+    margin-bottom: 100px;
   }
+}
+
+.country-filter__button-text {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: -25px;
+    width: 13px;
+    height: 13px;
+    background-image: url("../img/filter-close.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      left: -40px;
+      width: 22px;
+      height: 24px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .country-filter--closed .country-filter__list {
+    display: none;
+  }
+}
+
+.country-filter--opened .country-filter__uncover {
+
+  content: "Свернуть";
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 19px;
+    right: 30px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/filter-close.svg");
+    background-repeat: no-repeat;
+    filter: invert(12%) sepia(9%) saturate(4552%) hue-rotate(193deg) brightness(97%) contrast(97%);
+
+    @media (min-width: @tablet-width) {
+      top: 0;
+      left: 185px;
+      width: 22px;
+      height: 24px;
+    }
+  }
+}
+
+.country-filter--closed .country-filter__countries-list {
+  display: none;
 }

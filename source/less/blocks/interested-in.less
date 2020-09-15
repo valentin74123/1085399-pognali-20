@@ -1,17 +1,23 @@
 .interested-in {
   background-color: @blue2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  z-index: 3;
+  margin-top: -30px;
+  position: relative;
 }
 
 .interested-in__wrapper {
-  padding: 70px 25px 15px 25px;
+  padding: 100px 25px 15px 25px;
   width: auto;
 
   @media (min-width: @tablet-width) {
-    padding: 75px 76px 60px 76px;
+    padding: 105px 76px 60px 76px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 110px 133px 100px 133px;
+    padding: 140px 133px 100px 133px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -93,6 +99,7 @@
 
 .interested-in__email {
   margin-bottom: 30px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
@@ -106,36 +113,54 @@
 }
 
 .interested-in__email-input {
-  width: 70%;
+  width: 90%;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: rgba(@dark-gray, 0.3);
+  border: 4px solid @white;
   background-color: @white;
 
-  border: none;
+
+  z-index: 1;
 
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 25px;
   border-radius: 15px;
 
+  &:hover {
+    color: rgba(@dark-gray, 0.5);
+    background-color: @light-gray;
+  }
+
+  &:focus {
+    border: 4px solid @white;
+    background-color: inherit;
+    color: @white;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 36px;
+    margin-bottom: 60px;
+  }
+}
+
+.interested-in__email-input[type="email"]::placeholder {
+  color: rgba(@dark-gray, 0.3);
+
   &:hover,
   &:focus {
     color: rgba(@dark-gray, 0.5);
   }
+}
 
-  @media (min-width: @tablet-width) {
-    padding-top: 28px;
-    padding-bottom: 28px;
-    padding-left: 36px;
-    margin-bottom: 60px;
-    width: 80%;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 60%;
-  }
+.interested-in__email-input[type="email"]:invalid {
+  background-color: @white;
+  color: red;
 }
 
 .interested-in__button {
@@ -144,17 +169,21 @@
   line-height: 24px;
 
   min-width: 60px;
-  height: 62px;
+  height: 73px;
   padding-bottom: 25px;
 
   border-radius: 15px;
   background-color: @yellow;
   border: none;
-  position: relative;
+  position: absolute;
+
+  z-index: 4;
+  top: 0;
+  right: 0;
 
   @media (min-width: @tablet-width) {
     min-width: 80px;
-    height: 80px;
+    height: 86px;
     padding-bottom: 35px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -172,16 +201,17 @@
 
   @media (min-width: @desktop-width) {
     display: inline;
+    padding-left: 42px;
   }
 }
 
 .interested-in__button::after {
   position: absolute;
   content: "";
-  top: 23px;
+  top: 28px;
   left: 22px;
   width: 16px;
-  height: 14px;
+  height: 15px;
   background-image: url("../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
 
@@ -190,12 +220,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 34px;
+    top: 35px;
     left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-
     left: 90%;
   }
 }
@@ -251,54 +280,6 @@
   @media (min-width: @desktop-width) {
     br {
       display: none;
-    }
-  }
-}
-
-.interested-in__icon {
-  background-color: @dark-blue;
-  fill: @yellow;
-  margin-right: 16px;
-  border-radius: 50%;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 22px;
-  }
-
-  &:hover,
-  &:focus {
-    fill: @yellow-dark;
-  }
-
-  &--tel {
-    padding: 14px 13.5px;
-
-    @media (min-width: @tablet-width) {
-      padding: 20px 21px;
-      width: 27px;
-      height: 25px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 28px;
-      width: 36px;
-      height: 34px;
-    }
-  }
-
-  &--mail {
-    padding: 11px 10px 9px 11px;
-
-    @media (min-width: @tablet-width) {
-      padding: 15px 16px;
-      width: 35px;
-      height: 37px;
-    }
-
-    @media (min-width: @desktop-width) {
-      padding: 20px 21px;
-      width: 47px;
-      height: 50px;
     }
   }
 }

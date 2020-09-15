@@ -1,14 +1,51 @@
 .travelers {
   background-color: @blue2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  position: relative;
+  z-index: 5;
+  margin-top: -30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 335px;
+    left: -7px;
+    width: 71px;
+    height: 71px;
+    background-size: 71px 71px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url("../img/rogovaya-back-mobile@1x.png");
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 120px;
+      left: auto;
+      right: 74px;
+      width: 285px;
+      height: 285px;
+      background-size: 285px 285px;
+      border-radius: 20px;
+      background-image: url("../img/rogovaya-back-desktop@1x.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 435px;
+      left: 190px;
+      right: auto;
+    }
+  }
 }
 
 .travelers__wrapper {
-  padding-top: 70px;
+  padding-top: 100px;
   padding-bottom: 31px;
   width: auto;
 
   @media (min-width: @tablet-width) {
-    padding-top: 210px;
+    padding-top: 185px;
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,12 +54,68 @@
 
   @media (min-width: @desktop-width) {
     width: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 430px min-content(190px) 285px 285px;
+    grid-template-rows: 100px 174px 135px 80px;
+    padding-bottom: 135px;
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 59px;
+    width: 113px;
+    height: 132px;
+    background-color: @dark-blue3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 100px;
+      left: 40px;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 60px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 59px;
+    right: 25px;
+    width: 144px;
+    height: 144px;
+    background-size: 144px 144px;
+    border-radius: 5px;
+    background-image: url("../img/smolov-back-desktop@1x.png");
+    z-index: 1;
+
+    @media (min-width: @tablet-width) {
+      top: 515px;
+      left: 40px;
+      width: 144px;
+      height: 144px;
+      background-size: 144px 144px;
+      border-radius: 20px;
+      background-image: url("../img/smolov-back-desktop@1x.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 235px;
+      left: 547px;
+    }
   }
 }
 
 .travelers__title {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
@@ -31,6 +124,7 @@
   margin-bottom: 20px;
   padding-left: 50px;
   padding-right: 50px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -53,6 +147,7 @@
 }
 
 .travelers__description {
+  position: relative;
   font-size: 16px;
   line-height: 22px;
   font-weight: lighter;
@@ -62,11 +157,13 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 25px;
+  max-width: 220px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
-    width: 430px;
+    max-width: 430px;
     padding-left: 73px;
     margin-bottom: 40px;
 
@@ -85,6 +182,7 @@
 }
 
 .travelers__description-bold {
+  position: relative;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
@@ -94,6 +192,7 @@
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 55px;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
@@ -123,7 +222,10 @@
   list-style: none;
   padding-left: 25px;
   padding-right: 25px;
+  margin-top: -60px;
   width: auto;
+  z-index: 4;
+  position: relative;
 
   margin-bottom: 40px;
 
@@ -137,6 +239,7 @@
 
     padding-left: 74px;
     padding-right: 74px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -158,25 +261,45 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
+    min-width: 285px;
+
     &:nth-child(1) {
-      margin-right: 30px;
+      margin-right: 25px;
     }
 
     &:nth-child(2) {
-      margin-left: 30px;
+      margin-left: 25px;
     }
   }
 }
 
+.travelers__circle {
+
+  stroke-dashoffset: 65;
+
+  &--frisova {
+    stroke-dasharray: 195 5;
+  }
+
+  &--demin {
+    stroke-dasharray: 170 30;
+  }
+}
+
 .travelers__level {
-  position: relative;
+  z-index: 1;
+
   top: 80px;
   left: 5%;
   width: 60px;
   height: 60px;
-  border: 4px solid @orange;
-  border-radius: 50%;
   background: rgba(@black, 0.6);
+  position: relative;
+  border-radius: 50%;
+}
+
+.travelers__level-text {
+  margin-top: -70px;
 }
 
 .travelers__number {
@@ -216,6 +339,12 @@
   top: -20px;
   left: 50%;
   transform: translateX(-150%);
+
+  &--germany {
+    top: -17px;
+    margin-right: 15px;
+    transform: translateX(-150%) scale(1.2);
+  }
 }
 
 .travelers__info {
@@ -232,6 +361,7 @@
 }
 
 .travelers__name {
+  position: relative;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -241,6 +371,32 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    max-width: 200px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @light-red;
+
+    @media (min-width: @tablet-width) {
+      left: 10px;
+    }
+  }
+
+  &--online::before {
+    background-color: @green;
+  }
 
   &:hover,
   &:focus {
@@ -257,9 +413,16 @@
   line-height: 18px;
   font-weight: normal;
   color: @dark-gray;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   margin-bottom: 15px;
+  max-width: 190px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 23px;
+    max-width: 225px;
+  }
 }
 
 .travelers__transpotrs-list {
@@ -267,14 +430,18 @@
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .travelers__transpotrs-item {
-  padding: 0 5px;
+  margin-right: 15px;
 }
 
 .travelers__to-all {
   margin: 0 25px;
+  display: block;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     margin: 0 76px;
