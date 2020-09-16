@@ -46,6 +46,16 @@
     }
   }
 
+  @-moz-document url-prefix("") {
+    &::before {
+      margin-top: 20px;
+
+      @media (min-width: @tablet-width) {
+        margin-top: 15px;
+      }
+    }
+  }
+
   &--catalog::before {
     left: 8px;
 

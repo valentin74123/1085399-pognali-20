@@ -6,6 +6,12 @@
   z-index: 6;
   margin-top: -30px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -45px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 55px;
+  }
 }
 
 .directions__wrapper {
@@ -21,8 +27,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 40px;
-    padding-top: 230px;
+    margin-left: 53px;
+    padding-top: 205px;
+    padding-bottom: 83px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -44,7 +51,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 175px;
+      top: 135px;
       right: 60px;
     }
   }
@@ -63,8 +70,8 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 150px;
-      left: 10px;
+      top: 134px;
+      left: 9px;
     }
   }
 }
@@ -87,7 +94,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 170px;
+    margin-left: 115px;
 
     grid-column-start: 2;
     grid-column-end: 3;
@@ -108,13 +115,20 @@
   max-width: 216px;
   z-index: 2;
 
+  span {
+    display: none;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
     line-height: 33px;
     padding-left: 0;
     margin-bottom: 105px;
-    max-width: 380px;
+    max-width: 350px;
+
+    span {
+      display: inline-block;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -123,8 +137,8 @@
     grid-row-start: 2;
     grid-row-end: 3;
 
-    margin-top: 60px;
-    margin-left: 170px;
+    margin-top: 57px;
+    margin-left: 115px;
     margin-bottom: 0;
   }
 }
@@ -146,14 +160,22 @@
 .directions__item {
   position: relative;
   width: auto;
+  margin-bottom: -5px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 563px;
+    margin-bottom: 15px;
   }
 }
 
 .directions__photo {
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   width: 100%;
   z-index: 1;
 
@@ -164,6 +186,7 @@
     z-index: 3;
     top: 0;
     right: 0%;
+    border-radius: 25px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -172,7 +195,7 @@
 
 .directions__flag {
   position: absolute;
-  bottom: 130px;
+  bottom: 94px;
   left: 25px;
   right: auto;
   z-index: 3;
@@ -190,27 +213,35 @@
 .directions__info {
   position: relative;
   background-color: @white;
-  padding-top: 26px;
+  padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   z-index: 2;
-  top: -50px;
+  top: -15px;
+
+  &--czech-republic {
+    padding-bottom: 5px;
+    padding-right: 32px;
+
+    @media (min-width: @tablet-width) {
+      br {
+        display: none;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
-    padding-top: 30px;
+    padding-top: 22px;
     padding-bottom: 20px;
-    padding-left: 26px;
+    padding-left: 31px;
+    border-radius: 25px;
     z-index: 2;
     top: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 28px;
   }
 }
 
@@ -220,7 +251,7 @@
   font-weight: bold;
   color: @black;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -229,7 +260,7 @@
 }
 
 .directions__description {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: @dark-gray;
@@ -250,10 +281,11 @@
   color: @light-black;
   opacity: 0.3;
   margin: 0;
+  margin-top: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 28px;
-    padding-top: 21px;
+    margin-left: 31px;
+    padding-top: 24px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -283,6 +315,7 @@
   text-align: left;
   display: block;
   z-index: 2;
+  margin-top: 15px;
 
   @media (min-width: @tablet-width) {
     margin-top: 30px;
@@ -294,11 +327,13 @@
     margin-top: 320px;
     margin-bottom: 56px;
     max-width: 280px;
-    margin-left: 170px;
+    margin-left: 115px;
 
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+
+    width: 210px;
   }
 }

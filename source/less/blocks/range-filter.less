@@ -53,11 +53,24 @@
 .range-filter__min input {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
+
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
 .range-filter__max input {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
 .range-filter__price-controls {

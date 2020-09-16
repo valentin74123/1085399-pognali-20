@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/styles.min.css">
 
     <link rel="preload" href="./css/styles.min.css" as="style">
-    <link rel="preload" href="./js/script.min.js" as="script">
+    <link rel="preload" href="./js/top-menu.js" as="script">
     <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
 
+    <link rel="stylesheet" href="./css/styles.min.css">
   </head>
   <body class="page__body">
 
 
     <header class="page-header">
 
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <a class="page-header__logo">
+          <a class="main-nav__logo">
             <picture>
               <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
@@ -29,7 +29,7 @@
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="page-header__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="main-nav__white-logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
 
             <picture>
@@ -39,7 +39,7 @@
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="main-nav__blue-logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
           </a>
           <ul class="main-nav__list site-list">
@@ -55,7 +55,7 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item user-list__item--close users-links">
-              <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
+              <a class="user-list__info users-links__info" href="tel:8800555-86-28">
                 <article class="users-links__icons">
                   <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
                     <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
@@ -65,7 +65,7 @@
               </a>
             </li>
             <li class="user-list__topmenu">
-              <a class="user-list__topmenu-links" href="tel:8 800 555-86-28">
+              <a class="user-list__topmenu-links" href="tel:8800555-86-28">
                 <div class="user-list__topmenu-icons user-list__topmenu-icons--tel">
                   <svg class="user-list__topmenu-icon user-list__topmenu-icon--tel" width="15" height="16">
                     <use xlink:href="img/sprite.svg#icon-topmenu-phone"></use>
@@ -166,15 +166,13 @@
 
       <nav class="main-nav--desktop">
         <div class="main-nav__wrapper">
-          <a class="page-header__logo">
+          <a class="main-nav__logo">
             <picture>
               <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
-
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-
-              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="main-nav__blue-logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
           </a>
           <ul class="main-nav__list site-list">
@@ -190,7 +188,7 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__topmenu">
-              <a class="user-list__topmenu-links" href="tel:8 800 555-86-28">
+              <a class="user-list__topmenu-links" href="tel:8800555-86-28">
                 <div class="user-list__topmenu-icons user-list__topmenu-icons--tel">
                   <svg class="user-list__topmenu-icon user-list__topmenu-icon--tel" width="15" height="16">
                     <use xlink:href="img/sprite.svg#icon-topmenu-phone"></use>
@@ -222,7 +220,7 @@
           <p class="about-service__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
           <p class="about-service__description-bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
           <a class="about-service__to-all button button--yellow" href="">
-            <span class="button__text--yellow">Подробнее</span>
+            <span class="button__text button__text--yellow">Подробнее</span>
           </a>
         </div>
       </section>
@@ -230,7 +228,7 @@
       <section class="directions">
         <div class="directions__wrapper">
           <h2 class="directions__main-title">Направления</h2>
-          <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+          <p class="directions__text">Мы не продаем туры<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           <ul class="directions__list">
             <li class="directions__item">
               <picture>
@@ -238,7 +236,7 @@
                 <source type="image/webp" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
 
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
-                <img class="directions__photo" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2px" alt="Таиланд">
+                <img class="directions__photo" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" alt="Таиланд">
               </picture>
               <img class="directions__flag" src="img/flag-thailand.svg" alt="флаг Таиланда" width="35" height="24">
               <div class="directions__info">
@@ -255,7 +253,7 @@
                 <source type="image/webp" srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x">
 
                 <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
-                <img class="directions__photo" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2px" alt="Франция">
+                <img class="directions__photo" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="Франция">
               </picture>
               <img class="directions__flag" src="img/flag-france.svg" alt="флаг Франции" width="35" height="24">
               <div class="directions__info">
@@ -273,20 +271,20 @@
                 <source type="image/webp" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@1x.webp 2x">
 
                 <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
-                <img class="directions__photo" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2px" alt="Чехия">
+                <img class="directions__photo" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" alt="Чехия">
               </picture>
               <img class="directions__flag" src="img/flag-czech.svg" alt="флаг Чехии" width="35" height="24">
-              <div class="directions__info">
+              <div class="directions__info directions__info--czech-republic">
                 <article>
                   <h3 class="directions__title">Чехия</h3>
-                  <p class="directions__description">Закоулки старой Европы</p>
+                  <p class="directions__description">Закоулки старой <br> Европы</p>
                 </article>
                 <p class="directions__people">5326</p>
               </div>
             </li>
           </ul>
           <a class="directions__to-all button button--yellow" href="">
-            <span class="button__text--yellow">Показать все</span>
+            <span class="button__text button__text--yellow">Показать все</span>
           </a>
         </div>
       </section>
@@ -294,13 +292,13 @@
       <section class="travelers">
         <div class="travelers__wrapper">
           <h2 class="travelers__title">Попутчики</h2>
-          <p class="travelers__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="travelers__description-bold">Теперь можно легко найти единомышленников!</p>
+          <p class="travelers__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> а другому маршрут для хайкинга.</p>
+          <p class="travelers__description-bold">Теперь можно легко<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> найти единомышленников!</p>
           <ul class="travelers__list">
             <li class="travelers__item">
               <div class="travelers__level">
                 <svg width="65" height="65">
-                  <circle class="travelers__circle travelers__circle--frisova" r="29" cx="31" cy="31" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
+                  <circle class="travelers__circle travelers__circle--firsova" r="29" cx="31" cy="31" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
                 </svg>
                 <article class="travelers__level-text">
                   <p class="travelers__number">99</p>
@@ -310,7 +308,7 @@
               <picture>
                 <source type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
 
-                <img class="travelers__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2px" alt="Таня Фрисова">
+                <img class="travelers__avatar" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" alt="Таня Фрисова">
               </picture>
               <article class="travelers__flags">
                 <img class="travelers__flag" src="img/flag-sri-lanka.svg" alt="флаг Шри-ланки" width="35" height="24">
@@ -318,11 +316,11 @@
                 <img class="travelers__flag" src="img/flag-seychelles.svg" alt="флаг Сейшелов" width="35" height="24">
               </article>
               <div class="travelers__info">
-                <h3 class="travelers__name">Таня Фрисова</h3>
+                <h3 class="travelers__name">Таня Фирсова</h3>
                 <p class="travelers__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="travelers__transpotrs-list">
                   <li class="travelers__transpotrs-item transpotrs-hover">
-                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
+                    <svg class="travelers__icon travelers__icon--active" width="20" height="21">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
                     <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
@@ -330,7 +328,7 @@
                     </div>
                   </li>
                   <li class="travelers__transpotrs-item transpotrs-hover">
-                    <svg class="travelers-profile__icon" width="17" height="19">
+                    <svg class="travelers__icon" width="17" height="19">
                       <use xlink:href="img/sprite.svg#icon-bus"></use>
                     </svg>
                     <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bus">
@@ -338,7 +336,7 @@
                     </div>
                   </li>
                   <li class="travelers__transpotrs-item transpotrs-hover">
-                    <svg class="travelers-profile__icon" width="21" height="16">
+                    <svg class="travelers__icon" width="21" height="16">
                       <use xlink:href="img/sprite.svg#icon-bike"></use>
                     </svg>
                     <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--bike">
@@ -346,7 +344,7 @@
                     </div>
                   </li>
                   <li class="travelers__transpotrs-item transpotrs-hover">
-                    <svg class="travelers-profile__icon" width="18" height="18">
+                    <svg class="travelers__icon" width="18" height="18">
                       <use xlink:href="img/sprite.svg#icon-run"></use>
                     </svg>
                     <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--run">
@@ -356,8 +354,7 @@
                 </ul>
               </div>
             </li>
-            <li class="travelers__item">
-
+            <li class="travelers__item travelers__item--demin">
               <div class="travelers__level">
                 <svg width="65" height="65">
                   <circle class="travelers__circle travelers__circle--demin" r="29" cx="31" cy="31" fill="transparent" stroke="#FF8D30" stroke-width="4"/>
@@ -370,18 +367,18 @@
               <picture>
                 <source type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
 
-                <img class="travelers__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2px" alt="Петя Демин">
+                <img class="travelers__avatar" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" alt="Петя Демин">
               </picture>
               <article class="travelers__flags">
-                <img class="travelers__flag travelers__flag--germany" src="img/flag-germany.svg" alt="флаг Германии" width="30" height="20">
+                <img class="travelers__flag travelers__flag--germany" src="img/flag-belgium.svg" alt="флаг Германии" width="35" height="24">
                 <img class="travelers__flag" src="img/flag-czech.svg" alt="флаг Чехии" width="35" height="24">
               </article>
               <div class="travelers__info">
-                <h3 class="travelers__name travelers__name--online">Петя Демин</h3>
-                <p class="travelers__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                <h3 class="travelers__name travelers__name--online travelers__name--demin">Петя Демин</h3>
+                <p class="travelers__hashtags  travelers__hashtags--demin">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="travelers__transpotrs-list">
                   <li class="travelers__transpotrs-item transpotrs-hover">
-                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="21" height="22">
+                    <svg class="travelers-profile__icon travelers-profile__icon--active" width="19" height="22">
                       <use xlink:href="img/sprite.svg#icon-plane"></use>
                     </svg>
                     <div class="transpotrs-hover__hover-description transpotrs-hover__hover-description--plane">
@@ -417,7 +414,7 @@
             </li>
           </ul>
           <a class="travelers__to-all button button--yellow" href="">
-            <span class="button__text--yellow">Показать всех</span>
+            <span class="button__text button__text--yellow">Показать всех</span>
           </a>
         </div>
       </section>
@@ -450,7 +447,7 @@
           </ul>
           <a class="add-profile__business-tariff">
             <article class="add-profile__icons">
-              <svg class="add-profile__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0px" y="0px"
+              <svg class="add-profile__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" x="0px" y="0px"
                 viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                 <path class="st0" d="M16.4,15.1c-0.9-1.2-2-2-3.6-2.4l-1.5,5.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9v-4.2
                 c0-0.6-0.5-1.1-1.1-1.1c-0.6,0-1.1,0.5-1.1,1.1v4.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9l-1.5-5.2
@@ -493,14 +490,14 @@
       <section class="interested-in">
         <div class="interested-in__wrapper">
           <h2 class="interested-in__title">Заинтересовались?</h2>
-          <p class="interested-in__description">Зарегистрируйтесь, <br> это быстро и бесплатно! <br> Уже зарегистрированы? Тогда <br> скорее <a href="" class="interested-in__link">авторизуйтесь</a>.</p>
+          <p class="interested-in__description">Зарегистрируйтесь, <br> это быстро и бесплатно!&nbsp;&nbsp; <br> Уже зарегистрированы? Тогда <br> скорее <a href="" class="interested-in__link">авторизуйтесь</a>.</p>
           <div class="interested-in__email">
             <input class="interested-in__email-input" type="email" placeholder="E-mail">
             <button class="interested-in__button button button--reg" type="button">
               <span class="interested-in__button-text ">Регистрация</span></button>
             </div>
           <p class="interested-in__questions">Остались вопросы? <br> Мы с радостью на них ответим!</p>
-          <a class="interested-in__info users-links users-links__info" href="tel:8 800 555-86-28">
+          <a class="interested-in__info users-links users-links__info" href="tel:8800555-86-28">
             <article class="users-links__icons">
               <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
                 <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
@@ -522,9 +519,9 @@
       <section class="route">
         <div class="route__wrapper">
           <p class="route__address">ул. Большая <br> Конюшенная, 19/8</p>
-          <button class="route__button button button--route" type="button">
+          <a class="route__button button button--route" href="">
             <span class="route__button-text">Проложить маршрут</span>
-          </button>
+          </a>
         </div>
       </section>
 
@@ -585,7 +582,7 @@
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">HTML Academy</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="33" x="0px" y="0px"
+          <svg class="copyright__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="34" x="0px" y="0px"
             viewBox="0 0 27 34" style="enable-background:new 0 0 27 34;" xml:space="preserve">
             <path class="st0" d="M13.6,0l-0.2,0L0,1.4V26l13.5,8L27,26l0,0V1.4L13.6,0z M19.3,16.8l-0.9,0.5l-5-3l0,1.4l3.8,2.3l-0.8,0.5l-3-1.8
             l0,1.4l1.9,1.1l-1.8,1.1L2,13.6l11.4-6.8L25,13.5l-4.5,2.6l-7.1-4.2l0,1.4L19.3,16.8z M1.9,15.1l11.4,6.8l0,1l-8-4.7l0,1.4l8,4.8

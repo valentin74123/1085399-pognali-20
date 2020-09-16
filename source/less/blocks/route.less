@@ -6,11 +6,17 @@
   z-index: 2;
   margin-top: -30px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -45px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 55px;
+  }
 }
 
 .route__wrapper {
   width: auto;
-  padding: 61px 25px 35px 25px;
+  padding: 43px 25px 35px 25px;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -20,8 +26,8 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 283px;
-    padding-top: 85px;
-    padding-bottom: 55px;
+    padding-top: 105px;
+    padding-bottom: 40px;
     grid-template-columns: 2fr 1fr;
   }
 }
@@ -34,7 +40,7 @@
   color: @blue3;
   text-transform: uppercase;
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   margin-left: 60px;
 
   &::before {
@@ -86,11 +92,14 @@
 }
 
 .route__button {
-  padding: 22px;
+  padding: 19px 19px;
 
   @media (min-width: @desktop-width) {
-    width: 325px;
-    height: 80px;
+    width: 235px;
+    padding: 28px 37px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   position: relative;
@@ -98,8 +107,8 @@
   &::after {
     position: absolute;
     content: "";
-    top: 24px;
-    left: 95%;
+    top: 21px;
+    right: 15px;
     width: 15px;
     height: 15px;
     background-image: url("../img/triangle-arrow-right.svg");

@@ -2,8 +2,8 @@
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 192px 255px, 100% 485px;
-  background-position: 55% 223px, top;
+  background-size: 192px 255px, 100% 480px;
+  background-position: 62% 223px, top;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/traveller-illustration-mobile@2x.png"),
@@ -25,8 +25,8 @@
   @media (min-width: @desktop-width) {
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.jpg");
-    background-size: 431px 640px, 100% 750px;
-    background-position: 60% 60px, center top;
+    background-size: 431px 640px, 1800px 750px;
+    background-position: 60% 62px, -180px -45px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/traveller-illustration-desktop@2x.png"),
@@ -37,8 +37,8 @@
 
 .information__wrapper {
   padding: 0 25px;
-  padding-top: 95px;
-  margin-bottom: -190px;
+  padding-top: 90px;
+  margin-bottom: -202px;
 
   @media (min-width: @tablet-width) {
     margin-top: 162px;
@@ -50,7 +50,7 @@
 
     margin-top: 0;
     padding: 0 60px;
-    padding-top: 150px;
+    padding-top: 157px;
     padding-bottom: 123px;
   }
 }
@@ -76,7 +76,7 @@
   text-align: center;
   max-width: 240px;
   margin: 0 auto;
-  margin-bottom: 310px;
+  margin-bottom: 315px;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -89,7 +89,7 @@
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    margin-left: 127px;
+    margin-left: 68px;
     max-width: 420px;
 
 
@@ -107,7 +107,7 @@
   color: @white;
   margin-left: 25px;
   max-width: 165px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
@@ -121,10 +121,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 21px;
-    line-height: 25px;
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 300;
     margin: 0;
-    margin-right: 30px;
+    margin-top: 13px;
+    margin-left: 2px;
 
     grid-column-start: 3;
     grid-column-end: 4;
@@ -155,7 +157,8 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    margin-right: 30px;
+    margin-top: 27px;
+    margin-left: 4px;
 
     grid-column-start: 3;
     grid-column-end: 4;
@@ -189,7 +192,7 @@
   font-weight: bold;
   color: @light-black;
   margin: 0;
-  margin-top: 22px;
+  margin-top: 20px;
   margin-left: 24px;
 
   @media (min-width: @tablet-width) {
@@ -198,6 +201,11 @@
     margin-top: 30px;
     margin-left: 33px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 28px;
+    margin-left: 30px;
+  }
 }
 
 .information__number {
@@ -205,7 +213,7 @@
   line-height: 18px;
   font-weight: bold;
   margin: 0;
-  margin-top: 22px;
+  margin-top: 20px;
   margin-right: 21px;
   color: @white;
 
@@ -217,8 +225,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 30px;
-    margin-right: 64px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 28px;
+    margin-right: 50px;
   }
 }
 
@@ -268,7 +278,8 @@
 
     @media (min-width: @desktop-width) {
       z-index: 2;
-      margin-left: -10px;
+      margin-left: -2px;
+      margin-right: -29px;
     }
   }
 
@@ -286,8 +297,8 @@
 
     @media (min-width: @desktop-width) {
       z-index: 3;
-      left: 20px;
-      margin-left: -60px;
+      left: 35px;
+      margin-left: -34px;
     }
   }
 
@@ -308,6 +319,8 @@
     @media (min-width: @desktop-width) {
       height: 105px;
       border-top-right-radius: 15px;
+      width: 315px;
+      left: 15px;
     }
   }
 }

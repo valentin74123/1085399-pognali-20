@@ -12,16 +12,16 @@
     padding: 35px 25px 25px 35px;
     margin-bottom: 40px;
 
-    grid-template-columns: 2fr 2fr 50px 50px 1fr;
+    grid-template-columns: 2fr 224px 50px 50px 1fr;
     grid-template-rows: 50px 94px 50px 40px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 46px 43px 42px 60px;
-    margin-bottom: 30px;
+    padding: 46px 43px 48px 60px;
+    margin-bottom: 35px;
 
-    grid-template-columns: 2fr 2fr 50px 50px 2fr 60px;
-    grid-template-rows: 50px 90px 58px;
+    grid-template-columns: 285px 230px 50px 50px 160px 60px;
+    grid-template-rows: 50px 90px 50px;
   }
 }
 
@@ -144,11 +144,16 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 15px;
+    margin-left: -70px;
 
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -80px;
   }
 }
 
@@ -158,13 +163,28 @@
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 4;
+    margin-left: -75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -80px;
+  }
+}
+
+@-moz-document url-prefix("") {
+  .travelers-profile__heart {
+    margin-top: 10px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 15px;
+    }
   }
 }
 
 .travelers-profile__hashtags {
   font-size: 15px;
   line-height: 18px;
-  font-weight: normal;
+  font-weight: 500;
   color: @dark-gray;
   margin: 0;
   margin-top: 10px;
@@ -176,6 +196,7 @@
   grid-row-end: 4;
 
   @media (min-width: @tablet-width) {
+    color: @black;
     max-width: 227px;
     font-size: 20px;
     line-height: 23px;
@@ -197,7 +218,7 @@
 .travelers-profile__description {
   font-size: 15px;
   line-height: 16px;
-  font-weight: normal;
+  font-weight: 500;
   color: @dark-gray;
 
   &--visit {
@@ -269,7 +290,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 80px;
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 1;
@@ -283,6 +303,11 @@
   padding: 0 15px;
   margin-bottom: 10px;
   margin-left: 25px;
+
+  @media (min-width: @desktop-width) {
+    width: 160px;
+    margin-bottom: 0;
+  }
 }
 
 .travelers-profile__city {
@@ -387,7 +412,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 80px;
+    margin-left: 0;
     grid-column-start: 5;
     grid-column-end: 6;
     grid-row-start: 3;
@@ -537,6 +562,8 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
+    width: 150px;
+    text-align: center;
 
     grid-column-start: 2;
     grid-column-end: 3;

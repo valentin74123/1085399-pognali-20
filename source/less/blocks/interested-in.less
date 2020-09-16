@@ -6,10 +6,15 @@
   z-index: 3;
   margin-top: -30px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: 55px;
+  }
 }
 
 .interested-in__wrapper {
-  padding: 100px 25px 15px 25px;
+  padding: 80px 25px 29px 25px;
   width: auto;
 
   @media (min-width: @tablet-width) {
@@ -17,7 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 140px 133px 100px 133px;
+    padding: 100px 133px 100px 133px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,7 +36,7 @@
   font-weight: bold;
   color: @orange;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     font-size: 45px;
@@ -42,6 +47,7 @@
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-bottom: 28px;
   }
 }
 
@@ -51,7 +57,6 @@
   font-weight: 300;
   color: @white;
   text-align: center;
-  width: auto;
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
@@ -70,6 +75,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
+    margin-right: -15px;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -98,7 +104,7 @@
 }
 
 .interested-in__email {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -119,14 +125,15 @@
   font-weight: bold;
   border: 4px solid @white;
   background-color: @white;
+  margin-left: 3px;
 
 
   z-index: 1;
 
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 25px;
-  border-radius: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 21px;
+  border-radius: 10px;
 
   &:hover {
     color: rgba(@dark-gray, 0.5);
@@ -140,12 +147,14 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: 93%;
     font-size: 24px;
     line-height: 24px;
-    padding-top: 25px;
+    padding-top: 21px;
     padding-bottom: 25px;
-    padding-left: 36px;
-    margin-bottom: 60px;
+    padding-left: 30px;
+    margin-bottom: -35px;
+    border-radius: 20px;
   }
 }
 
@@ -169,10 +178,10 @@
   line-height: 24px;
 
   min-width: 60px;
-  height: 73px;
+  height: 63px;
   padding-bottom: 25px;
 
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: @yellow;
   border: none;
   position: absolute;
@@ -183,16 +192,26 @@
 
   @media (min-width: @tablet-width) {
     min-width: 80px;
-    height: 86px;
+    height: 82px;
     padding-bottom: 35px;
+    border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 330px;
-    width: 35%;
+    width: 325px;
     padding-bottom: 5px;
+  }
+}
+
+@-moz-document url-prefix("") {
+  .interested-in__button {
+    height: 64px;
+
+    @media (min-width: @tablet-width) {
+      height: 83px;
+    }
   }
 }
 
@@ -201,15 +220,15 @@
 
   @media (min-width: @desktop-width) {
     display: inline;
-    padding-left: 42px;
+    padding-left: 30px;
   }
 }
 
 .interested-in__button::after {
   position: absolute;
   content: "";
-  top: 28px;
-  left: 22px;
+  top: 25px;
+  left: 25px;
   width: 16px;
   height: 15px;
   background-image: url("../img/triangle-arrow-right.svg");
@@ -225,7 +244,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 90%;
+    left: auto;
+    right: 30px;
   }
 }
 
@@ -236,7 +256,7 @@
   color: @white;
   text-align: center;
   width: auto;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     font-size: 28px;

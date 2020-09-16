@@ -3,11 +3,20 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
+  @media (min-width: @desktop-width) {
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+  }
+
   position: relative;
 
   &--index {
-    margin-top: -35px;
+    margin-top: -247px;
     z-index: 2;
+
+    @media (min-width: @desktop-width) {
+      margin-top: -165px;
+    }
   }
 
   &--form {
@@ -20,7 +29,7 @@
     margin-top: -30px;
   }
 
-  padding: 38px 25px 20px 25px;
+  padding: 38px 25px 30px 25px;
 
   @media (min-width: @tablet-width) {
     padding: 45px 60px 30px 60px;
@@ -31,10 +40,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 45px 40px;
+    padding: 9px 40px 45px 40px;
   }
 }
 
 .page-footer__logo img {
-  margin-bottom: 40px;
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 20px;
+  }
 }

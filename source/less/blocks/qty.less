@@ -74,8 +74,15 @@
   text-align: center;
   border: none;
 
+  appearance: textfield;
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 18px;
   }
+}
+
+.qty__number::-webkit-outer-spin-button,
+.qty__number::-webkit-inner-spin-button {
+  appearance: none;
 }

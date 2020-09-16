@@ -5,12 +5,16 @@
   font-weight: bold;
   color: @blue3;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: left;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-radius: 20px;
   }
 
   &--yellow {
@@ -35,9 +39,9 @@
     position: absolute;
     content: "";
     top: 25px;
-    right: 23px;
-    width: 14px;
-    height: 14px;
+    right: 19px;
+    width: 15px;
+    height: 13px;
     background-image: url("../img/triangle-arrow-right.svg");
     background-repeat: no-repeat;
 

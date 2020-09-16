@@ -4,19 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/styles.min.css">
+
+    <link rel="preload" href="./css/styles.min.css" as="style">
+    <link rel="preload" href="./js/top-menu.js" as="script">
+    <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
+
+    <link rel="stylesheet" href="./css/styles.min.css">
   </head>
   <body class="page__body">
-
-
     <header class="page-header">
 
-      <nav class="main-nav main-nav--opened main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <a class="page-header__logo">
+          <a class="main-nav__logo">
             <picture>
               <source type="image/webp" media="(min-width: 1320px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
@@ -24,7 +27,7 @@
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="page-header__white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="main-nav__white-logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
 
             <picture>
@@ -34,7 +37,7 @@
 
               <source media="(min-width: 1320px)"  srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="page-header__blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
+              <img class="main-nav__blue-logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип «Погнали»">
             </picture>
           </a>
           <ul class="main-nav__list site-list">
@@ -50,7 +53,7 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item user-list__item--close users-links">
-              <a class="user-list__info users-links__info" href="tel:8 800 555-86-28">
+              <a class="user-list__info users-links__info" href="tel:8800555-86-28">
                 <article class="users-links__icons">
                   <svg class="users-links__icon users-links__icon--tel" width="17" height="15">
                     <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
@@ -60,7 +63,7 @@
               </a>
             </li>
             <li class="user-list__topmenu user-list__topmenu--mobile-close">
-              <a class="user-list__topmenu-links" href="tel:8 800 555-86-28">
+              <a class="user-list__topmenu-links" href="tel:8800555-86-28">
                 <div class="user-list__topmenu-icons user-list__topmenu-icons--tel">
                   <svg class="user-list__topmenu-icon user-list__topmenu-icon--tel" width="15" height="16">
                     <use xlink:href="img/sprite.svg#icon-topmenu-phone"></use>
@@ -147,28 +150,28 @@
           <p class="profile-info__hashtags">#бургер #бар #футбол #концерт #крафт</p>
           <p class="profile-info__title profile-info__title--transport">Транспорт</p>
           <ul class="profile-info__list transports">
-            <li class="transports__item">
+            <li class="transports__item" tabindex="0">
               <input class="transports__checkbox" type="checkbox" id="plane" name="plane" checked>
               <label class="transports__description transports__description--plane" for="plane">
-                <img class="transports__icon-plane transports__icon-plane--active" src="" alt="" width="23" height="24">
+                <span class="transports__icon-plane transports__icon-plane--active"></span>
               </label>
             </li>
-            <li class="transports__item">
+            <li class="transports__item" tabindex="0">
               <input class="transports__checkbox" type="checkbox" id="car" name="car" checked>
               <label class="transports__description transports__description--car" for="car">
-                <img class="transports__icon-car transports__icon-car--active" src="" alt="" width="23" height="24">
+                <span class="transports__icon-car transports__icon-car--active"></span>
               </label>
             </li>
-            <li class="transports__item">
+            <li class="transports__item" tabindex="0">
               <input class="transports__checkbox" type="checkbox" id="bicycle" name="bicycle">
               <label class="transports__description transports__description--bicycle" for="bicycle">
-                <img class="transports__icon-bicycle" src="" alt="" width="23" height="24">
+                <span class="transports__icon-bicycle"></span>
               </label>
             </li>
-            <li class="transports__item">
+            <li class="transports__item" tabindex="0">
               <input class="transports__checkbox" type="checkbox" id="afoot" name="afoot" checked>
               <label class="transports__description transports__description--afoot" for="afoot">
-                <img class="transports__icon-afoot transports__icon-afoot--active" src="" alt="" width="23" height="24">
+                <span class="transports__icon-afoot transports__icon-afoot--active"></span>
               </label>
             </li>
           </ul>
@@ -213,7 +216,7 @@
               <div class="steps__qty steps__qty--people qty">
                 <button class="qty__button-min" type="button">
                   <span class="visually-hidden">-</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
                     viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
                     <rect class="qty__button" width="14" height="2"/>
                   </svg>
@@ -221,7 +224,7 @@
                 <input class="qty__number" type="number" id="traveler" name="traveler" min="1" value="2">
                 <button class="qty__button-max" type="button">
                   <span class="visually-hidden">+</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
                     viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
                     <polygon class="qty__button" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 "/>
                   </svg>
@@ -232,7 +235,7 @@
               <div class="steps__qty steps__qty--days  qty">
                 <button class="qty__button-min" type="button">
                   <span class="visually-hidden">-</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
                     viewBox="0 0 14 2" style="enable-background:new 0 0 14 2;" xml:space="preserve">
                     <rect class="qty__button" width="14" height="2"/>
                   </svg>
@@ -240,20 +243,20 @@
                 <input class="qty__number" type="number" id="duration" name="duration" min="1" value="2">
                 <button class="qty__button-max" type="button">
                   <span class="visually-hidden">+</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" x="0px" y="0px"
                     viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
                     <polygon class="qty__button" points="8,6 8,0 6,0 6,6 0,6 0,8 6,8 6,14 8,14 8,8 14,8 14,6 "/>
                   </svg>
                 </button>
               </div>
-              <div class="steps__checkbox checkbox">
+              <div class="steps__checkbox checkbox" tabindex="0">
                 <input class="checkbox__check" type="checkbox" id="children" name="children" checked>
                 <label class="checkbox__description" for="children">Можно с детьми</label>
               </div>
               <div class="steps__months months">
                 <button class="months__button" type="button">
                   <span class="visually-hidden">Предыдущий месяц</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="21" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="21" x="0px" y="0px"
                     viewBox="0 0 18 34" style="enable-background:new 0 0 18 34;" xml:space="preserve">
                     <path d="M3.6,17l14-14.4c0.6-0.6,0.6-1.6,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L0.4,15.9c-0.6,0.6-0.6,1.6,0,2.1l15.1,15.5
                     c0.3,0.3,0.7,0.4,1,0.4s0.8-0.1,1-0.4c0.6-0.6,0.6-1.6,0-2.1L3.6,17z"/>
@@ -262,7 +265,7 @@
                 <p class="months__month">Март 2019</p>
                 <button class="months__button" type="button">
                   <span class="visually-hidden">Следующий месяц</span>
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="21" x="0px" y="0px"
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="21" x="0px" y="0px"
                   viewBox="0 0 18 34" style="enable-background:new 0 0 18 34;" xml:space="preserve">
                   <path d="M14.4,17L0.4,2.6C-0.1,2-0.1,1,0.4,0.4c0.6-0.6,1.5-0.6,2.1,0l15.1,15.5c0.6,0.6,0.6,1.6,0,2.1L2.5,33.6
                   c-0.3,0.3-0.7,0.4-1,0.4s-0.8-0.1-1-0.4c-0.6-0.6-0.6-1.6,0-2.1L14.4,17z"/>
@@ -337,7 +340,7 @@
                   <td class="table__date">5</td>
                 </tr>
               </table>
-              <a class="steps__button steps__button--next-one button-form button-form--next" href="#step-two" type="button">Следующий шаг</a>
+              <a class="steps__button steps__button--next-one button-form button-form--next" href="#step-two" >Следующий шаг</a>
             </li>
 
             <li class="steps__item steps__item--two">
@@ -350,7 +353,7 @@
                 <li class="points__item points__item--active">Маршрут</li>
                 <li class="points__item">Развлечения</li>
               </ul>
-              <p class="steps__countries steps__countries--bosnia">
+              <div class="steps__countries steps__countries--bosnia">
                 <select class="steps__countries-select" name="country">
                   <option value="Босния и герцеговина" selected>Босния и герцеговина</option>
                 </select>
@@ -360,8 +363,8 @@
                     <span class="visually-hidden">Удалить страну из списка</span>
                   </button>
                 </div>
-              </p>
-              <p class="steps__countries steps__countries--czech-republic">
+              </div>
+              <div class="steps__countries steps__countries--czech-republic">
                 <select class="steps__countries-select" name="country">
                   <option value="Чехия" selected>Чехия</option>
                 </select>
@@ -371,7 +374,7 @@
                     <span class="visually-hidden">Удалить страну из списка</span>
                   </button>
                 </div>
-              </p>
+              </div>
               <div class="steps__choose-country choose-country choose-country--opened choose-country--nojs">
                 <button class="steps__button steps__button--choose button-country button-country--choose">
                   <span class="button-country__text button-country__text--choose">Выберите страну</span>
@@ -438,8 +441,8 @@
                 </button>
               </div>
 
-              <a class="steps__button steps__button--next-two button-form button-form--next" href="#step-three" type="button">Следующий шаг</a>
-              <a class="steps__button steps__button--prev-two button-form button-form--prev" href="#step-one" type="button">На шаг назад</a>
+              <a class="steps__button steps__button--next-two button-form button-form--next" href="#step-three" >Следующий шаг</a>
+              <a class="steps__button steps__button--prev-two button-form button-form--prev" href="#step-one" >На шаг назад</a>
             </li>
 
             <li class="steps__item steps__item--three">
@@ -466,7 +469,7 @@
                 name="czech-republic-entertainment" id="czech-republic-entertainment" cols="30" rows="10">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
               </textarea>
               <button class="steps__button steps__button--submit button-form button-form--submit" type="submit">Отправить</button>
-              <a class="steps__button steps__button--prev-three button-form button-form--prev" href="#step-two" type="button">На шаг назад</a>
+              <a class="steps__button steps__button--prev-three button-form button-form--prev" href="#step-two" >На шаг назад</a>
             </li>
 
           </ul>
@@ -514,7 +517,7 @@
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">HTML Academy</span>
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="33" x="0px" y="0px"
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="33" x="0px" y="0px"
             viewBox="0 0 27 34" style="enable-background:new 0 0 27 34;" xml:space="preserve">
             <path class="st0" d="M13.6,0l-0.2,0L0,1.4V26l13.5,8L27,26l0,0V1.4L13.6,0z M19.3,16.8l-0.9,0.5l-5-3l0,1.4l3.8,2.3l-0.8,0.5l-3-1.8
             l0,1.4l1.9,1.1l-1.8,1.1L2,13.6l11.4-6.8L25,13.5l-4.5,2.6l-7.1-4.2l0,1.4L19.3,16.8z M1.9,15.1l11.4,6.8l0,1l-8-4.7l0,1.4l8,4.8
